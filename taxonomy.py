@@ -1,93 +1,106 @@
-"""Urgency × Emotion grid, scenario/style assignment, and distribution logic."""
+"""Urgency x Emotion grid, scenario/style/channel assignment, and distribution logic."""
 
 import random
-from prompts import SCENARIOS, STYLES
+from prompts import SCENARIOS, STYLES, CHANNELS
 
 # ---------------------------------------------------------------------------
-# Grid definition: (urgency, emotion) → count
+# Grid definition: (urgency, emotion) -> count
 # ---------------------------------------------------------------------------
 GRID = [
-    ("Low",    "Low",    12),
-    ("Low",    "Medium", 11),
-    ("Low",    "High",   11),
-    ("Medium", "Low",    11),
-    ("Medium", "Medium", 11),
-    ("Medium", "High",   11),
-    ("High",   "Low",    11),
-    ("High",   "Medium", 11),
-    ("High",   "High",   11),
+    ("Low",    "Low",    25),
+    ("Low",    "Medium", 25),
+    ("Low",    "High",   25),
+    ("Medium", "Low",    25),
+    ("Medium", "Medium", 25),
+    ("Medium", "High",   25),
+    ("High",   "Low",    25),
+    ("High",   "Medium", 25),
+    ("High",   "High",   25),
 ]
 
 
+def _build_pool(items: list[str], total: int, min_per_item: int,
+                 rng: random.Random) -> list[str]:
+    """Build a shuffled pool guaranteeing each item appears >= min_per_item times."""
+    pool = items * min_per_item
+    remaining = total - len(pool)
+    if remaining > 0:
+        pool += rng.choices(items, k=remaining)
+    rng.shuffle(pool)
+    return pool
+
+
 def build_assignments(seed: int = 42) -> list[dict]:
-    """Return 100 complaint assignments satisfying all distribution constraints.
+    """Return 225 complaint assignments satisfying all distribution constraints.
 
     Guarantees:
-    - Each scenario is used >= 10 times (8 scenarios, 100 complaints).
-    - Each style is used >= 16 times (5 styles, 100 complaints).
-    - No duplicate (scenario, style) pair within the same cell.
+    - Each of 20 scenarios is used >= 11 times.
+    - Each of 8 styles is used >= 28 times.
+    - Each of 4 channels is used >= 56 times.
+    - No duplicate (scenario, style, channel) triple within the same cell.
     """
     rng = random.Random(seed)
-    total = sum(count for *_, count in GRID)  # 50
+    total = sum(count for *_, count in GRID)  # 225
 
-    # --- Build scenario and style pools with minimum guarantees -----------
-    # Minimum fills: 8 scenarios × 10 = 80, need 20 more
-    scenario_pool = SCENARIOS * 10  # 80 guaranteed
-    extras_scenario = rng.choices(SCENARIOS, k=total - len(scenario_pool))
-    scenario_pool += extras_scenario
-    rng.shuffle(scenario_pool)
+    # --- Build pools with minimum guarantees (exact length = total) ---------
+    scenario_pool = _build_pool(SCENARIOS, total, 11, rng)  # 20x11=220 +5
+    style_pool = _build_pool(STYLES, total, 28, rng)        # 8x28=224  +1
+    channel_pool = _build_pool(CHANNELS, total, 56, rng)     # 4x56=224  +1
 
-    # Minimum fills: 5 styles × 16 = 80, need 20 more
-    style_pool = STYLES * 16  # 80 guaranteed
-    extras_style = rng.choices(STYLES, k=total - len(style_pool))
-    style_pool += extras_style
-    rng.shuffle(style_pool)
-
-    # --- Assign to cells, avoiding duplicate (scenario, style) per cell ---
+    # --- Slice pools into per-cell chunks, then resolve collisions ----------
+    # This approach never skips pool entries, so global distribution is exact.
     assignments: list[dict] = []
-    s_idx = 0  # pointer into scenario_pool
-    t_idx = 0  # pointer into style_pool
+    offset = 0
 
     for cell_idx, (urgency, emotion, count) in enumerate(GRID):
-        used_pairs: set[tuple[str, str]] = set()
-        cell_assignments: list[dict] = []
+        cell_scenarios = list(scenario_pool[offset:offset + count])
+        cell_styles = list(style_pool[offset:offset + count])
+        cell_channels = list(channel_pool[offset:offset + count])
 
-        for _ in range(count):
-            # Try to find a non-duplicate pair
-            scenario = scenario_pool[s_idx % len(scenario_pool)]
-            style = style_pool[t_idx % len(style_pool)]
+        # Resolve any duplicate triples within the cell by swapping within
+        # the cell's own lists (preserves global counts exactly).
+        used_triples: set[tuple[str, str, str]] = set()
+        for i in range(count):
+            triple = (cell_scenarios[i], cell_styles[i], cell_channels[i])
             attempts = 0
-            while (scenario, style) in used_pairs and attempts < 50:
-                # Swap style to resolve collision
-                t_idx += 1
-                style = style_pool[t_idx % len(style_pool)]
+            while triple in used_triples and attempts < 200:
+                # Pick a random other index in the cell and swap channels
+                j = rng.randint(0, count - 1)
+                if j != i:
+                    cell_channels[i], cell_channels[j] = (
+                        cell_channels[j], cell_channels[i])
+                triple = (cell_scenarios[i], cell_styles[i], cell_channels[i])
                 attempts += 1
+            used_triples.add(triple)
 
-            used_pairs.add((scenario, style))
-            cell_assignments.append({
+        for i in range(count):
+            assignments.append({
                 "urgency": urgency,
                 "emotion": emotion,
-                "scenario": scenario,
-                "style": style,
+                "scenario": cell_scenarios[i],
+                "style": cell_styles[i],
+                "channel": cell_channels[i],
                 "system_prompt_idx": cell_idx % 3,
             })
-            s_idx += 1
-            t_idx += 1
 
-        assignments.extend(cell_assignments)
+        offset += count
 
-    # --- Validate constraints ------------------------------------------------
+    # --- Validate constraints ----------------------------------------------
     from collections import Counter
 
     scenario_counts = Counter(a["scenario"] for a in assignments)
     style_counts = Counter(a["style"] for a in assignments)
+    channel_counts = Counter(a["channel"] for a in assignments)
 
     for sc, cnt in scenario_counts.items():
-        if cnt < 10:
-            raise ValueError(f"Scenario '{sc}' only assigned {cnt} times (<10)")
+        if cnt < 11:
+            raise ValueError(f"Scenario '{sc}' only assigned {cnt} times (<11)")
     for st, cnt in style_counts.items():
-        if cnt < 16:
-            raise ValueError(f"Style '{st}' only assigned {cnt} times (<16)")
+        if cnt < 28:
+            raise ValueError(f"Style '{st}' only assigned {cnt} times (<28)")
+    for ch, cnt in channel_counts.items():
+        if cnt < 56:
+            raise ValueError(f"Channel '{ch}' only assigned {cnt} times (<56)")
 
     assert len(assignments) == total, f"Expected {total}, got {len(assignments)}"
     return assignments
@@ -107,9 +120,14 @@ if __name__ == "__main__":
     for st, cnt in sorted(Counter(a["style"] for a in assignments).items()):
         print(f"  {st}: {cnt}")
 
+    print("\nChannel distribution:")
+    for ch, cnt in sorted(Counter(a["channel"] for a in assignments).items()):
+        print(f"  {ch}: {cnt}")
+
     print("\nPer-cell breakdown:")
     for urg, emo, count in GRID:
-        cell = [a for a in assignments if a["urgency"] == urg and a["emotion"] == emo]
-        pairs = [(a["scenario"], a["style"]) for a in cell]
-        print(f"  {urg} urgency × {emo} emotion: {len(cell)} complaints, "
-              f"unique pairs: {len(set(pairs))}/{len(pairs)}")
+        cell = [a for a in assignments
+                if a["urgency"] == urg and a["emotion"] == emo]
+        triples = [(a["scenario"], a["style"], a["channel"]) for a in cell]
+        print(f"  {urg} urgency x {emo} emotion: {len(cell)} complaints, "
+              f"unique triples: {len(set(triples))}/{len(triples)}")

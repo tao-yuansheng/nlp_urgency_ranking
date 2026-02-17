@@ -1,4 +1,4 @@
-"""Generate 50 synthetic telecoms complaints using OpenAI GPT-4o-mini."""
+"""Generate 225 synthetic telecoms complaints using OpenAI GPT-5-mini."""
 
 import json
 import os
@@ -40,8 +40,10 @@ def _build_user_prompt(cell_assignments: list[dict]) -> str:
             divergence_note = (
                 "\nIMPORTANT: The urgency and emotion levels are intentionally "
                 "different. The customer is highly emotional and upset, but the "
-                "underlying issue is relatively minor. They are overreacting to a "
-                "small problem — the anger is disproportionate to the situation.\n\n"
+                "underlying issue is relatively minor. The emotional intensity "
+                "is genuine — some customers feel strongly about issues that "
+                "others might consider small. Write the complaint with authentic "
+                "high emotion while keeping the actual problem minor in scope.\n\n"
             )
 
     header = (
@@ -50,8 +52,19 @@ def _build_user_prompt(cell_assignments: list[dict]) -> str:
         f"Urgency: {urgency} — {URGENCY_DEFINITIONS[urgency]}\n"
         f"Emotion: {emotion} — {EMOTION_DEFINITIONS[emotion]}\n\n"
         f"{divergence_note}"
-        f"Each complaint has a specific scenario and writing style listed below. "
-        f"Make every complaint sound unique — vary phrasing, length, and details.\n\n"
+        f"Each complaint has a specific scenario, writing style, and "
+        f"communication channel listed below. Make every complaint sound "
+        f"unique — vary phrasing, length, and details.\n\n"
+        f"For realism, include where appropriate:\n"
+        f"- Account or reference numbers (e.g., ACC-7291834, REF-20240315)\n"
+        f"- Specific dates of incidents and prior contacts\n"
+        f"- Names of staff spoken to previously\n"
+        f"- Prior contact history ('I have already called three times')\n"
+        f"- Greetings and sign-offs appropriate to the channel\n"
+        f"- Channel-appropriate formatting (emails are structured with "
+        f"paragraphs; live chats are short and immediate; online forms tend "
+        f"to be concise and structured; social media posts are brief and "
+        f"public-facing, possibly with @mentions or hashtags)\n\n"
     )
 
     items = []
@@ -60,6 +73,7 @@ def _build_user_prompt(cell_assignments: list[dict]) -> str:
             f"Complaint {i}:\n"
             f"  Scenario: {a['scenario']}\n"
             f"  Style: {a['style']}\n"
+            f"  Channel: {a['channel']}\n"
         )
 
     footer = (
@@ -73,7 +87,7 @@ def _build_user_prompt(cell_assignments: list[dict]) -> str:
 
 
 def generate_all(seed: int = 42) -> pd.DataFrame:
-    """Generate all 100 complaints and return a DataFrame."""
+    """Generate all 225 complaints and return a DataFrame."""
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         print("Error: OPENAI_API_KEY not set. Add it to .env or environment.")
@@ -98,11 +112,11 @@ def generate_all(seed: int = 42) -> pd.DataFrame:
         user_prompt = _build_user_prompt(cell_assignments)
 
         print(f"Generating cell {cell_idx + 1}/9: "
-              f"{urgency} urgency × {emotion} emotion "
+              f"{urgency} urgency x {emotion} emotion "
               f"({len(cell_assignments)} complaints)...")
 
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-5-mini",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
@@ -131,6 +145,7 @@ def generate_all(seed: int = 42) -> pd.DataFrame:
                 "intended_emotion": a["emotion"],
                 "scenario": a["scenario"],
                 "style": a["style"],
+                "channel": a["channel"],
             })
             complaint_id += 1
 
@@ -151,7 +166,9 @@ def main() -> None:
     print(df["scenario"].value_counts().to_string())
     print("\nStyle counts:")
     print(df["style"].value_counts().to_string())
-    print("\nUrgency × Emotion counts:")
+    print("\nChannel counts:")
+    print(df["channel"].value_counts().to_string())
+    print("\nUrgency x Emotion counts:")
     print(df.groupby(["intended_urgency", "intended_emotion"]).size().to_string())
 
 
