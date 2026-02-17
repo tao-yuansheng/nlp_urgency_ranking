@@ -1,101 +1,845 @@
-﻿id,complaint_text,intended_urgency,intended_emotion,scenario,style
-1,"I am experiencing a network outage in my area. The coverage is consistently poor, and I am unable to make calls or use data. This has been ongoing for several hours.",Low,Low,Network outage / poor coverage,Angry and blunt
-2,I was surprised to see additional fees on my recent bill that I was not expecting. I would like clarification on these charges as they do not align with what I was quoted initially.,Low,Low,Billing overcharge / unexpected fees,Angry and blunt
-3,It’s amusing how transferring my number has taken so long. It’s almost as if the system is having a hard time figuring out if I’m actually a customer worth keeping. Perhaps I should just wait another week for it.,Low,Low,Porting / number transfer issues,Passive-aggressive / sarcastic
-4,It seems quite interesting that an early termination fee appears on my account when I was promised otherwise. It’s nice to see that contracts can be interpreted so flexibly.,Low,Low,Contract dispute / early termination fee,Passive-aggressive / sarcastic
-5,"I am writing to formally address an overcharge on my latest bill. The amount exceeds the service fees I agreed to, and I would appreciate a prompt explanation and correction of this matter.",Low,Low,Billing overcharge / unexpected fees,Formal professional
-6,"I’ve been trying to cancel my service for over a week now, and each time I call, it feels like I'm going in circles. It should not be this complicated.",Low,Low,Service cancellation difficulty,Casual conversational
-7,"This letter serves to address my difficulties with cancelling my service. I have reached out multiple times with no resolution, which is quite disappointing. I request immediate action on this matter.",Low,Low,Service cancellation difficulty,Formal professional
-8,"I've run into some unexpected roaming charges during my trip abroad. I assumed my plan would cover international use, but it appears that I was mistaken.",Low,Low,Roaming charges / international billing,Casual conversational
-9,"I contacted customer service for assistance, but I found the representative to be quite unhelpful and rude. It would be nice to be treated with respect when I seek help.",Low,Low,Rude or unhelpful customer service,Non-native English
-10,"Hello, I have to say I’m quite confused. I wish to cancel my plan, but the process seems so difficult. It is like they don’t want me to leave at all.",Low,Low,Service cancellation difficulty,Non-native English
-11,I have noticed a persistent issue with the quality of the network in my location recently. It would be great if something could be done about the connectivity problems.,Low,Low,Network outage / poor coverage,Casual conversational
-12,I was reviewing my bill and noticed an increase without any prior notice. It would be nice to have clarity on where these added charges are coming from.,Low,Low,Billing overcharge / unexpected fees,Casual conversational
-13,I JUST GOT MY BILL AND I'M SEEING EXTRA CHARGES! THIS IS UNACCEPTABLE! FIX IT NOW!,Low,Medium,Billing overcharge / unexpected fees,Angry and blunt
-14,"Hello, I have problem with network. It’s very bad. I can't talk. It makes me very sad.",Low,Medium,Network outage / poor coverage,Non-native English
-15,"Oh great, another dead zone! I just LOVE paying for a service that barely works! Can I get a discount for my creativity in finding the only spot with no coverage?",Low,Medium,Network outage / poor coverage,Passive-aggressive / sarcastic
-16,"I spoke to your customer service today, and they were so unhelpful! I am really frustrated with the complete lack of support!",Low,Medium,Rude or unhelpful customer service,Angry and blunt
-17,"Please, I want to cancel my service but it very hard! Your system don’t let me! I am confused!",Low,Medium,Service cancellation difficulty,Non-native English
-18,"Why is it taking forever to transfer my number? This is ridiculous! I just want my old number back, this should’ve been simple!",Low,Medium,Porting / number transfer issues,Angry and blunt
-19,Hey there! I’m a bit confused about my bill because I see charges I didn’t expect! Can you help explain that?,Low,Medium,Billing overcharge / unexpected fees,Casual conversational
-20,"Excuse me, I tried to cancel my plan but there is an early termination fee? I thought I was clear, I don’t understand!",Low,Medium,Contract dispute / early termination fee,Non-native English
-21,I am writing to express my displeasure at how difficult it has been to cancel my service. The entire process has been unnecessarily complicated.,Low,Medium,Service cancellation difficulty,Formal professional
-22,"Wow, you guys sure make it easy to cancel a service... NOT! It’s almost like you don’t want customers to leave!",Low,Medium,Service cancellation difficulty,Passive-aggressive / sarcastic
-23,I’m extremely annoyed about being charged an early termination fee! That’s just not fair! This is such a bad practice!,Low,Medium,Contract dispute / early termination fee,Angry and blunt
-24,"Hey, I just noticed an UNEXPECTED CHARGE on my bill this month!!! What the heck is this??? I am so freaking tired of getting overcharged for NO REASON!!! Can someone please EXPLAIN THIS???",Low,High,Billing overcharge / unexpected fees,Casual conversational
-25,"I try to change my number to new provider but is very DIFFICULT!!! My number still not transfer, I am GETTING ANNOYED!!! This is not nice for me, why you make this so HARD???",Low,High,Porting / number transfer issues,Non-native English
-26,"I must express my dissatisfaction regarding the assistance I recently received. The representative was rather UNHELPFUL and their manner was decidedly RUDE. I expect a high level of service, and this was utterly UNACCEPTABLE. I want to speak to a MANAGER NOW!!!",Low,High,Rude or unhelpful customer service,Formal professional
-27,"I am writing to formally address the issues I have encountered with the transfer of my telephone number. It has been a tedious process, and the communication from your team has been severely LACKING. This is not how one should handle such a crucial aspect of customer service! I demand PROMPT ATTENTION to this matter!!!",Low,High,Porting / number transfer issues,Formal professional
-28,The coverage on my phone is absolutely TERRIBLE!!! I can’t believe I pay for this service and my calls drop EVERY TIME I’m in my house!! This is just STUPID and I am fed up!!!,Low,High,Network outage / poor coverage,Non-native English
-29,"Oh wow, apparently you can just throw around 'early termination fees' like they're candy!!! I love being SCAMMED!! I wish I had a dollar for every time I heard this nonsense—then I could cover that ridiculous fee!!! Thanks for NOTHING!!!",Low,High,Contract dispute / early termination fee,Passive-aggressive / sarcastic
-30,"So I traveled internationally and, SURPRISE, I got slapped with ROAMING CHARGES that I never agreed to!!! This is a complete JOKE!!! I can hardly take a trip without having to deal with your ridiculous billing practices!!! Do better!!!",Low,High,Roaming charges / international billing,Passive-aggressive / sarcastic
-31,"You guys really think it's okay for my internet to be SLOWER THAN MOLASSES?!!! I mean, come on!!! I’m just trying to stream a show here, and it’s taking FOREVER!!! This is absolutely CRIMINAL!!!",Low,High,Slow or unreliable internet speed,Passive-aggressive / sarcastic
-32,"I am deeply disappointed with the speed of my internet connection. It is consistently SLOW and UNRELIABLE. Please address this issue promptly, as it is disrupting my ability to work effectively from home. Clear communication regarding this issue would also be appreciated.",Low,High,Slow or unreliable internet speed,Formal professional
-33,"Seriously, what is UP with the network coverage??? I genuinely cannot get a signal in half my house!!! It’s like you WANT me to cancel my plan!!! Work on FIXING THIS NOW!!!",Low,High,Network outage / poor coverage,Angry and blunt
-34,"I cannot believe how HARD it has been to get my number transferred. It’s like pulling TEETH!!! I’ve called like a MILLION TIMES, and I’m STILL waiting!!! This is RIDICULOUS!!!",Low,High,Porting / number transfer issues,Casual conversational
-35,"Hey there, I just wanted to ask about the early termination fee on my contract. I thought I understood the terms, but now it seems like I'm being charged more than I should. Can you help clarify this for me?",Medium,Low,Contract dispute / early termination fee,Casual conversational
-36,"I am writing to formally report a recent network outage that has affected my ability to use your services. The connectivity issues have persisted for several hours, and I would appreciate an update on when normal service will be restored. Thank you.",Medium,Low,Network outage / poor coverage,Formal professional
-37,"Your internet speed is really not what was promised. It’s been excruciatingly slow, and I’m just tired of it. I expect better service, especially considering what I’m paying each month.",Medium,Low,Slow or unreliable internet speed,Angry and blunt
-38,"I noticed an unexpected charge on my latest bill. It’s not a huge amount, but it's frustrating to see fees that I did not anticipate. Can you explain this to me? It would be great to understand where this extra charge came from.",Medium,Low,Billing overcharge / unexpected fees,Casual conversational
-39,"I recently returned from overseas, and I was quite surprised to see roaming charges on my bill. I thought my plan included international usage. Seems like a great way to make extra money off your customers.",Medium,Low,Roaming charges / international billing,Passive-aggressive / sarcastic
-40,"I have a question about my bill. There is a charge that I didn’t expect, and I’m not sure what it is for. I would appreciate your help in understanding this situation as I don’t want to pay for something I didn’t agree to.",Medium,Low,Billing overcharge / unexpected fees,Non-native English
-41,The coverage in my area has been spotty for a while now. It’s almost like I’m paying for a service that doesn’t even reach my home. Perhaps I should be paying less for such unreliable access?,Medium,Low,Network outage / poor coverage,Passive-aggressive / sarcastic
-42,I had an interaction with customer service recently that was quite frustrating. The representative seemed uninterested in helping my situation and did not provide any useful information. I would like to see improvements in this area.,Medium,Low,Rude or unhelpful customer service,Casual conversational
-43,"I cannot believe the early termination fee you’re trying to impose on my account. It feels like a way to trap customers. If I’m leaving, I’d expect to just stop paying—not get slapped with an extra charge.",Medium,Low,Contract dispute / early termination fee,Passive-aggressive / sarcastic
-44,"The internet at my home is painfully slow. I’m not sure how you define 'high-speed', but it certainly isn’t what I’m experiencing. Maybe I should consider other options if this continues.",Medium,Low,Slow or unreliable internet speed,Passive-aggressive / sarcastic
-45,"I’ve been trying to cancel my service for a while now, and it’s been more complicated than it should be. I just want to stop my service without all of these hurdles. Can someone assist me with this?",Medium,Low,Service cancellation difficulty,Casual conversational
-46,"I CAN'T BELIEVE HOW LONG THIS PORTING PROCESS IS TAKING! It’s ridiculous! I want my number transferred NOW, not in a week!",Medium,Medium,Porting / number transfer issues,Angry and blunt
-47,I am very confusing about the termination fee. I thought I can leave the contract without penalty. Why charge me? Please help to understand.,Medium,Medium,Contract dispute / early termination fee,Non-native English
-48,I am quite disappointed with the internet speed! It’s so slow! I pay for high speed but can barely load websites! This is not acceptable!,Medium,Medium,Slow or unreliable internet speed,Non-native English
-49,"Dear Customer Service, I am writing to formally dispute the roaming charges applied to my recent bill. I believed I was covered exactly as stated in my contract but am facing unexpected fees. I seek clarification and resolution on this matter promptly.",Medium,Medium,Roaming charges / international billing,Formal professional
-50,"YOUR ROAMING CHARGES ARE RIDICULOUS! I went to another country, but the fees are insane! This is not what I signed up for!!",Medium,Medium,Roaming charges / international billing,Angry and blunt
-51,"I had a question, and the customer service person was rude. It was really frustrating! I need help, not attitude! Can someone please be nice?",Medium,Medium,Rude or unhelpful customer service,Non-native English
-52,Oh great! Another outage! This is just wonderful! I’m so glad I pay for this service that doesn’t work half the time. Keep it up!,Medium,Medium,Network outage / poor coverage,Passive-aggressive / sarcastic
-53,"Received my bill today, and guess what? There’s an unexpected fee! Just what I needed - a surprise charge on top of everything! Guess I'll just keep giving you my money!",Medium,Medium,Billing overcharge / unexpected fees,Passive-aggressive / sarcastic
-54,"I want to cancel my service, but it is so difficult! I called and nobody help me! It is frustrating! Please, I just want to cancel!",Medium,Medium,Service cancellation difficulty,Non-native English
-55,I am furious! The network coverage is terrible! I can't even make calls! What am I paying for?! This is unacceptable!,Medium,Medium,Network outage / poor coverage,Angry and blunt
-56,Really?! I get charged an early termination fee while your service was terrible?? This is how you treat loyal customers? I expect a reversal of this fee immediately!,Medium,Medium,Contract dispute / early termination fee,Angry and blunt
-57,"I am utterly DISAPPOINTED with the SERVICE I received from your team today!! The customer service representative was incredibly RUDE and UNHELPFUL. This is NOT the way to treat paying customers!!! I expect a prompt response, and I DEMAND to speak to a MANAGER NOW!!!",Medium,High,Rude or unhelpful customer service,Formal professional
-58,"So, I guess I'm now an international BILLIONAIRE?? Just got my latest bill with RIDICULOUS roaming charges when I was just in Canada for two days. Thanks for giving my wallet a workout while I was away!! I can’t believe this is how you treat your CUSTOMERS!!",Medium,High,Roaming charges / international billing,Passive-aggressive / sarcastic
-59,"I am very angry about service. When I call, the person is always SO RUDE!!! I don’t understand why your support isn’t better. This is not acceptable! Please make this right or I will change provider!!!",Medium,High,Rude or unhelpful customer service,Non-native English
-60,"Hey there, just wanted to say I’m a bit upset that I’ve been charged EXTRA on my bill this month. I thought my plan was LOCKED IN. I mean, what's going on?? I shouldn't be paying more, this is honestly so frustrating!!",Medium,High,Billing overcharge / unexpected fees,Casual conversational
-61,It is RIDICULOUS that I cannot cancel my service without jumping through HUNDREDS of hoops!! Your process is absolutely DISGUSTING!!! I want this sorted OUT IMMEDIATELY and do NOT want to deal with this any longer!!!!,Medium,High,Service cancellation difficulty,Formal professional
-62,"I am trying to port my number over for 2 weeks now, and it is incredibly FRUSTRATING!!! I expected this to be a SIMPLE process, but your team couldn't figure it out. I NEED this resolved TODAY!!",Medium,High,Porting / number transfer issues,Formal professional
-63,"Wow, a £45 charge out of nowhere! I thought this was a MISTAKE but looks like your company just LOVES to play games with customers' money. Is this how you treat loyal customers?? I am clearly not impressed!!!",Medium,High,Billing overcharge / unexpected fees,Passive-aggressive / sarcastic
-64,I am not happy with my contract!! I was told I could end it early without penalties but now I see you want to charge me for that?! This is absolutely unacceptable!!! Help me understand why I should stay with you??,Medium,High,Contract dispute / early termination fee,Non-native English
-65,I don't like how your service is. The customer service answer is NOT good at all!! I can't change my plan without a fuss! I will find another company if it does not improve!!! This is too much!!!,Medium,High,Rude or unhelpful customer service,Casual conversational
-66,My cancel service attempt is complete nightmare!! Why is this so hard?? Your customer service is not helping at all!! I will never give you money again if this continues!!!,Medium,High,Service cancellation difficulty,Non-native English
-67,"This internet is BROKEN!! I CAN'T believe how SLOW it is!! I pay good money for this service, and honestly, I am DONE!!!!! It’s embarrassing and unacceptable!!",Medium,High,Slow or unreliable internet speed,Angry and blunt
-68,"I am writing to formally address an issue regarding the porting of my mobile number. The process took longer than anticipated and resulted in a loss of service for several days. I would appreciate an update on the resolution of this matter, as the lack of communication has caused significant inconvenience.",High,Low,Porting / number transfer issues,Formal professional
-69,"I use your service while traveling abroad, but I have been receiving roaming charges that I was not informed about. The fees are all higher than expected, and it is quite confusing. I would like clarification on these charges and how they were applied to my account.",High,Low,Roaming charges / international billing,Non-native English
-70,I've been dealing with customer service regarding my account issues and I found the representatives to be quite rude. I didn’t expect this level of service and would like to report this behavior as it was unhelpful in resolving my concerns.,High,Low,Rude or unhelpful customer service,Casual conversational
-71,I have a problem with the transfer of my number. It has not completed as promised and now I am unable to use my phone. I would like to know when this issue will be rectified. This situation is difficult and requires urgent attention.,High,Low,Porting / number transfer issues,Non-native English
-72,"The network coverage has been nonexistent in my area for the past week. I am unable to make calls or use data, which is problematic. I need a clear timeline for when service will resume, as this has disrupted my daily activities.",High,Low,Network outage / poor coverage,Angry and blunt
-73,I was charged an amount on my last bill that I was not expecting. This overcharge was not communicated to me beforehand. I need a detailed explanation of my billing because I do not understand these additional fees.,High,Low,Billing overcharge / unexpected fees,Angry and blunt
-74,"Hey there, I just got my bill and there are some charges I didn’t know about. It seems like I’m being overcharged and I would like to see what’s going on. Can someone help me figure this out? Thanks.",High,Low,Billing overcharge / unexpected fees,Casual conversational
-75,"I wanted to let you know that the network has been down where I live for several days. I can't use my phone at all, and it's really frustrating. Please look into this as soon as possible because I need to make calls.",High,Low,Network outage / poor coverage,Casual conversational
-76,I request clarification regarding the roaming charges on my recent bill. It appears that I was charged for services while traveling overseas without a proper explanation. I need a comprehensive breakdown of these charges to understand them better.,High,Low,Roaming charges / international billing,Formal professional
-77,The transfer of my number to another provider has not been completed and I have lost access to my account. This is unacceptable and I need this issue resolved immediately. Please advise on how to proceed.,High,Low,Porting / number transfer issues,Angry and blunt
-78,I'm really upset about these international charges on my latest bill. They are way more than I expected and I wasn’t informed. I need to know why this happened because it's significantly impacting my finances.,High,Low,Roaming charges / international billing,Angry and blunt
-79,I don’t understand why you charge me for early termination fee. I think it's unfair. I never want to cancel contract! Can you explain please?,High,Medium,Contract dispute / early termination fee,Non-native English
-80,I am reaching out regarding unexpected roaming charges during my business trip. It’s quite disappointing to see such inflated costs without prior notice. I expect prompt clarification and resolution.,High,Medium,Roaming charges / international billing,Formal professional
-81,Why is it so hard to cancel my service? I’ve called THREE times and got NO help! This is ridiculous. Just cancel it already!!,High,Medium,Service cancellation difficulty,Angry and blunt
-82,I tried to speak with your customer service today and they were extremely rude. It’s unacceptable! I deserve respect and proper help for my issues.,High,Medium,Rude or unhelpful customer service,Formal professional
-83,"Wow, I really love how you hit me with an early termination fee just when I thought I was done with you! What a way to keep customers happy! So thrilled right now.",High,Medium,Contract dispute / early termination fee,Passive-aggressive / sarcastic
-84,"So, you port my number without confirming with me first? That’s just fantastic. Really great service you got here. I’ll definitely tell my friends how awesome it is.",High,Medium,Porting / number transfer issues,Passive-aggressive / sarcastic
-85,This network outage has been going on for DAYS! How am I supposed to work like this? Your coverage is a joke and I’m losing business because of it!,High,Medium,Network outage / poor coverage,Passive-aggressive / sarcastic
-86,I don’t know why my number transfer took days! No one helped me! Can you please tell me what’s going on? It’s very confusing and I’m not happy!,High,Medium,Porting / number transfer issues,Non-native English
-87,Your customer service is terrible! The person I spoke to was completely unhelpful! I couldn’t believe how dismissive they were. FIX THIS NOW!,High,Medium,Rude or unhelpful customer service,Angry and blunt
-88,"Seriously, my number was supposed to port yesterday! Why is it still not working? I am really upset and need my phone back now!!",High,Medium,Porting / number transfer issues,Angry and blunt
-89,I am so frustrated! I called for help and the representative was so rude. I just wanted a simple answer and got treated like a bother! This is not how you treat customers!,High,Medium,Rude or unhelpful customer service,Non-native English
-90,"Wow, I just LOVE being overcharged $250 on my bill this month! Really makes my day!!! I must have missed the memo where you guys decided to charge me for the PRIVILEGE of being a customer! This is absolutely RIDICULOUS!!!",High,High,Billing overcharge / unexpected fees,Passive-aggressive / sarcastic
-91,"I am BEYOND frustrated!! My internet speed is so SLOW it might as well be dial-up!!! I can hardly load a webpage and streaming? Forget it! This is NOT what I’m paying for!!! Seriously, FIX THIS NOW!!!",High,High,Slow or unreliable internet speed,Angry and blunt
-92,I am INCREDIBLY ANGRY!!! I tried to port my number weeks ago and it STILL hasn’t gone through! I can’t believe you don't know what you're doing!! My business depends on this!! I WANT MY NUMBER TRANSFERRED IMMEDIATELY!!!,High,High,Porting / number transfer issues,Angry and blunt
-93,"Oh great, ANOTHER network outage!!! What a SURPRISE!!! I’ve been WITHOUT service for DAYS now while you keep telling me it’s being 'resolved'. Let’s just say I’m REALLY looking forward to my next bill, which better NOT include anything for these days of NO SERVICE!!!!",High,High,Network outage / poor coverage,Passive-aggressive / sarcastic
-94,Just a note: your SO-CALLED 'high-speed' internet is a JOKE. It’s like you took a page out of a history book! My connection is SO SLOW that it makes watching paint dry feel exciting! FIX THIS or I’m GONE!!!,High,High,Slow or unreliable internet speed,Passive-aggressive / sarcastic
-95,"Dear Customer Service, I am writing to formally express my dissatisfaction with the persistent issues regarding the unreliable internet speeds I have experienced. This has severely impacted my ability to work from home. I kindly request immediate intervention on your part to resolve this issue.",High,High,Slow or unreliable internet speed,Formal professional
-96,"I just wanted to say that your internet is a total disaster! Seriously, how can you even call it 'broadband' when I can’t even load a simple website!? This is not cool, guys!!! Can I PLEASE just get what I’m actually paying for? UGH!",High,High,Slow or unreliable internet speed,Casual conversational
-97,"Hello! I’m very sad because my internet is always very slow!!! I can watch movie, but it no load. It always stop and go!!! PLEASE help me fast! I need for work and play. Thank you!!!",High,High,Slow or unreliable internet speed,Non-native English
-98,"Why am I getting huge roaming charges when I didn’t even use my phone abroad?! This is SO confusing!!! I thought I had everything sorted out, but now I’m facing a hefty bill! Can someone please HELP ME figure this out???",High,High,Roaming charges / international billing,Non-native English
-99,"I just don't understand why my bill jumped by $100 this month!!! I didn't even change my plan! What’s up with that? This is quite frustrating, you know? Can someone please break down these charges? I thought we were past these issues!",High,High,Billing overcharge / unexpected fees,Casual conversational
-100,"I called your support line and the agent was super rude!!! I can’t believe how unhelpful they were! I’m seeking help, not attitude! I am DONE with this service if I can't get someone who knows what they are doing!!!",High,High,Rude or unhelpful customer service,Casual conversational
+﻿id,complaint_text,intended_urgency,intended_emotion,scenario,style,channel
+1,Hi @BroadNetUK — I have been a customer since 2017 (ACC-7291834). I recently contacted customer services on 2026-02-02 and was told a retention discount would be offered but nothing was applied to my bill (account shows standard tariff). I asked for a loyalty adjustment or a clear explanation of why I do not qualify. Please review REF-20260203 and advise whether a retention offer can be applied to my account. Thank you.,Low,Low,Customer loyalty not rewarded / retention offer dispute,Polite but firm,social media
+2,"Hello @GlobeTel, I travelled to France 2026-01-12–2026-01-18 and have been charged £9.50 for data despite selecting the roaming add-on before travel. REF-20260125 and ACC-8810921. I called on 2026-01-20 and spoke to Priya who said it would be reversed; as of the 2026-02 bill the charge remains. Please can you confirm your findings and correct the bill when convenient.",Low,Low,Roaming charges / international billing,Polite but firm,social media
+3,"Account number: ACC-3344556
+Preferred contact: email
+Issue: Accessibility - captions and transcripts
+Description: I use text-based support for calls and need captioning on voicemail transcripts. On 2026-01-28 I requested transcript formatting to be plain text (support ref REF-20260128-A). The transcripts I received are images and not accessible with my screen reader. Could you update my preferences to plain text and confirm the change? I have time to wait for an update.",Low,Low,Accessibility needs not met,Casual conversational,online form
+4,"Dear Support,
+I am writing about a recent call on 2026-02-09 (ACC-990112). The advisor I spoke to did not provide the information requested and ended the call early. Please arrange a callback at a convenient time to complete the query. REF-20260209.
+Regards,
+Sarah C.",Low,Low,Rude or unhelpful customer service,Terse and minimal,email
+5,"Account: ACC-5567788
+Device: Pixel 6a (IMEI 356789012345678)
+Problem: Touchscreen intermittently unresponsive since 2026-01-05. I visited a store on 2026-01-22 and was told it might be a software issue. The device is still under manufacturer warranty. I would like clarification on repair options or a replacement process and an estimated timeline. REF-20260123.",Low,Low,Device / handset fault or warranty dispute,Casual conversational,online form
+6,"Account: ACC-220011
+Issue: Number porting failed
+Details: Requested port from OldNet on 2026-02-01 (port request PR-20260201). Number still with old provider; service interruption minimal but inconvenient. Please confirm status and expected completion date. No urgency; can wait.",Low,Low,Porting / number transfer issues,Terse and minimal,online form
+7,"Dear Complaints Team,
+Account: ACC-441100
+I am writing to formally note an interaction on 2026-01-15 in which the representative, Mr. Ahmed Khan, provided incomplete information regarding my plan migration. I requested written confirmation of next steps and did not receive it. Please provide the requested documentation and a summary of what was discussed. I expect a reply within a reasonable timeframe.
+Kind regards,
+Eleanor P.
+REF-20260116",Low,Low,Rude or unhelpful customer service,Formal professional,email
+8,"Hi — I'm on chat because my area (postcode SE15 4AB) had intermittent 4G drops between 2026-01-10 and 2026-01-18. It started fine on the morning of 2026-01-10, then calls often dropped in the afternoons. Signal fluctuated from two bars to no service for short periods. I can provide exact times if helpful; I wanted to log this so you have a record. No immediate need for a fix, just please investigate coverage in the area when you can. ACC-778899.",Low,Low,Network outage / poor coverage,Narrative / storytelling,live chat
+9,"Account: ACC-663322
+Product: Broadband plus phone
+I was sold 'unlimited uploads' by a sales advisor on 2026-01-05 but my upload speed is capped and I now see a policy limiting uploads to a daily quota. The sales advisor's notes (SALE-20260105) indicated no cap. Please review the sales recording and confirm whether the plan was misdescribed and, if so, how this will be corrected.",Low,Low,Mis-selling / misleading sales practices,Casual conversational,online form
+10,"Hello,
+Account: ACC-775511
+I was billed a roaming fee of £7.20 on 2026-01-14 despite being on an international add-on. Please review REF-20260116 and advise corrections. ACC-775511.
+Thank you.",Low,Low,Roaming charges / international billing,Terse and minimal,email
+11,"@ConnectRight I am aware of my rights under the Consumer Rights Act 2015. My handset (ACC-554433, IMEI 012345678901234) developed a hardware fault on 2025-12-27 and the store declined to repair under warranty on 2026-01-04 citing accidental damage without substantive evidence. Please confirm your warranty position in writing and provide details of the appeals process. REF-20260105. I request a clear next step within 14 days.",Low,Low,Device / handset fault or warranty dispute,Legalistic / rights-aware,social media
+12,"Account: ACC-990044
+Preferred contact: phone (sms if not available)
+Issue: Accessibility support missing
+Details: I require large print and TTY-friendly documents for account notices. On 2026-01-19 I received standard-size PDFs which are difficult to read. Please update my account preferences to large print and confirm when this takes effect. REF-20260119.
+Thank you.",Low,Low,Accessibility needs not met,Formal professional,online form
+13,Hi @SignalWave — I ordered an eSIM on 2026-02-03 (ACC-888003) and the activation QR did not register on my phone. I tried the steps in your guide and restarted the device. No service yet; the order shows active. Any chance you can push the activation or resend the QR? I’m keeping my old SIM in the interim and this is not urgent.,Low,Low,SIM card / eSIM activation problem,Casual conversational,social media
+14,"Dear Customer Relations,
+Account: ACC-121314
+I am writing to report an incident from 2026-01-30 involving my elderly mother, who is registered as a vulnerable customer. She called to discuss a billing query and the advisor ended the call before confirming the next steps. My mother felt unsettled by the abrupt ending. Please let me know what training or process is in place for vulnerable customers and how you will follow up. I am available by email to discuss further. REF-20260131.
+Yours sincerely,
+Thomas L.",Low,Low,Vulnerable customer mistreatment,Narrative / storytelling,email
+15,"Hi, I’ve had three separate issues open (billing query, faulty voicemail, and a SIM swap) over the last month. Account ACC-334211. I called on 2026-01-12, 2026-01-20 and 2026-02-02 and those contacts are logged under REF-20260112, REF-20260120, and REF-20260202. Can we consolidate the outstanding actions and a single expected completion date? I can wait for a coordinated update.",Low,Low,Multiple unresolved issues over time,Polite but firm,live chat
+16,"Hello,
+Account ACC-556900.
+Thanks for the help last week (call ref 20260205). I appreciated the agent's time. Slightly amusingly, I am now being told a different advisor gave a different resolution. If you could please confirm which process will be followed (escalation or refund) and update REF-20260205 accordingly, that would be helpful.
+Regards,
+M. Patel",Low,Low,Rude or unhelpful customer service,Passive-aggressive / sarcastic,email
+17,"Dear Support,
+Account: ACC-770011
+On 2026-01-18 my phone began intermittent rebooting. I have taken the device to a store (visit 2026-01-21) and spoken to two advisors (names: Claire and Marcus). Below are the relevant details:
+- Device: Galaxy S22, IMEI 490123456789012
+- Purchase date: 2024-11-10
+- Issue first occurred: 2026-01-18 (restarts approx every 2–3 hours)
+- Attempts made: factory reset (2026-01-20), software update (2026-01-20)
+- Store visit outcome: advised to log a warranty repair (REF-20260121-REP)
+I request a repair authorisation, an estimated repair time, and confirmation whether a replacement device is possible under warranty. Please also confirm how data will be handled during repair. ACC-770011.
+Thank you for your assistance.",Low,Low,Complaint handling process failure,Polite but firm,live chat
+18,"Account: ACC-337790
+Device: iPhone 12
+IMEI: 357890123456789
+Problem: Screen has developed vertical lines after a fall on 2026-01-09. I contacted support on 2026-01-12 and was advised to raise a warranty claim (REF-20260112). Please confirm whether this is covered under my device protection plan and advise next steps for repair or replacement. I would prefer a mail-in repair or drop-off appointment. Thank you.",Low,Low,Device / handset fault or warranty dispute,Verbose and detailed,online form
+19,"@MyNetCare My account ACC-004412 has had three open tickets for different problems for over a month. I’ve reported a slow broadband, a handset fault and a billing mismatch. REF-20260102, REF-20260115, REF-20260128. Please can someone provide a single summary update? No rush, just clarity would be appreciated.",Low,Low,Device / handset fault or warranty dispute,Polite but firm,online form
+20,"Dear Support,
+I purchased my handset from you in September 2024 (ACC-224466). In November 2025 the screen began to flicker and in December 2025 the camera failed. On 2026-01-10 I attended your city centre store and the assistant took details and suggested a repair. The repairs department returned the device on 2026-01-24 with the camera still faulty. I would like you to arrange a full diagnostic and either a confirmed repair schedule or a like-for-like replacement. I am happy to provide further receipts and the repair reference (REP-20260124) if required.
+Kind regards,
+Alex Greene",Low,Low,Multiple unresolved issues over time,Terse and minimal,social media
+21,Hi — contract ACC-558811. My partner moved house and I had to cancel an add-on line; we were charged an early termination fee of £120 on 2026-01-03. I was under the impression this specific add-on could be cancelled without fee per the advisor on 2025-12-20 (sales ref SALE-20251220). Can you review this charge and confirm whether the fee can be waived? Please update when convenient. Thanks.,Low,Low,Device / handset fault or warranty dispute,Narrative / storytelling,email
+22,"Hi, quick note on an overcharge: my bill shows a one-off fee of £3.99 for caller ID on 2026-01-28 that I do not recall subscribing to. ACC-668800. I can wait for a full investigation, but a correction would be appreciated when possible. Thanks for looking into REF-20260201.",Low,Low,Contract dispute / early termination fee,Casual conversational,social media
+23,"Hello,
+Account: ACC-441233
+I am writing to report repeated poor indoor coverage at my flat (postcode N1 7GU). Calls drop and 4G is inconsistent between 18:00 and 22:00 most evenings. I have logged this informally via chat twice (REF-20260111 and REF-20260125) and was promised an engineer visit; to date no appointment has been made. Please can you advise on next steps to assess indoor coverage and whether a signal booster or alternative solution is possible. I am not without service but would appreciate a scheduled assessment.
+Regards,
+Maya R.",Low,Low,Billing overcharge / unexpected fees,Passive-aggressive / sarcastic,live chat
+24,"Dear Support,
+Account ACC-992211
+I purchased my handset from an authorised retailer on 2024-10-02. On 2025-12-12 the screen stopped responding and the phone repeatedly booted. I called support on 2026-01-05 and lodged a claim (REF-20260105-WTY). I have followed the troubleshooting steps suggested by two agents and the issue persists. Please let me have a timeline for repair or replacement and confirmation that data will be backed up or instructions for a safe backup prior to any repair. I can attend a store appointment if required.
+Yours faithfully,
+Rebecca H.",Low,Low,Network outage / poor coverage,Passive-aggressive / sarcastic,email
+25,I signed up for a new package on 2026-01-03 after speaking to a sales rep who said the plan included unlimited international minutes to EU numbers. My contract (ACC-882244) states international minutes are capped. I have the sales call reference SALE-20260103 and would like a review of the call recording to confirm what was promised and how the discrepancy will be resolved. I can wait for a response.,Low,Low,Mis-selling / misleading sales practices,Narrative / storytelling,online form
+26,Account ACC-7291834: On 01/02/2026 my plan was downgraded to 'Essential 10GB' without my consent. I did not request this change. My bill still shows charges for '200GB Plus'. Please reinstate my original plan and correct the billing. REF-20260201.,Low,Medium,Service downgrade without consent,Terse and minimal,online form
+27,"Hi, I'm on the SuperFast 100 package but since 05/02 my speed tests show 4–6 Mbps (attached screenshots). I've chatted twice already — spoke to Raj on 07/02 (chat ref CHT-3345) — but the issue persists. Can you please arrange an engineer or explain why speeds drop so low? I'm disappointed and would like this investigated within a week.",Low,Medium,Slow or unreliable internet speed,Polite but firm,live chat
+28,"Hello, I am contacting you regarding an incident on 09/02/2026 when your advisor, 'Sophie', was dismissive and unhelpful during my live chat (chat ref 981722). I explained the billing discrepancy in detail and was repeatedly told to 'wait six weeks' with no clear justification. This service is unacceptable. I expect a formal apology, an explanation of your process for resolving billing errors, and confirmation of corrective action within 10 working days.",Low,Medium,Rude or unhelpful customer service,Formal professional,live chat
+29,"Hi there,
+
+I'm writing because my accessibility requirements (large-print bills and BSL interpreter option) were not recorded when I spoke to customer services on 03/02. The agent—Mark—said he'd add it, but my online account still shows no notes. I'm mildly frustrated as this makes managing my account harder. Can you please confirm you will update my preferences and tell me how long that will take?
+
+Thanks,
+Lucy Patel",Low,Medium,Accessibility needs not met,Casual conversational,email
+30,"Account: REF-20240115-BILL
+
+Summary: Unexpected roaming charges after a short trip to Spain.
+
+Details: I travelled to Barcelona from 15/01/2026 to 19/01/2026. Before travelling I called on 13/01 (call ref 887221) and explicitly asked about roaming rates, and was told that my 'International Lite' add-on would cover data and texts. My bill for January now contains a roaming charge of £34.17 for data on 17/01 and £12.50 for calls on 18/01. I have screenshots of the call notes from your agent (name given as Claire) and the on-screen confirmation message which said roaming included. I have already completed the online disputes form on 22/01 and spoken with your billing team twice (24/01 with Tom, ref BILL-445) who said they'd escalate, but there's been no resolution.
+
+I am requesting a full reversal of the disputed roaming charges and a written explanation of why the add-on did not apply. This is frustrating and has taken too long; please respond within 14 days with a clear remediation plan.
+
+Regards,
+Mohammed Rahman
+Account number: 441-998-772",Low,Medium,Roaming charges / international billing,Verbose and detailed,online form
+31,"I was at home on 11/02/2026 hosting a small online meeting and the network dropped repeatedly for three hours. It started at 10:05am and didn't fully stabilise until 13:10. I made three attempts to call support — waited on hold twice, then used the chat — and nobody could explain why the mast shows 'good' on your status page while I'm losing calls. I've been with you since 2018 and this level of unreliability is frustrating. Can you check mast 54C (near 12 High Street, postcode ME7 3BN) and let me know what's being done? I can wait for an engineer but want an update on planned fixes.",Low,Medium,Network outage / poor coverage,Narrative / storytelling,live chat
+32,"I started the number transfer on 02/02/2026 and was told it would complete within 48 hours. It's now 12/02 and my old number still isn't ported; calls to the new SIM go to voicemail and my old provider says the PAC was sent on 03/02. I was passed between teams: 'Transfers' said the delay was with your 'Networks' team, who said the PAC wasn't received. I was given two different reference numbers—PORT-20260204 and TRANS-5612—and nobody can tell me the status. This is annoying as I use this number for work contacts. Please provide a clear timeline and confirm when the port will complete.",Low,Medium,Porting / number transfer issues,Narrative / storytelling,live chat
+33,"Dear Customer Relations,
+
+I am writing because on 08/02/2026 I was treated rudely by an agent called Darren during a call about my direct debit. He interrupted me repeatedly, refused to provide his surname and claimed he 'couldn't find anything' when I had already supplied my account number (ACC-005492). I am aware of my rights under the Consumer Rights Act and the FCA guidelines about fair treatment; being brusque is not acceptable. I require a full account of what happened, evidence of the call recording, and confirmation that staff will receive retraining. I expect a substantive response within 14 days.
+
+Yours sincerely,
+Eleanor Finch
+Account: 005492",Low,Medium,Rude or unhelpful customer service,Legalistic / rights-aware,email
+34,"Hello,
+
+My phone, a Catalyst X1 purchased from you on 14/09/2025, developed a fault — the screen flickers and the touchscreen becomes unresponsive — after three months. I sent it in for repair on 27/11/2025 (repair ref RPR-1093) and was told it was covered by warranty. Instead of being repaired I received an identical refurbished unit which started doing the same thing last week. Marvelous. I have to say, I'm thrilled to be taking my phone to a shop again for the pleasure of arguing over warranty terms.
+
+Please arrange a proper repair or a replacement unit under warranty and let me know when I can drop the handset off. I'd rather not spend hours on hold again.
+
+Regards,
+Simon Clarke",Low,Medium,Device / handset fault or warranty dispute,Passive-aggressive / sarcastic,email
+35,"Hi,
+
+Thank you for moving my number so promptly... or not. You started the port on 28/01/2026 and promised completion within 24 hours. It's now 11/02 and my voicemail is full of messages from clients who can't reach me. I'm told by your team that 'there's nothing we can do'—how comforting. Perhaps you enjoy inconveniencing people; if so, do let me know so I can cancel everything and join someone who values customers.
+
+Anyway, please fix the port (ACC-332211) and confirm a completion time.
+
+Best,
+Amelia Ford",Low,Medium,Porting / number transfer issues,Passive-aggressive / sarcastic,email
+36,"Hey, my new handset (invoice INV-33478, delivery 10/01/2026) has started randomly rebooting while I am on calls. Called the helpdesk yesterday and the agent ran the basic checks but then said 'it's just the phone' and closed the chat. The device is still under the 12-month warranty. I would rather not be told to 'try turning it off and on again' by a paid advisor — please arrange a repair or replacement and give me an RMA number so I can send it in. Chat ref: LIVE-7782.",Low,Medium,Device / handset fault or warranty dispute,Narrative / storytelling,live chat
+37,"I have attempted to cancel my broadband twice: initially on 04/02/2026 (agent Zoe, ref CAN-441) and again on 09/02/2026 (agent Mahmood, ref CAN-459). Each time I was promised email confirmation; neither arrived. When I asked for a written confirmation in the chat today, the agent referred me to retention and put me on hold for 20 minutes before closing the chat. This is unprofessional. Please confirm my cancellation and provide the final account balance and closure date in writing within five working days.",Low,Medium,Service cancellation difficulty,Formal professional,live chat
+38,"Hello — billing query. Account 772-334: my February statement includes a £19.99 'service admin fee' that was not mentioned when I changed my package on 02/01 (I moved from 'Family 50' to 'Essentials Plus'). I called on 04/02 and was told the fee was a one-off; the agent (Liam, ref 6612) said they'd credit it back. The credit never appeared. Also there is an extra line charge of £7.50 for a device I returned in December (RMA-998). I've spent over an hour across three chats and am getting nowhere. Please itemise all charges for Jan–Feb and either refund the admin fee and remove the returned device charge or provide evidence of the contrary.",Low,Medium,Billing overcharge / unexpected fees,Verbose and detailed,live chat
+39,"@YourProvider I've been a customer for 8 years and was promised a retirement plan discount by your retention team during my last contract renewal call (23/01/2026, agent Paula, ref RET-223). Today I received an email offering a smaller discount than discussed — and no explanation. As a long-standing customer this is disappointing. Please review my case (Account 998-007) and restore the agreed offer, or explain why loyal customers are losing out. #CustomerService #Loyalty",Low,Medium,Customer loyalty not rewarded / retention offer dispute,Verbose and detailed,social media
+40,"Hi — urgent for your records: I am a vulnerable customer and yesterday (10/02) the advisor declined to note my communication needs when I asked for a simplified bill and voicemail transcriptions. I was short with your staff and felt dismissed. I don't require immediate medical assistance, but I do require that my account be handled with care. Please record my vulnerability flag on ACC-441122 and confirm the reasonable adjustments within five working days.",Low,Medium,Vulnerable customer mistreatment,Terse and minimal,live chat
+41,"Dear @YourProvider,
+
+I am writing about an incident on 05/02/2026 where the retention offer promised on the phone (REF: RET-1209) was not honoured. I have been a customer for 12 years and was told I would receive a 25% reduction for 12 months; the email I received later offered only 10%. I have already raised this with support (chat ref 7643) and requested escalation. As this involves my account pricing, please DM me to resolve and provide the correct amended contract or a clear explanation of why the original offer cannot be honoured.
+
+Kind regards,
+Thomas Avery
+Account: 112-334",Low,Medium,Customer loyalty not rewarded / retention offer dispute,Formal professional,social media
+42,"I am 68, partially sighted and rely on clear, large-print invoices. On 02/02 I sent an email asking for large text and simple billing, but when the technician visited on 06/02 no note was on my account and he handed me a standard printout. I had to ask a neighbour to read it. That is not acceptable. I expected better after explaining my needs on the phone. Please ensure the accessibility note is added and confirm next steps in writing.
+
+Sincerely,
+Margaret O'Neill",Low,Medium,Vulnerable customer mistreatment,Narrative / storytelling,email
+43,"I need clarification about my early termination fee. I cancelled my contract on 15/01/2026 because I’m relocating abroad for work (moving date 01/03). My Final Charges statement shows an ETF of £145. I'm aware of the pro-rata rule but the calculation shown is unclear — it lists 11 months remaining at £15.45 without explaining discounts or handset subsidy contributions. Please recalculate and, if possible, waive part of the fee due to relocation. Account ACC-554433. I expect a response within two weeks.",Low,Medium,Contract dispute / early termination fee,Polite but firm,online form
+44,"Thanks for your help earlier — or at least the theatrical hold music. After speaking to two different agents today (refs 9987 and 9988) about being put on a 'priority callback list' that never happened, I'm left wondering if 'priority' is code for 'never'. Please stop promising callbacks and actually do them, or stop using the term. My issue: wrong charges on my January bill (ACC-2219). Fix it.",Low,Medium,Rude or unhelpful customer service,Passive-aggressive / sarcastic,online form
+45,Porting started 04/02/2026 and it's still not done. Your site says 'in progress' and nobody in support can give a completion date. Lovely. Could someone please move my number to the correct SIM before my voicemail fills again? REF PORT-904.,Low,Medium,Service downgrade without consent,Terse and minimal,live chat
+46,"I had an unpleasant call with customer services on 08/02 — the agent was short, didn't explain the charges on my bill, and hung up while I was asking for clarification. I'd prefer not to be spoken to like that. Please review the recording (call ref 8832) and provide a proper explanation of the disputed items within five working days.
+
+Regards,
+Neil Hart",Low,Medium,Porting / number transfer issues,Passive-aggressive / sarcastic,online form
+47,"@YourProvider My port still hasn't completed and your status page shows 'done' — which is helpful for absolutely no one. Port initiated 06/02, REF PORT-061. Can someone update publicly when it's resolved? I'm losing calls. #porting",Low,Medium,Rude or unhelpful customer service,Terse and minimal,email
+48,"Hello — my eSIM activation is failing. I scanned the QR on 09/02 but the eSIM profile doesn't register; the phone reports 'profile download failed'. ICCID on the plastic SIM was 8944-7723-001; device IMEI 356789012345678. I've tried activation twice and rebooted. Your chat suggested waiting 24 hours (chat ref LIVE-907), but that was a day ago and nothing changed. Please escalate to technical support and confirm what you will do and when.",Low,Medium,Porting / number transfer issues,Terse and minimal,social media
+49,"Dear Customer Services,
+
+I am writing to explain how your failure to provide accessible billing is causing ongoing stress. On 12/01/2026 I telephoned to request large-print bills and an option for bill explanation via telephone rather than online statements — the agent (Karen) said this would be added and gave me the case number ACC-889001. I received an automated email the next day, but my March bill arrived as a standard PDF even though I had emphasised my visual impairment and the importance of receiving large text. When I called on 02/02, I was transferred three times and finally told 'we don't have that option on your account' despite the earlier assurance.
+
+This is not a dramatic emergency but it is important: I need accessible bills to manage my finances. Please (1) confirm that the accessibility flag is now applied to my account, (2) send the March bill in large-print by post, and (3) explain what went wrong so this does not recur. I would appreciate a response within 10 working days.
+
+Yours faithfully,
+Diane Mercer
+Account: 889001",Low,Medium,SIM card / eSIM activation problem,Polite but firm,live chat
+50,[GENERATION FAILED — re-run needed],Low,Medium,Accessibility needs not met,Narrative / storytelling,email
+51,"Hi — I started porting my number on 03/02/2026 (ACC-982314) and it's now 12 days later and the whole thing has become a farce. I was told by your agent Claire in the store on 03/02 that the transfer would take 48 hours; I then spoke to Tom on phone on 06/02 who told me the donor network had 'delayed the paperwork', and on 09/02 I chatted with Maya who promised an engineer would 'kick it through'. My old SIM still works, the new one shows 'pending' and I have an overlapping voicemail with two networks — utterly messy. I can afford to wait but I am absolutely livid at the incompetence and the conflicting information. I booked a day off to sort this and wasted it. My number is 07745 321987; reference REF-20260203-PORT. Please stop passing the buck and tell me, in plain English, when the port will actually complete. I want a named contact who will follow this through. This is minor in the grand scheme but the way it has been handled is appalling.",Low,High,Porting / number transfer issues,Narrative / storytelling,live chat
+52,"Dear Sir/Madam,
+
+I am writing with extreme concern about a potential data breach linked to my account (ACC-741209). On 28 January 2026 I received a text from an unknown number saying, ""We have your bill details"" followed by my full billing amount and partial card digits — how they obtained that is inexplicable. I called your privacy team on 29 January and spoke with Hannah (case REF-20260129-PRIV). She said she would escalate to IT but I have had no substantive update despite three follow-ups on 04/02, 11/02 and 18/02. Each time I was promised a timeline which was not met.
+
+I am deeply distressed and frankly terrified that my financial and personal data may be circulating without my consent. I am not asking for platitudes: I want a detailed account of what information was exposed (full list), how it happened, which internal systems were implicated, the identities of any third parties who had access, and the mitigation steps your company has taken. Please provide logs showing access to my account between 20/01 and 30/01 and confirm if my data has been shared externally. I am considering reporting this to the ICO and seeking legal advice if I do not receive a comprehensive response within 10 working days.
+
+This may be 'low urgency' in that no money has been taken yet, but my trust has been destroyed and I expect transparent, forensic-level answers. I look forward to your full response.
+
+Yours faithfully,
+
+Eleanor Pritchard
+Account: ACC-741209
+Contact: eleanor.pritchard@email.example",Low,High,Data breach / privacy concern,Verbose and detailed,email
+53,"Hello,
+
+I am absolutely furious about a charge on my bill (ACC-614902, REF-20260210). On 10 February I was billed £17.99 for ""late network admin fee"" which was never mentioned when I upgraded in December. I called on 11/02 and spoke to Gareth who admitted it was ""possibly a system default"" and promised to reverse it. Yesterday 16/02 the charge still appeared — now with an extra £2.50 ""processing"" line. I can wait for corrections, I don't need immediate action, but I am appalled at the laziness here. I have been a customer since 2016; I upgraded on 02/12/2025 after being promised no hidden fees. Your advisors assured me I would only pay the plan rate and a one-off set up, which was done.
+
+This is not about the money — it's about being misled and then ignored. Please remove the fee, refund the processing charge, and explain why your billing system keeps inventing fees. If I don't have confirmation within 7 working days I will consider escalating formally.
+
+Regards,
+
+Mark Ainsworth",Low,High,Billing overcharge / unexpected fees,Narrative / storytelling,email
+54,"Account ACC-559001.
+
+Speed still awful. Have run the tests 3 times. Reported 05/02, ref REF-20260205SPEED. I'm extremely annoyed. It slows streaming and web pages load like it's 2005. Please fix — or tell me why I should keep paying full price for this patchy service. I don't need a promise now; I can wait but I want this escalated properly.",Low,High,Slow or unreliable internet speed,Terse and minimal,email
+55,"Account number: ACC-803214
+
+I have been a customer for seven years and was offered a retention package when my contract came up on 01/02/2026. I was told a discount would be applied to my next bill. The new bill shows no discount and full roaming charges. I can wait for correction, but I'm furious I was promised something and it wasn't honoured. REF: RET-20260201.",Low,High,Customer loyalty not rewarded / retention offer dispute,Terse and minimal,online form
+56,"Name: Louise Carter
+Account: ACC-672233
+
+I renewed in January and was promised loyalty discount. Billing still full. Have phoned twice. Not urgent but I am extremely annoyed and expect a proper explanation and the discount applied.",Low,High,Vulnerable customer mistreatment,Casual conversational,email
+57,"Hi,
+
+This is not a formal letter, just me as a customer utterly shaken by how a vulnerable customer's needs were ignored by your staff. Account ACC-447799 is in my mother's name (I am Tom Reynolds and act as her carer). She is registered as vulnerable with you since 2019 due to mobility and memory issues. On 08/02/2026 I phoned to update contact details and to ask for paper bills only. The representative, Paul, told me he couldn't find the vulnerability flag and bluntly said, ""We don't do carers"" — then put us on hold for 35 minutes and dropped the call. I had a panic attack after and had to cancel an appointment for the day because Mum was distraught.
+
+I do not want the dramatic language of a regulator email; I want this fixed and for someone to accept responsibility. Please confirm the vulnerability flag has been reinstated, confirm the change to paper billing, and explain why your systems allowed this to be erased. I am angry and upset — but recognise this is a minor procedural failure in practical terms; still, the human impact was disproportionate. Please call me on 07712 554003 (Tom) — I don't want to repeat this ordeal.
+
+Regards,
+
+Tom Reynolds",Low,High,Customer loyalty not rewarded / retention offer dispute,Verbose and detailed,online form
+58,"Account: ACC-318004
+Retention reference: RET-20260115
+
+I have been a loyal customer for nine years and was promised a retention package in January when my contract came up for renewal. On 15/01 I spoke to Sophie in retention who explicitly offered a £10 monthly discount for 18 months plus a free handset upgrade in March. I accepted and was told confirmation would arrive by email (it did not). On 02/02 I received a bill showing the full price and a notification that my 'upgrade window' was not yet available.
+
+I completed an online chat on 04/02 (agent Kurt) who said the offer was recorded and a credit would appear on next bill. Nothing. I called again on 11/02 — different answer: ""the promotion expired"" — which is nonsense because Sophie told me it was guaranteed for my account.
+
+I want a full explanation of why a sales promise made by an authorised retention agent was not honoured, immediate application of the £10 discount backdated to 15/01, plus written confirmation of the handset upgrade commitment. I can wait a little while for correction but I am furious that after nine years the level of service and the cavalier attitude to promises is this poor. Please respond in writing to this form entry and escalate to retention manager Priya.",Low,High,Data breach / privacy concern,Narrative / storytelling,online form
+59,"Account number: ACC-556120
+
+On 06/02 I received an email stating my data was shared with a third-party partner for targeted offers. I did not consent to this — and the email included my usage summary and partial address. On 07/02 I completed the online privacy form and was told at the time of submission that a response would arrive within 10 working days (REF-PRIV-20260207). Today I received a generic reply that didn't answer whether my details were sold or merely used for in-house marketing. I have copies of the email and of the form submission confirmation.
+
+I am extremely upset that my personal usage information was shown outside the company without clear consent. For a minor convenience issue this is stressful and I expect a thorough answer: a timeline of what was shared, to whom, and how you obtained explicit consent. Please include the legal basis you relied on for processing and details on how to opt out permanently. I am prepared to wait for a proper investigation but I want transparency and an assurance this will not happen again.",Low,High,Vulnerable customer mistreatment,Legalistic / rights-aware,social media
+60,"@YourProvider I am beyond annoyed. Direct debit failed on 12/02 because your system debited £0.01, then later tried the full amount and doubled up on 13/02. My bank shows one pending payment then a second. This is causing me hassle to reconcile. My account ACC-501220, ref DD-20260212. Call centre gave me different stories — now I have to chase my own bank. Not urgent but this incompetence is infuriating.",Low,High,Data breach / privacy concern,Verbose and detailed,social media
+61,Agent: your live chat told me the unlimited data plan would include tethering and no throttling. On 02/02 my phone slowed when I tethered my laptop — streaming cut out and speeds dropped below 1Mbps. I chatted on 03/02 with Jess who admitted the 'fair use' policy kicks in at 10GB tethering. That was never mentioned when I signed up on 28/01. I feel cheated; I can wait for a fix but I'm furious at the misleading sales claim. My account ACC-776430 and ref MIS-20260203.,Low,High,Direct debit or payment processing error,Casual conversational,social media
+62,"Account: ACC-888002
+Retention ref: RET-20260215
+
+I was told in January that loyalty would be recognised with a reduced monthly fee. I completed the online form and it said a response would follow. The package hasn't been applied to my bill. I'm furious. Please apply the promised discount and stop treating long-standing customers like an afterthought.",Low,High,Mis-selling / misleading sales practices,Narrative / storytelling,live chat
+63,"Name: Aisha Khan
+Account: ACC-430112
+
+I am registered blind and rely on your app's voiceover support to manage my account. On 01/02/2026 the latest app update removed several labelled buttons and made the payment flow inaccessible. I called customer support on 02/02 and spoke with Matt who said the app 'should still work' and offered to send an email link — which is useless for me because I can't confirm payments without the app labels. I have used your service for six years and never had this kind of barrier. I feel helpless and betrayed by a company that claims to support accessibility but pushes updates without proper testing.
+
+I don't expect an instant fix, but I insist that your app team prioritises restoring labelled controls for screen readers and that I am offered a temporary alternative phone-based payment process that is truly accessible. Please escalate to your accessibility lead and contact me at 0208 555 4412 (voice preferred). This has been happening for two weeks and it's intolerable.",Low,High,Customer loyalty not rewarded / retention offer dispute,Terse and minimal,online form
+64,"Dear Data Protection Officer,
+
+I write on account ACC-993321 to report an incident that left me shocked and anxious. On 22/01/2026 I received a call from one of your salespeople who quoted my recent usage statistics and offered me a 'tailored' package. I have never given permission for my usage profile to be used in cold calls. I complained on 23/01 to customer services (agent Luke) and was told a formal complaint would be lodged (REF-DP-20260123). Weeks later, on 10/02, I received an automated email acknowledging receipt but no substantive answers.
+
+Please provide a full account of the lawful basis you relied upon to use my data for outbound marketing, confirm whether profiling was involved, list any third parties who accessed my profile, and provide copies of any consent records you hold for my account. I am extremely distressed that my private usage data is apparently used as a sales tool. I can wait a reasonable time for your response, but be under no illusion: this has destroyed my confidence in you and I will report to the ICO if I do not receive a complete reply within 14 days.
+
+Yours sincerely,
+
+Nathaniel Hargreaves
+ACC-993321",Low,High,Accessibility needs not met,Narrative / storytelling,online form
+65,Hi — my direct debit was collected twice this month (12/02 and 14/02) and then a refund was initiated only for one of them. I raised it publicly because I am fed up chasing with different advisors. My card ends 3456 and my account is ACC-662001. This is such a small issue financially but the time wasted on hold is infuriating. Please sort this so I don't have to keep posting here and dragging this out.,Low,High,Data breach / privacy concern,Narrative / storytelling,email
+66,"I started my contract on 04/02 after an advisor called me to 'upgrade' my package. The advisor, Ryan, was friendly and talked me into a 24-month contract promising ""no data caps, no throttling, full international minutes"". On 10/02 I was contacted by collections saying I had a data cap breach and my speeds would be reduced after 15GB. I have since chatted twice (agents Amina and Josh) who gave conflicting explanations. I feel mis-sold a plan by someone who deliberately omitted essential terms. It's infuriating because I budget tightly and this changes how I can use my phone. I don't expect an instant miracle but want the mis-selling corrected and compensation for the inconvenience. Account ACC-911204, ref MS-20260210.",Low,High,Mis-selling / misleading sales practices,Casual conversational,live chat
+67,"Account: ACC-705331
+
+When I signed up in January I was told the retention offer would be 'locked in' at £18/month for the 24-month term. Today I received the online form outcome saying my application was declined with no reason. I have chatted with three agents and none could explain why a previously-agreed offer was rescinded. I appreciate resolving this may take a few days, but I am absolutely livid at the broken promises. Please reinstate the offer or give me a written, itemised reason why not.",Low,High,Complaint handling process failure,Verbose and detailed,online form
+68,"Complaint reference: COMP-20260212
+
+I am registered as having a hearing impairment for communications on account ACC-559770. On 12/02 I asked to cancel a service via the online form and requested confirmation in text. The company sent an email only, leaving me unsure whether cancellation has been processed. I attempted to use the live webchat on 13/02 and typed 'Need SMS confirmation' repeatedly while the agent, Priya, ignored that need and sent links to audio guides. I felt dismissed and unable to exercise my rights to accessible communications.
+
+Please confirm in writing by SMS to 07798 443221 that the cancellation request has been processed and that any future correspondence will be sent via SMS or plain-text email as previously requested. I will wait for your confirmation but I am disappointed and angry that my clear accessibility needs are apparently optional to your staff.",Low,High,Service cancellation difficulty,Legalistic / rights-aware,online form
+69,"To whom it may concern,
+
+On 01/02/2026 I received an email stating my personal details might have been included in an accidental disclosure to a third-party marketing contractor. The email was vague, offering little by way of specifics. I filed a complaint via your online form (REF-PRIV-20260201) and provided my account details (ACC-203441) and the date I received the suspicious email. It has now been 18 days with only one automated response and no evidence of a proper investigation.
+
+This lack of transparency is unacceptable. I demand a full timeline: what data was disclosed, the recipient, the legal basis for the transfer, and any remedial measures offered. I also need to know what monitoring you are providing to affected customers (credit watch, fraud alerts etc.). While this is not causing immediate financial loss, the emotional impact is severe and I expect a professional, documented reply within 10 working days. If you fail to provide comprehensive answers I will contact the ICO and consider further action.
+
+Sincerely,
+
+Rebecca Lowe
+ACC-203441",Low,High,Porting / number transfer issues,Formal professional,online form
+70,"Live chat: my eSIM activation has been a comedy of errors. I ordered an eSIM on 05/02 (Order ESIM-05822) and was told activation would be instant. On 06/02 the QR code failed; I chatted and the agent, Dan, remotely 'activated' it but my phone still showed no service. I can wait — it's not urgent — but the incompetence is maddening. I had to drive to a friend to use their Wi‑Fi because your instructions were contradictory. Please fix this properly and stop giving generic 'turn it off and on again' steps.",Low,High,Contract dispute / early termination fee,Verbose and detailed,social media
+71,"Hi — your recent 'downgrade' of my plan without asking is unacceptable. I had the Plus bundle (unlimited data, 2000 minutes) since 2019 and on 07/02 my allowance changed to Basic (500 minutes). I noticed because my bills started showing 'overuse' warnings. I chatted on 08/02 with an agent called Jo who said 'it was a system update' and couldn't guarantee when it would be reverted. I am furious at this unilateral change. I don't need immediate service restoration — I can wait for it to be fixed — but I expect someone to admit the mistake and put my original bundle back on the account. Account ACC-339002.",Low,High,SIM card / eSIM activation problem,Legalistic / rights-aware,online form
+72,"@YourProvider So your eSIM 'activation' email is a thrilling treasure hunt. I clicked the QR code and my phone said ""unsupported"". I called, waited 40 minutes, and was told to reinstall the app. Of course I had already done that twice. My account ACC-224155. Wonderful service. Truly. Could you maybe, just once, provide an activation process that works on the first attempt? No rush; I'll be here, calmly seething and considering my options.",Low,High,Service downgrade without consent,Casual conversational,live chat
+73,"Order: INST-20260120
+Account: ACC-700510
+
+I booked a broadband installation slot for 20/01/2026 and paid the advance fee. The engineer did not attend and the portal showed 'rescheduled' without offering a replacement date. I phoned and spoke to Leila on 21/01; she apologised and said a new slot would be assigned within five working days. It's now 16/02 and I have had two different provisional dates cancelled at short notice with no explanation. I've wasted time waiting in and had to rearrange commitments repeatedly.
+
+This is infuriating. I don't rely on this connection for essential work (so it's low urgency), but the ongoing poor communication and last-minute cancellations are unacceptable for a paid service. I want a firm installation appointment within the next 10 working days, a clear reason for the repeated cancellations, and an explanation of why no priority scheduling was offered after the first miss. Please escalate to the installations manager and confirm in writing. Installer reference numbers and all prior chat transcripts are available on my account; use them. I expect a proper apology and a goodwill gesture given the repeated inconvenience.",Low,High,SIM card / eSIM activation problem,Passive-aggressive / sarcastic,social media
+74,"Dear Complaints Team,
+
+Account: ACC-412880
+Invoice: INV-20260214
+
+I am writing about an unexplained surcharge of £25 labelled 'contract adjustment' on my latest bill. I terminated an add-on on 02/02 and was told by advisor Claire (call logged 02/02, ref CL-20260202) that there would be no early-termination fee. My invoice arrived on 14/02 showing the £25 fee. I have already raised this on 15/02 via your web chat and received a vague promise of a refund. It is now 18/02 and nothing has been credited.
+
+I note my statutory rights under the Consumer Rights Act and expect a full audit trail explaining the fee's origin, the name of the person who authorised it, and immediate reversal of the charge. This is a minor financial matter in absolute terms but the principle — being charged despite a clear promise — is infuriating. Please respond within 7 working days or provide the case owner and contact details so I can pursue this further.
+
+Yours faithfully,
+
+Gareth Mitchell
+ACC-412880",Low,High,Broadband installation delay or failure,Verbose and detailed,online form
+75,[GENERATION FAILED — re-run needed],Low,High,Billing overcharge / unexpected fees,Legalistic / rights-aware,email
+76,"Dear Customer Relations,
+
+I write regarding an interaction on 08/02/2026 with your support agent Ms. Claire H. (call reference REF-20260208-CH). During that call I was advised that my complaint about persistent text delivery failure (ACC-8421192) was resolved; instead the tone from the agent was dismissive and I was told I had 'no entitlement' to further investigation. Under the Consumer Rights Act 2015 and Ofcom guidance on complaints handling, I request a formal written explanation of why my report was not investigated and a record of all steps taken. Please escalate this matter to a supervisor and confirm within five working days who will re-open the diagnostic tests and what remedial steps will be taken.
+
+Yours faithfully,
+Martin Keane
+Account ACC-8421192",Medium,Low,Rude or unhelpful customer service,Legalistic / rights-aware,email
+77,"Name: Sarah T.
+Account: ACC-551203
+Issue: Mobile coverage poor since 10/02/2026
+Details: Signal drops in garden and living room. Speeds 0.2–0.5 Mbps when 4G indicator shows bars. Your network map says 'full coverage' so that's reassuring. I have rebooted the handset, tested in different rooms and tried a SIM swap. No improvement.
+Requested action: Please provide a realistic time estimate for resolution or confirm whether a mast is being upgraded nearby.
+REF: REF-20260210-NT
+
+(Yes, I'll keep waiting patiently while you consult your magical network engineers.)",Medium,Low,Network outage / poor coverage,Passive-aggressive / sarcastic,online form
+78,"Hello,
+
+My bill dated 01/02/2026 (Invoice INV-20260201, Account 9034721) includes an item described as 'International data surcharge' of £37.50 which I did not incur. My tariff is 'Unlimited EU Roaming' and I was connected only in France between 20–24/01/2026; my usage details show 0GB outside EU countries. I have attached a screenshot of the roaming setting and prior bill from January showing the same plan.
+
+Please remove the £37.50 charge and apply the appropriate credit. I contacted support twice on 05/02/2026 (calls with agents Tom and Aisha; ref numbers 05-02-T and 05-02-A) and was told it would be investigated but no correction has appeared. I would appreciate confirmation by 24/02/2026 and a clear explanation of how this happened.
+
+Kind regards,
+A. Patel
+Account 9034721",Medium,Low,Billing overcharge / unexpected fees,Polite but firm,email
+79,"Hi,
+
+Invoice INV-20260201 shows an unexplained charge of £14.99 (REF-20260201). Please remove and confirm.
+
+Thanks,
+L. Morgan
+ACC-332110",Medium,Low,Billing overcharge / unexpected fees,Terse and minimal,email
+80,"@ProviderHelp My home broadband has been dropping to unusable speeds since 04/02 — streaming stalls and pages fail to load. On average getting 3–5 Mbps on a 100 Mbps plan. I’ve restarted the router, checked wired and Wi‑Fi tests, and rebooted devices. Can you check node status for W10X area and advise expected time to restore normal speeds? ACC-774205.",Medium,Low,Slow or unreliable internet speed,Casual conversational,social media
+81,"Dear Support Team,
+
+I have been a customer since 2018, and over the last six months there have been four separate issues that remain partly unresolved. I set out the timeline so you have the full context:
+
+- 05/08/2025: Reported intermittent broadband disconnections (REF-20250805-A). Engineer visit scheduled but cancelled; no follow-up.
+- 14/10/2025: New phone line order incorrectly provisioned as a business line (ACC-667122). I called and was promised re-provisioning within seven days; not completed.
+- 02/12/2025: Unexpected billing adjustment of £46.20 posted to account (INV-20251202). I called twice; Case REF-20251203 remains open.
+- 03/02/2026: Current issue — incoming texts for one number are not delivered intermittently.
+
+I have spoken with three separate agents (Alice, Ben, and Omar) and received NUMEROUS reference numbers but no consolidated resolution. I am requesting a single point of contact, a summary of actions taken to date, and a clearly dated action plan to resolve outstanding items within ten working days. My account is ACC-667122; please acknowledge receipt and assign a case manager.
+
+Yours,
+Daniel Ruiz",Medium,Low,Multiple unresolved issues over time,Narrative / storytelling,email
+82,"To whom it may concern,
+
+I am writing about mis-selling that took place at point of sale on 16/11/2025. I was presented with 'SuperHome Fibre Plus' as including a multiroom mesh unit and guaranteed upload speeds of 25 Mbps. My install on 02/12/2025 included only a single router, and steady tests show upload around 3–4 Mbps. The salesperson, Mr. James Arbuthnot, signed a paper that lists the mesh equipment and the 25 Mbps guarantee.
+
+Relevant details:
+- Account: ACC-990441
+- Sales reference: SALE-20251116-JA
+- Installation date: 02/12/2025 (Job J-20251202)
+- Adverts and sales script: quote attached from your website (screenshot dated 16/11/2025)
+
+I require the following actions:
+1) Provision of the mesh units promised at sale, or a documented refund of the price differential.
+2) Immediate remedial works to bring upload speed to the contractually represented 25 Mbps.
+3) Written confirmation of whether any further charges will be applied as a result of corrective work.
+
+Please respond within five working days with a named contact and the proposed remediation schedule. If you decline, please provide the contractual clause on which you rely to justify the failure to deliver the agreed equipment and speeds.
+
+Regards,
+Samantha Brooks
+ACC-990441",Medium,Low,Mis-selling / misleading sales practices,Verbose and detailed,email
+83,"Agent: Hi, I'm Sam. How can I help?
+Customer: Hello Sam. I called earlier today about an appointment that was cancelled without notice (REF-20260209-B). The agent then disconnected. I would like this escalated to a supervisor and a new appointment within three working days.
+Agent: Thank you — can I confirm the account number?
+Customer: ACC-441100. I spoke to agent Priya at 09:15 and was offered a callback that did not come. Please advise the supervisor handling this complaint and provide a reference.
+
+Thank you,
+Michael",Medium,Low,Rude or unhelpful customer service,Formal professional,live chat
+84,"Product: Phone handset
+Account: ACC-556009
+Issue: Screen flicker since 28/01/2026
+Model: Vento X2 serial SN: VX2-99532
+Warranty status: Within 12 months
+Requested action: Repair or replacement under warranty
+REF: REF-20260128-HF",Medium,Low,Device / handset fault or warranty dispute,Terse and minimal,online form
+85,"Public post: I signed up in May 2025 for a 24-month plan but have been charged an early termination fee after a service change. My original contract was explicitly for £20/month; when I upgraded handset in January I was told no new contract would be applied. Today I received a final demand for £120 ETF. Account ACC-775001, sale ref SALE-20250112. Please can someone clarify the contractual basis for this charge and confirm whether it will be reversed. I will share further details if contacted directly.",Medium,Low,Contract dispute / early termination fee,Narrative / storytelling,social media
+86,"Dear Complaints Team,
+
+I refer to my order for broadband installation placed on 10/12/2025 (Order REF-20251210-IB, Account ACC-711223). Installation was booked for 04/01/2026, an engineer attended that day but left without completing due to a missing junction box; I requested a rebook. The current position is that no further appointment has been scheduled despite weekly calls on 12/01, 19/01 and 02/02 (call refs 20260112, 20260119, 20260202). I rely on this service to work from home. Under the Consumer Contracts Regulations and Ofcom guidance, I request you provide a firm installation date within seven days and confirm any compensation for delay as per your terms. If you cannot meet that timeframe, please set out why and what alternative arrangements you propose.
+
+Yours sincerely,
+E. Hammond
+ACC-711223",Medium,Low,Broadband installation delay or failure,Legalistic / rights-aware,email
+87,"Hello,
+
+I am being charged an early termination fee of £149.99 on my account (ACC-558770) after notifying you of relocation on 01/02/2026 and being told by sales agent Lewis that my existing contract could be transferred. There is a disagreement between what I was told and the invoicing. Please cancel the ETF and provide confirmation in writing. If you require proof of the conversation I can forward call reference 01-02-LEWIS.
+
+Kind regards,
+R. Patel",Medium,Low,Contract dispute / early termination fee,Polite but firm,email
+88,"Name: Tom G.
+Account: ACC-223344
+Issue: Accessibility – customer support by text required
+Details: I am partially deaf and requested SMS/text-based support on 15/01/2026 and again on 29/01/2026. Calls are not accessible for me. Neither request has been actioned and I received two automated voice reminders on 01/02/2026.
+Requested outcome: Please register my accessibility preference (SMS only) and assign a text-based case handler for ongoing correspondence. Confirm within 3 working days.
+REF: ACC-223344-ACCESS",Medium,Low,Accessibility needs not met,Polite but firm,online form
+89,@Provider I see you charge 'roaming premium' when I cross into Northern Ireland now — very convenient. My bill shows £22.40 for two short calls on 28/01; these were to a UK landline from Belfast. Please explain why I'm being charged an international rate when both my number and recipient are UK-based. ACC-663001.,Medium,Low,Roaming charges / international billing,Passive-aggressive / sarcastic,social media
+90,"Public post: I was charged £89.60 in roaming data fees after a business trip to Spain (dates: 18–21/01/2026). My package included 'Business Europe Roaming' per the plan details on your website and I did not use more than 500MB. I have contacted customer services twice (refs 27/01-CS1 and 03/02-CS2) and been given conflicting answers. Please can someone from billing review INV-20260125 and confirm a refund of the disputed £89.60, and state what measures you will take to prevent similar billing for business customers in future? Account ACC-884411. #billing #roaming",Medium,Low,Roaming charges / international billing,Verbose and detailed,social media
+91,"Complaint reference: REF-20260211-CHR
+
+Issue: Failure of complaint handling process
+
+Account: ACC-338822
+Date first logged: 07/01/2026
+Details: I submitted a formal complaint on 07/01/2026 (email and online) and was assigned reference REF-20260107. I received an acknowledgement but no substantive response thereafter. I escalated on 25/01/2026 and was promised a resolution within 10 working days; that deadline passed without contact. This repeats the pattern set out in Ofcom guidance for timely complaint resolution.
+
+Requested action:
+1) Immediate confirmation of next steps and named case officer.
+2) A schedule for investigation and a target date for final response (within 7 days).
+3) Records of all actions taken to date.",Medium,Low,Complaint handling process failure,Legalistic / rights-aware,online form
+92,"Hi,
+
+I am registered as a vulnerable customer (medical condition: hearing impairment, registered on 12/11/2020) but a support agent on 09/02/2026 asked standard identity questions that are difficult for me to answer by phone. I prefer email or SMS. Can you ensure that my account (ACC-447711) is flagged and that future contacts are via written channels? Also please confirm what adjustments you will make to prevent repeated distress.
+
+Thanks,
+Amira Khan",Medium,Low,Vulnerable customer mistreatment,Casual conversational,email
+93,"Hello Support,
+
+My Vento Z1 handset (model VZ1-2020, IMEI 352099101234567) purchased on 14/03/2025 is showing repeated battery shutdowns and will not power on intermittently after a recent update. I raised a ticket on 29/01/2026 (REF-20260129-VZ) and was advised to perform a factory reset; the problem persists. The device is within the 24‑month warranty. Please advise next steps for repair or replacement and arrange a prepaid shipping label if replacement is authorised. I can be reached on email for photographic evidence.
+
+Best,
+Owen Matthews
+ACC-900210",Medium,Low,Device / handset fault or warranty dispute,Casual conversational,email
+94,"I've been trying to resolve three separate problems since November 2025 — slow broadband, incorrect billing, and a handset fault — and each time the issue is closed as 'resolved' but reappears within days. Timeline: Nov 12 (slow speeds), Dec 3 (bill error), Jan 7 (handset fault). I have posted about this before and have spoken to six agents. I need a single consolidated investigation, an interim remedy to make services usable within 5 working days (temporary router or credit) and a written plan to prevent recurrence. Account ACC-119900. Please contact me publicly to confirm acknowledgement.",Medium,Low,Multiple unresolved issues over time,Narrative / storytelling,social media
+95,"Form entry:
+Name: Dr. Evelyn Moore
+Account: ACC-556788
+Issue: Broadband speeds consistently below advertised level since 02/02/2026
+Measured download: 6–8 Mbps (advertised 80 Mbps)
+Tests performed: Wired speed tests, router reboot, different ethernet cable
+Requested action: Please run line diagnostics and provide timeslot for engineer visit within five working days. If an engineer is not available, provide a temporary speed credit.
+REF: SPEED-20260202",Medium,Low,Slow or unreliable internet speed,Formal professional,online form
+96,"Email to Data Protection Officer,
+
+I reference your security incident notification received on 03/02/2026 (ref PRIV-20260203). I require immediate confirmation of which personal data fields were accessed, the accounts affected (my account ACC-772234 is among those listed), the date(s) of access, and what mitigation you have applied. Please also provide details of any third parties involved and confirm the point of contact for follow-up. Under the ICO's expectations I request this information within five working days.
+
+Regards,
+N. Fisher",Medium,Low,Complaint handling process failure,Narrative / storytelling,email
+97,"Dear Accessible Services,
+
+I am writing to record a failure to provide reasonable adjustments. I contacted customer services on 04/02/2026 to request billing statements in large print and to arrange text-only support; my request references REF-20260204-AX. To date, paper statements in standard print are still being issued and I received an automated voicemail reminder. As you are aware, under the Equality Act 2010 service providers must make reasonable adjustments for customers with disabilities. Please confirm by 19/02/2026 that: (a) my account (ACC-660110) will receive large-print or email statements only, (b) my contact preference is set to SMS/email, and (c) staff handling my account have been notified of the adjustment.
+
+Yours sincerely,
+Claire Donovan",Medium,Low,Data breach / privacy concern,Terse and minimal,online form
+98,Public: Hello @ProviderSupport — I requested porting of my mobile number on 28/01/2026 (port request PR-20260128) and the process was due to complete on 30/01. My number is still with the old provider and your system shows 'in progress'. I need the port to complete by 22/02/2026 as I have clients who use that number. Please confirm the expected completion date and provide a direct contact who can update me. Account ACC-992311.,Medium,Low,Accessibility needs not met,Legalistic / rights-aware,email
+99,"Agent: Hello, I need assistance with a Direct Debit issue.
+Customer: I set up a DD on 01/01/2026 for £35.00 monthly (ACC-331120). On 05/02/2026 two payments were taken: £35.00 and a duplicate £35.00 on the same day. Reference: DD-20260205-DUP. My bank has flagged the second payment as unauthorised and placed a temporary block on payments pending resolution. Please arrange an immediate refund of the duplicate £35.00 to my bank account and confirm the correct next collection date. I can provide bank transaction references if required.
+Agent: Thank you. Please escalate to billing and confirm within 48 hours.
+
+Kind regards,
+Hannah Li",Medium,Low,Porting / number transfer issues,Polite but firm,social media
+100,[GENERATION FAILED — re-run needed],Medium,Low,Direct debit or payment processing error,Formal professional,live chat
+101,"ACC-7291834
+I am a vulnerable customer and was spoken to dismissively on 03/02/2026 by your advisor Mark. I explained my support needs and was ignored. This treatment is unacceptable. Please escalate and contact me by phone within 3 working days.
+— Janet H.",Medium,Medium,Vulnerable customer mistreatment,Terse and minimal,online form
+102,"Dear Customer Relations,
+
+Account: 8354912
+Plan: Unlimited Plus
+Reference: REF-20260112
+
+On 12 January 2026 my plan was downgraded from Unlimited Plus to Basic without my consent. I did not request or authorise this change; I only noticed the reduction in allowances when my bill arrived on 27/01/2026. I have called twice (23/01 and 26/01) and spoke to advisors Emma and Paul who assured me the account would remain unchanged. This downgrade is unacceptable and has caused me additional charges.
+
+I require the original plan reinstated, a refund for any overcharges, and a written explanation of how this happened. Please respond within 5 working days.
+
+Yours sincerely,
+Arun Patel
+Account 8354912",Medium,Medium,Service downgrade without consent,Formal professional,email
+103,"Hi,
+
+I'm on a vulnerable customer flag and I felt really let down by your team. I emailed 05/02/26 and spoke to Sophie on 08/02 — she seemed rushed and didn't note my care needs. I'm disappointed and quite stressed about how this was handled. Can someone who understands vulnerability support contact me? My account is 9023347.
+
+Thanks,
+Fiona",Medium,Medium,Vulnerable customer mistreatment,Casual conversational,email
+104,"Account: 554210
+Reference: C-20260201
+
+I am disappointed with the conduct of your customer service team. On 01/02/2026 I called regarding billing discrepancies and the advisor was both abrupt and unhelpful. I requested escalation but was told there was no supervisor available. This is unacceptable. Please review the call recording and advise corrective action within 5 working days.
+
+Regards,
+Mr. K. Davies",Medium,Medium,Rude or unhelpful customer service,Formal professional,online form
+105,"Hi there — order 987654321 (SIM order placed 02/02/2026, REF 9876-02-02).
+
+I have been trying to activate an eSIM for two days. Steps I have taken:
+- Inserted eSIM QR, scanned at 09:10 on 03/02/26
+- Phone restarted three times (iPhone 13 Pro, IMEI 356789012345678)
+- Tried APN settings manually and set network selection to automatic
+- Spoke to support at 14:00 on 03/02 with Hannah who advised a network refresh; nothing changed
+- ICCID on the pack is 8944041234567890123
+
+Current status: phone shows 'No Service' and messages say SIM not provisioned. I need the eSIM active today — work calls routed through this number. Please escalate to technical support and provide a realistic ETA. I am frustrated with repeated failed activations and need a clear next step.
+
+Order: 987654321
+Thanks,
+Liam",Medium,Medium,SIM card / eSIM activation problem,Verbose and detailed,live chat
+106,"Complaint REF: CMP-20260203
+I have been sent from person to person. My complaint remains unresolved. Please escalate. I expect a substantive response within 5 working days.
+
+— S. Ahmed",Medium,Medium,Complaint handling process failure,Terse and minimal,online form
+107,@YourProvider I accepted a retention offer on 04/01/2026 (promo code LOYAL21) but the discount was never applied to my latest bill (Account 662233). I was promised £10 off per month for 12 months. This is disappointing and looks like poor practice. Please honour the offer and correct my bill. #CustomerService,Medium,Medium,Customer loyalty not rewarded / retention offer dispute,Formal professional,social media
+108,"@YourProvider I have logged faults under TICKET-001 (15/12/25), TICKET-014 (22/01/26) and TICKET-029 (28/01/26). None have been resolved. This is a pattern of systematic failures affecting my service and causing financial loss. I expect you to comply with your obligations under the Consumer Rights Act and to remedy all outstanding issues immediately. If you fail to act I will escalate to Ofcom and seek formal remedies.",Medium,Medium,Multiple unresolved issues over time,Legalistic / rights-aware,social media
+109,"@YourProvider I was sold ""Premium Broadband"" on 11/11/2025 with the express promise of 'no caps, no throttling'. My recent bill and speed tests show otherwise. I was told at point of sale the package included priority support — that was not honoured. I expect a full explanation and a refund for mis-sold services. Account: 441188.",Medium,Medium,Mis-selling / misleading sales practices,Formal professional,social media
+110,"Dear Sir/Madam,
+
+Account: 772900
+Reference: CAN-20260201
+
+I requested cancellation of my contract on 01/02/2026 and was promised confirmation within 48 hours. It has now been six days and my account remains active with another bill issued. I have called twice (05/02 spoke to James). This delay is causing ongoing charges which I do not accept. Please process the cancellation immediately, confirm the end date, and refund any charges beyond my cancellation request.
+
+Kind regards,
+Maya Singh",Medium,Medium,Service cancellation difficulty,Polite but firm,email
+111,"@YourProvider I pay for Fibre 150 (up to 150Mbps). Since 21/01/26 my download speed has averaged 14Mbps at peak times (see speedtest.net results attached earlier). I have reset the hub multiple times, swapped cables, and an engineer visit on 28/01 did not fix it. This is frustrating and unacceptable given the premium I pay. Account 300112. Please provide a permanent resolution and compensation for the ongoing disruption.",Medium,Medium,Slow or unreliable internet speed,Verbose and detailed,social media
+112,"Hey @YourProvider — porting issue. I requested PAC on 27/01/26 and was told my number would move on 29/01. It's 04/02 and my number still rings with the old provider, so I can't receive business calls. Ref PORT-20260127. This is really inconvenient — please sort this out today and update me with the cause.
+
+Thanks,
+Oli",Medium,Medium,Porting / number transfer issues,Casual conversational,social media
+113,"Hello,
+
+Account: 558112
+Reference: BILL-20260202
+
+I returned from Spain on 22/01/2026 and have been charged £128.45 for roaming data (itemised on 28/01/2026 bill). I had purchased the RoamSafe add-on on 15/01/2026 and was assured text confirmations would appear — I received none. I only used messaging and occasional maps; that charge is disproportionate and unexpected. Please investigate and refund the roaming charge in full.
+
+Regards,
+Noah Turner",Medium,Medium,Roaming charges / international billing,Casual conversational,email
+114,"Privacy concern — Account 990012
+
+On 31/01/2026 some of my contacts received unknown verification texts purporting to be from your service. I did not send these messages. I am concerned my account has been compromised or data shared improperly. This is a serious matter given the sensitivity of contact information. I request an immediate investigation and written confirmation of what data was accessed and any remedial steps. Please treat this with urgency.
+
+Sophie",Medium,Medium,Data breach / privacy concern,Formal professional,online form
+115,@YourProvider Great job charging me £60 for 8 minutes of data roaming while I was on a ferry. Nothing like being surprised with a lovely bill to brighten the day. Please refund REF: ROAM-20260120 and explain why my RoamAdd-on didn't apply. #NotImpressed,Medium,Medium,Roaming charges / international billing,Passive-aggressive / sarcastic,social media
+116,"Agent: Hello, how can I help?
+Customer: I have the pleasure of informing you that I've been moved along the support conveyor belt for SIX calls. Each time I'm promised a call-back that never comes. Ticket IDs: 1101, 1107, 1122. You said 'we're escalating' on 25/01 and 29/01. Nothing. I'm not asking for miracles, just for someone to actually fix the issue. Please escalate to a manager now and stop the runaround. I am losing patience.
+
+Order 564738
+— Ruth",Medium,Medium,Multiple unresolved issues over time,Passive-aggressive / sarcastic,live chat
+117,"Dear Complaints Team,
+
+Account: 776655
+Complaint REF: HNDL-20260130
+
+I refer to the mishandling of my earlier complaints (logged 30/01/2026). Under the Consumer Rights Act and your published complaints procedure, you are required to investigate and respond. I have provided evidence and requested escalation but have received no substantive reply. If you do not provide a written resolution within 14 days I will pursue the matter with Ofcom and consider further legal options.
+
+Yours faithfully,
+Catherine O'Neill",Medium,Medium,Complaint handling process failure,Legalistic / rights-aware,email
+118,"Account number: 884400
+
+So I cancelled early and was charged an ETE fee of £190 on 02/02/2026. The contract started 01/10/2024 and I was assured by sales that I could leave with a nominal admin fee if moving abroad. Clearly someone at sales lied. I expect the early termination fee waived immediately. Charging me for misleading advice is unacceptable. Fix this.
+
+— Ben",Medium,Medium,Contract dispute / early termination fee,Passive-aggressive / sarcastic,online form
+119,"I bought a handset (Samsung A53) from your store on 05/11/2025. At first it booted and then on 10/12/25 the screen started flickering. I returned it, was given an RMA (RMA-4598) and told it would be repaired. After two 'repairs' the same problem resurfaced on 15/01/26. Each time I am without my phone for weeks; I work as a carer and need a phone every day. Your repair service has failed me repeatedly. I am now asking for a replacement handset or full refund under the warranty. This ongoing disruption is unacceptable.
+
+— Maria Lopez",Medium,Medium,Device / handset fault or warranty dispute,Narrative / storytelling,online form
+120,"@YourProvider Business account: B-2211
+PAC issued 20/01/26 for number 07700 900111, expected port 22/01. Port still not completed and customers cannot reach me. Reference PORT-B-20JAN. Please action immediately — this is causing lost bookings and revenue. I require confirmation of new port date today and compensation for lost time.",Medium,Medium,Porting / number transfer issues,Formal professional,social media
+121,"Hi,
+
+I spoke to Darren on 29/01/2026 regarding a billing error (someone charged an extra £45 for an international call I never made). Darren was dismissive, cut me off and told me to 'check your usage'. This was rude and unhelpful. I expect a written apology and that the £45 is removed. My account is 331122.
+
+Regards,
+Ethan",Medium,Medium,Rude or unhelpful customer service,Passive-aggressive / sarcastic,email
+122,"Order 77665532
+
+I've just received an eSIM email but it won't activate. ICCID 8944049876543210001. I tried the QR code at 07:30, it says 'activation failed'. Chatted earlier with Sam who said he'd 'raise a tech ticket' but no update. I need this working for travel tomorrow. Please help now.",Medium,Medium,SIM card / eSIM activation problem,Casual conversational,live chat
+123,"Account: 443377
+Location: Truro, PL1
+
+For the last six weeks there have been intermittent outages around 07:00–09:00 and 18:00–22:00. On 26/01/26 a full outage lasted 3 hours and I couldn't take emergency calls at home. I work from home and this is disrupting my shifts. I have raised tickets 3005 and 3012; engineers attended but the problem recurs. Please investigate the local mast (mast ID M-PL1-09) and provide a timeline for permanent repair and a credit for lost service.
+
+Thank you,
+Hannah R.",Medium,Medium,Network outage / poor coverage,Narrative / storytelling,online form
+124,"Installation appointment reference INST-20260115
+
+An engineer was scheduled for 15/01/2026 between 08:00–12:00 and did not attend or provide a call. I waited all day. When I called you offered the next appointment in three weeks. Under the Consumer Contracts Regulations and Ofcom guidelines I am entitled to a timely installation and compensation for unreasonable delay. Please reschedule within five working days and confirm any automatic credit for the missed appointment.
+
+— Oliver Green",Medium,Medium,Broadband installation delay or failure,Legalistic / rights-aware,online form
+125,"Order: 992211
+Account: 554433
+
+I accepted a retention package during a call on 20/01/2026 with advisor Claire — 12 months at £18/month, handset discount applied. My new bill issued 01/02/2026 shows the full charge of £28 and the handset discount missing. I've called three times (20/01, 25/01, 31/01) and each time was told it would be corrected 'next bill'. This is causing ongoing overcharge and inconvenience. I need the contract record updated, a refund for the overcharge of £10 for this billing period, and a confirmation that the retention terms agreed on 20/01 will be honoured going forward. Please escalate to retention team now.
+
+Thanks,
+Priya Sharma",Medium,Medium,Customer loyalty not rewarded / retention offer dispute,Verbose and detailed,live chat
+126,"Hi @YourProvider, I'm absolutely livid. My direct debit of £42.50 (ACC-8421173) was taken twice on 04/02/2026 — your app shows one payment pending, my bank shows two withdrawals. I phoned on 05/02 and spoke to Maria in Billing who said she 'would sort it' but nothing has changed. I now have an unauthorised £42.50 pending that affects my overdraft and my partner and I are scrambling to cover groceries this week. This is not a petty inconvenience; it's damaging my credit and peace of mind. Fix this today and reverse the duplicate payment or I will escalate publicly and to the Financial Ombudsman. #appalling #fixthis",Medium,High,Direct debit or payment processing error,Narrative / storytelling,social media
+127,"Reference: REF-20260201
+I see that you accidentally exposed my email and partial billing address in a bulk message sent on 28/01/2026. How considerate. I submitted your online security form on 29/01 (ticket TKT-55921), and received an automated reply saying “we take this seriously.” That was quaint. Four days later, nothing: no substantive explanation, no apology, no mitigation advice. Which is understandable — why would a company that leaks customer data want to reassure anyone? Please confirm exactly what data was shared, when it was deleted, who had access, and what steps you are taking to prevent repeat occurrences. I expect a written response within five working days; silence will leave me no choice but to complain to the ICO.",Medium,High,Data breach / privacy concern,Passive-aggressive / sarcastic,online form
+128,@YourProvider I've never been prouder to have bad credit than I am right now. Signed up 18 months ago; decided to leave on 01/02/2026 and was told I'd pay a reasonable fee. Imagine my shock when an invoice for £320 (ACC-9903321) landed this morning for an 'early termination' — which was never disclosed during my sales call with James on 02/08/2024. So evidently your agent either forgot to mention a term or lied. Charming. Refund the erroneous charge or waive the fee. I'll be sharing this experience widely if you ladder up this nonsense.,Medium,High,Contract dispute / early termination fee,Passive-aggressive / sarcastic,social media
+129,"Hello, I need immediate help. My direct debit didn’t process on 06/02/2026 and ACC-7310022 now shows a late-payment flag. I have paid by bank transfer (reference DD-06FEB) and have confirmation from my bank, but your system still shows an outstanding balance and I’ve been warned of service suspension. I have been polite and cooperative—please confirm receipt of my transfer and update my account today. My name is Sarah Miller and I'm available to provide the bank reference. Thank you.",Medium,High,Direct debit or payment processing error,Polite but firm,live chat
+130,"@YourProvider This is ridiculous. My bill for January (ACC-7754410) is showing an unexplained £78.60 'network usage' charge on 31/01/2026 — I have a home plan with 200GB and I did not exceed it. I have checked call logs, data usage from my phone, and MyAccount which inconsistently reports usage windows. Timeline: 02/02/2026 called customer services, spoke to Oliver (call ref 88-271) who said billing would investigate; 05/02 an email promised a follow-up within 5 working days; today, 12/02, nothing. This unexpected fee pushes my monthly outgoings up nearly 30% this month and I cannot afford to keep paying for phantom usage. I demand a full breakdown of how that £78.60 was calculated, copies of the usage logs attributed to my account (by timestamp and IP where applicable), and either a full refund or an immediate credit while you investigate. If this is an error on your billing system, I expect compensation for the stress and the time I've wasted calling repeatedly. Fix it within three working days or I will escalate to Ofcom and the Citizens Advice consumer service. ACC-7754410, REF-20260212.",Medium,High,Billing overcharge / unexpected fees,Verbose and detailed,social media
+131,"Dear Support,
+
+I write to complain about continual poor coverage from your mobile network in the Torbay area (account ACC-6902219). Since 22/01/2026 we have experienced repeated drops and 3G-only speeds where 4G should be available; call quality is unusable during evenings. My family work irregular hours and rely on the connection for remote meetings and my son's school access. Timeline: 23/01 call to technical support (spoke to Priya, ticket TKT-10043); 26/01 visit from an engineer who reported 'local congestion' but no resolution; 02/02 another outage lasting four hours; 09/02 yet another five-hour degradation. Each incident has been logged under outage refs: OUT-2101, OUT-2102, OUT-2108. The pattern is intolerable and has continued for three weeks. I am asking for a detailed plan of remedial steps, precise timescales for permanent fixes to cell capacity, and a proportionate billing adjustment for the days we were unable to use the service. I expect an answer within five working days.
+
+Yours sincerely,
+Mark Reynolds
+ACC-6902219",Medium,High,Network outage / poor coverage,Verbose and detailed,email
+132,"@YourProvider Trying to cancel should not feel like attempting to disarm a bomb. I called on 02/02/2026 to cancel ACC-8110044; I was promised confirmation and a final bill. Instead I received an SMS on 09/02 saying 'your cancellation request is being processed' and then today an automated charge of £58.00. Super. Keep taking my money while your system 'processes' things slowly. Astonishing customer care. Cancel the service, refund the charge, and confirm in writing. I am fed up with the runaround.",Medium,High,Service cancellation difficulty,Passive-aggressive / sarcastic,social media
+133,"Hello. My name is Daniel Foster (ACC-7049923). I have been advised that the planned broadband installation due on 10/02/2026 has been cancelled without explanation. I completed the pre-installation checks on 28/01/2026 and agreed the appointment for 10/02. The live chat rep this morning (call ID 44-019) confirmed there was 'an issue with the engineer schedule' and said they'd reschedule within 48 hours — but gave me no firm date. I need a guaranteed new install date in writing, confirmation that any additional charges will be waived for the delay, and assurance that the original installation fee will not be refunded until installation is complete. Please escalate to a manager. Thank you.",Medium,High,Broadband installation delay or failure,Formal professional,live chat
+134,"To whom it may concern,
+
+I refer to Order No. ORD-20260115 for broadband installation at 12 Lower Hill Road, Chelmsford (installation date originally 05/02/2026). The installation has not proceeded and I received no substantive explanation, only an automated message on 06/02/2026. Under the Consumer Contracts Regulations and the Consumer Rights Act 2015, I expect the services to be performed with reasonable care and skill and within the agreed time. You have failed to meet that expectation. Please provide a full written explanation for the delay, the revised installation date within seven days, and a credit for the period without service. If you do not respond within five working days I will consider further action, including referral to Ofcom and the Small Claims Court as appropriate.
+
+Yours faithfully,
+Claudia Bennett
+REF-ORD-20260115
+ACC-6037180",Medium,High,Service downgrade without consent,Legalistic / rights-aware,social media
+135,"Hi, my direct debit on ACC-9912045 has been processed incorrectly and you've taken £125.00 on 08/02/2026 instead of the contracted £55.00. I have my bank statement to prove it. I have reminded you twice via chat (chat refs 77-882 and 77-984) and was told 'it's being escalated' — that was over a week ago. Under the Payment Services Regulations and my rights as a consumer, I expect an immediate reversal of the overpayment or a full refund to my account within three working days. Please confirm your intended actions now.",Medium,High,Broadband installation delay or failure,Legalistic / rights-aware,email
+136,"@YourProvider I ordered an eSIM for my iPhone (SIM ID ICCID-8986001234567890123) on 03/02/2026. Activation failed on 04/02 and my number (+44 7700 900123) is still inactive. I have tried the activation steps on your website, chatted with support twice (spoke to Aisha, ticket 22-334) and followed her instructions, but the SIM shows 'no service' and I'm left with an expensive paperweight. I need this activated today or a clear timeframe for when I will have a working line. I'm out of patience and cannot be without my mobile for longer.",Medium,High,Direct debit or payment processing error,Legalistic / rights-aware,live chat
+137,"Hey, I'm Tom. I signed up for a new line in December and was told my contract would end on 31/01/2026 if I used the 30-day exit clause. I tried to leave on 03/02 and was told I'd be hit with an early termination fee of £186 (ACC-8822201). That's not what I was told when I signed — agent Sophie even confirmed the 30-day option. I've called three times and spent hours on chat. Can someone please explain why I'm being charged and either cancel the fee or provide the recorded call where I supposedly agreed to it? I'm getting very fed up of being bounced around.",Medium,High,SIM card / eSIM activation problem,Polite but firm,social media
+138,"Hello, my January bill shows an unexpected 'line administration' charge of £24.99 on ACC-6655020. I called on 04/02 and was told this was a one-off; two calls later (refs 3001, 3009) and an hour on hold, I'm still waiting for the promised refund. I am requesting a refund of £24.99 to my original payment method and written confirmation that this will not recur. I expect this corrected within 5 working days. Thanks, Rachel.",Medium,High,Contract dispute / early termination fee,Casual conversational,live chat
+139,"Account: ACC-4477710
+Service changed without consent on 07/02/2026. Current tariff shows 'Essential' plan when I have an existing 'Plus' contract. I did not agree to this downgrade. Please revert immediately to my original plan or provide a written rationale and my legal right to dispute this change. This form is brief but I expect an urgent correction.",Medium,High,Billing overcharge / unexpected fees,Polite but firm,live chat
+140,"Oh good, another 'we've received your cancellation' auto-reply. I’ve been trying to cancel ACC-9001107 since 31/01/2026. Each time I get reassurance, they 'set up the cancellation' and then someone calls pitching retention deals and the account remains active and charged. I entered the cancellation form again on 08/02 and nothing. Delightful. If you can't cancel the account, refund the last two months' charges and send proof of closure. That is all.",Medium,High,Service downgrade without consent,Terse and minimal,online form
+141,"Hi, I had an engineer booked for 11/02/2026 for broadband installation (Ref: INST-1126). The engineer attended the wrong property and left; I was at home all day. I was told by the dispatcher (name: Gary) that they'd rebook but they could not give a date. I signed up on 15/01/2026 and was given the 11/02 slot. Please explain how an engineer turned up at 14 Manor Crescent when the booking clearly states 14a Elm Street, provide a new installation appointment for this week, and compensate for lost time. Thank you.",Medium,High,Service cancellation difficulty,Passive-aggressive / sarcastic,online form
+142,"@YourProvider I'm paying for 200Mbps and getting 10–15Mbps. Speed test results attached to my public complaint — from multiple devices and on different days (tests on 04/02/2026 and 10/02/2026: 12.3Mbps, 14.8Mbps). Account ACC-6613312. This is a professional-level service failure; my freelance work is being delayed, I have missed meetings, and deadlines are at risk. Please provide a technical audit, a schedule for fixing the throughput, and an interim rebate for the days of substandard service. I expect a substantive reply from an engineer within three working days.",Medium,High,Broadband installation delay or failure,Narrative / storytelling,live chat
+143,"Account ACC-8174028
+Speed tests performed 07/02/2026: 8.7Mbps down, expected 100Mbps. I have run tests from a wired ethernet connection and rebooted the router. I have contacted support twice (refs 7002 and 7018) and received only standard troubleshooting steps. Please escalate to a network engineer and provide a firm date for resolution. I need a credited refund for poor service and confirmation that this will not be ongoing.",Medium,High,Slow or unreliable internet speed,Formal professional,social media
+144,"Contract No: CTR-20200403
+I am disputing the early termination fee charged following my request to leave on 01/02/2026. At the point of sale (09/03/2020) I was told there would be no exit fee after 36 months; my contract clearly reached that milestone on 04/03/2024. The invoice of £240 sent on 05/02/2026 is therefore unjust. Please provide the contractual clause you are relying on, complete with page and paragraph. I require the fee to be rescinded within five working days or I will escalate to the Ombudsman. Signed, Jonathan Price.",Medium,High,Slow or unreliable internet speed,Polite but firm,online form
+145,"Hi — I am deaf and rely on SMS and an easy-to-access text-based account for customer support. Since 02/02/2026 your webchat has been unavailable to me: the live chat widget fails the magnifier screen reader and forces me to use a phone call. I have explained this three times (spoke to Hitesh, Ellie) and been told 'we'll note it' with no reasonable adjustments offered. This is unacceptable discrimination under the Equality Act. Provide immediate confirmation of the accessibility measures you will implement, ensure my account (ACC-3391121) can be managed without voice calls, and offer compensation for the time wasted. I would prefer email or text support going forward.",Medium,High,Contract dispute / early termination fee,Formal professional,online form
+146,"My area (Hemsworth, postcode WF9) has had rolling network outages every evening since 29/01/2026, sometimes lasting four to six hours. I have recorded each event: 30/01 outage 18:00–22:00 (REF OUT-307), 02/02 outage 19:30–23:00 (REF OUT-309), 08/02 intermittent service 17:45–21:30 (REF OUT-312). I am a small business owner and these outages are costing me clients and revenue. I have spoken to two duty managers (Lauren on 31/01 and Hassan on 09/02) who promised escalation but provided no concrete action. I need an engineer inspection, an explanation of the underlying cause (is this capacity, backhaul, or tower fault?), and a compensation credit for lost service. Please treat this as urgent; my business cannot absorb further hit to income.",Medium,High,Accessibility needs not met,Passive-aggressive / sarcastic,live chat
+147,"This is unacceptable: my tariff was downgraded from 'Business Plus' to 'Business Basic' without consent on 05/02/2026 (ACC-5540027). I require immediate reinstatement to the contracted service level and a detailed account of how such a change was authorised. If you assert that I consented, please provide the signed confirmation or call recording. Until you reverse the downgrade I will treat this as a breach of contract and will pursue all remedies available, including notifying Ofcom.",Medium,High,Network outage / poor coverage,Verbose and detailed,live chat
+148,"Hello, I want to make a formal complaint about mis-selling. On 12/01/2026 I signed up for a fibre package after a home sales visit by Mark Reed, who promised symmetric upload speeds for cloud backup and guaranteed no line rental increase for 12 months. The contract I received (CTR-20260112) contains no such guarantees and the product delivered is a standard asymmetric product with poor upload. I demand an immediate review of the sales recording, correction to supply the product as sold or cancellation without penalty, and a refund of any difference paid. Please escalate to a senior complaints manager now.",Medium,High,Service downgrade without consent,Formal professional,social media
+149,"Dear Complaints Team,
+
+I am writing because I have been charged an early termination fee of £198 (Invoice ET-20260209) despite having told your retention team on 01/02/2026 that I would be moving abroad and the agent confirming that ending the contract early would be 'handled as a one-off compassionate case'. The case handler was Rizwan Patel (call ref 54-771). This morning I received a demand for the full fee. That is dishonest and outrageous. I expect the fee to be rescinded immediately and for you to confirm in writing that my account (ACC-3034412) is closed without further charges. If you fail to comply I will forward this file, including call recordings and emails, to the Ombudsman and pursue all available remedies.
+
+Yours,
+Olivia Hart",Medium,High,Mis-selling / misleading sales practices,Formal professional,live chat
+150,[GENERATION FAILED — re-run needed],Medium,High,Contract dispute / early termination fee,Passive-aggressive / sarcastic,email
+151,"Hi team,
+
+My account (ACC-7291834) was debited twice for the same bill on 02/02/2026: £245.00 taken on 02/02/2026 (REF-20260202A) and again on 03/02/2026 (REF-20260203B). I spoke to billing on 04/02/2026 and was told a refund would be issued within 5 working days; no refund has arrived and my current account has entered an unarranged overdraft. Please reverse REF-20260203B immediately and confirm by reply. I need this resolved today to prevent further bank charges.
+
+Thanks,
+Oliver Matthews",High,Low,Direct debit or payment processing error,Casual conversational,email
+152,Account ACC-881209: upload speeds below 0.5Mbps since 06/02/2026. Need immediate escalation; remote work impossible. Logged fault 07/02 (REF-20260207). What is the next step?,High,Low,Slow or unreliable internet speed,Terse and minimal,live chat
+153,"Agent: I require immediate reinstatement of my originally contracted service. You have downgraded my business line from 'Business Pro 200' to 'Business Basic 50' without my consent on 01/02/2026 (ACC-334455). This constitutes an unlawful variation under the contract terms dated 15/08/2023. I request confirmation of the unauthorised change, full reinstatement within 24 hours, and documentation of the reasons for the change. If not complied with, I will refer the matter to the Ombudsman and pursue contractual remedies.",High,Low,Service downgrade without consent,Legalistic / rights-aware,live chat
+154,"Dear Data Protection Team,
+
+I am reporting a likely data breach affecting my account (ACC-540022). On 05/02/2026 I received an SMS from an unknown number containing partial details of my billing address and the last four digits of my credit card. I have not shared these details externally. Please confirm whether any unauthorised access to my account occurred, what specific data were exposed, and the remedial steps you are taking. I request a formal written breach notification under ICO guidance and evidence of mitigation within 48 hours. REF-20260205.
+
+Kind regards,
+S. Patel",High,Low,Data breach / privacy concern,Polite but firm,email
+155,"Hello,
+
+Account ACC-612904. I have been trying to activate my eSIM since 27/01/2026. Steps taken: ordered eSIM on 27/01 (CONF-ESIM-271), received QR on 28/01, scanned on iPhone 12 running iOS 17.2. Activation fails with network error. I spoke with two agents (Tom on 29/01 and Priya on 31/01). Priya escalated to Tier 2 and said the profile would push within 24 hours; it has not. I also attempted manual MNC/MCC entry as advised and received error code 1013. The active SIM on the handset shows 'No Service' and I cannot receive 999 calls from this device; the eSIM is required because the physical SIM is reserved for travel. My account number is ACC-612904 and the internal ticket is REF-20260131-ESIM. Please advise exact diagnostic steps I should perform, confirm whether there is a network-side block on my IMSI, and escalate to engineering. I need activation completed within the next 8 hours so I can access emergency contact capabilities.
+
+Regards,
+Daniel Harwood",High,Low,SIM card / eSIM activation problem,Verbose and detailed,live chat
+156,"@YourISP I am writing on behalf of my mother, Mrs Agnes Lowe (ACC-001782). She is a registered vulnerable customer and was left without a working landline and broadband from 05/02/2026 to 08/02/2026. During that period she could not reach her GP or carers. I raised the issue by DM on 06/02 and was advised service would be restored; it was not. Please urgently contact me on 07700 900123 to confirm reinstatement and outline a remedial plan. This is a safeguarding matter and requires immediate action.",High,Low,Vulnerable customer mistreatment,Formal professional,social media
+157,"Account number: ACC-993311
+Date of order: 12/01/2026
+Estimated install date given: 22/01/2026
+Current status: No engineer visit; order now delayed 19 days.
+
+I require the installation to be completed by 12/02/2026. The property relies on broadband for a medical monitoring device. Please confirm a revised appointment within 24 hours and provide a written reason for the delay. REF: ORD-120126-BB.",High,Low,Broadband installation delay or failure,Polite but firm,online form
+158,"Hello,
+
+Since 02/02/2026 the mobile network in my postcode (OX2 6XY) has been intermittent and at times completely unavailable. My account (ACC-445566) has registered repeated dropped calls and SMS non-delivery with timestamps between 02/02 and 06/02. I called technical support on 03/02 (case REF-20260203-NET) and was informed of an ongoing capacity issue; no ETA was provided. This outage is affecting my ability to conduct essential business and to contact clients. Please provide a full incident report, the expected restoration time, and interim measures such as temporary call routing or a loan SIM from another network. I require confirmation of these actions within 12 hours.
+
+Kind regards,
+Eleanor Grant",High,Low,Network outage / poor coverage,Verbose and detailed,email
+159,"I am the account holder (ACC-778900). On 30/01/2026 my eSIM activation attempt was rejected and my service was removed without notice on 01/02/2026. You have a statutory duty under the Consumer Rights Act 2015 to provide services as contracted. I require immediate restoration of the prior mobile service and a written explanation of the grounds for removal, including any evidence relied upon. Please treat this as a formal request for reinstatement and documentation. If you do not comply within 48 hours I will seek remedies including raising a formal complaint with CISAS.",High,Low,SIM card / eSIM activation problem,Legalistic / rights-aware,live chat
+160,@YourISP My bank reports a failed direct debit on 30/01/26 and you still took £198.50 on 02/02/26 (REF-20260202). Please reverse the duplicate payment and confirm by DM today.,High,Low,Direct debit or payment processing error,Terse and minimal,social media
+161,"@YourISP Ordered eSIM on 28/01 (ACC-661122). QR scanned, activation fails. SIM shows 'No Service' and I cannot make calls. Please advise next steps. Thanks.",High,Low,SIM card / eSIM activation problem,Casual conversational,social media
+162,"@YourISP I have requested account cancellation three times (calls on 04/01, 18/01, 02/02) and no confirmation has been sent. Please process CXL for ACC-443311 today and confirm with CXL-REF-20260202.",High,Low,Service cancellation difficulty,Terse and minimal,social media
+163,"Dear Support,
+
+I am writing regarding the failed number port of my mobile number 07400 112233 from Provider X to your network. Port request submitted 20/01/2026 (PAC received 21/01/2026). Window for transfer was 25/01/2026 — attempt failed at 08:45 with error code NP-ERR-73. I have contacted customer support on 26/01 (REF-20260126), 29/01 (REF-20260129) and again on 02/02 (ESC-PORT-02). Each time I received a different timeframe for resolution. The failed port has left me without my business number for 10 days, causing loss of client calls and confirmed financial impact of approximately £1,150 in missed invoices. Please provide:
+
+- Full log of port attempts and exact error messages
+- Clear plan and exact date/time for successful porting
+- Compensation policy and proposed payment for demonstrable losses
+
+Account: ACC-225544. I expect an engineering-level response within 24 hours.
+
+Regards,
+Marina Reyes",High,Low,Porting / number transfer issues,Verbose and detailed,email
+164,@YourISP My engineer did not turn up for the installation scheduled 22/01 (Order ORD-220126). No reschedule provided and I still have no broadband. This accommodation depends on internet for home schooling and a medical alarm. Please advise new appointment and compensation options. ACC-332211.,High,Low,Broadband installation delay or failure,Verbose and detailed,social media
+165,"Good afternoon,
+
+Account ACC-447788. My direct debit was presented on 01/02/2026 for £310.00 (DDID: DD-310216) but the payment failed due to an error on your side flagged by my bank. I contacted your billing team on 01/02 at 10:15 and was told the issue was resolved; however, the payment was presented again on 03/02 without notification and has incurred an unpaid charge of £35.00 from my bank. Please cancel the second presentation, refund any fees, and confirm the corrected payment schedule. I need confirmation within 24 hours to prevent further bank action.
+
+Regards,
+Dr Catherine Long",High,Low,Direct debit or payment processing error,Formal professional,live chat
+166,"Hi,
+
+Order ORD-781234 (install promised 15/01/2026) still not completed. I was told on 11/01 by agent 'Laura' that an engineer would attend by 15/01; appointment missed and no follow-up. I need the connection for a home business and to support a dependent who uses online therapy. Please provide a reassigned appointment within 48 hours and written reasons for the delay. ACC-556677.
+
+Thanks,
+Mark",High,Low,Broadband installation delay or failure,Casual conversational,email
+167,"I was downgraded from 'Unlimited Family 100' to 'Pay As You Go' without notice on 30/01/2026. The change removed inclusive international minutes and caused two premium-rate charges totaling £120. I called support and was told the change was a system update; no consent or contractual variation was provided. Timeline: contract start 01/07/2023; downgrade observed 30/01/2026; call with agent 'James' on 31/01/2026 (REF-20260131). Please publish a full chronology explaining why consent was not obtained, restore the original tariff immediately, and refund the premium charges. I will escalate to the Ombudsman if not resolved within 48 hours.",High,Low,Service downgrade without consent,Narrative / storytelling,social media
+168,"Dear Network Team,
+
+Account ACC-998877. Since 01/02/2026 there has been persistent loss of signal and regular dropouts across the local cell (BSID 2103). The outage has prevented me from placing urgent care appointments and contacting my GP. I reported this on 02/02 (REF-20260202-NET) and spoke to the duty engineer on 03/02 who confirmed a fault but provided no restoration ETA. Please supply a technical incident report, expected recovery time, and immediate interim measures (call divert, roaming enablement). I require confirmation within 12 hours.
+
+Yours sincerely,
+Hannah Cole",High,Low,Network outage / poor coverage,Polite but firm,email
+169,"@YourISP You sold me 'FastHome 500' with a guaranteed speed of 500Mbps on 12/09/2025. Your sales agent stated 'average speeds above 300Mbps during peak hours'. The installation engineer on 15/09/2025 confirmed the cabinet supports the tier. Since 28/01/2026 my line has been limited to 20Mbps with no explanation. Under the Consumer Protection from Unfair Trading Regulations this is misleading. Please provide corrective action, a written justification for the speed reduction, and compensation. Account ACC-191919.",High,Low,Mis-selling / misleading sales practices,Legalistic / rights-aware,social media
+170,"Agent: my registered access needs were not recorded. I have a hearing impairment and requested SMS-only notifications when I signed up on 04/10/2025 (ACC-554433). Since 29/01/2026 important outage notifications have been sent as automated voice calls which I cannot receive; this prevented me from arranging transport for essential medical treatment on 30/01/2026. Under the Equality Act 2010 you must make reasonable adjustments. Please update my account to SMS-only alerts immediately, confirm the change in writing, and explain why the request was ignored previously. REF: ACCESS-20260130.",High,Low,Accessibility needs not met,Legalistic / rights-aware,live chat
+171,"Hello,
+
+I have attempted to cancel my broadband package three times by phone (calls on 05/01, 18/01, 02/02) and via the online portal (01/02). Each time I have been told cancellation is scheduled, but no final confirmation email or CXL reference has been received. Account ACC-708090. Please confirm cancellation, provide final bill calculation including any early termination charges with legal basis and date-stamped confirmation, and refund any post-cancellation charges if applied. I require a written reply within 48 hours.
+
+Regards,
+S. Ahmed",High,Low,Service cancellation difficulty,Verbose and detailed,email
+172,"Device model: ZX-12
+Purchase date: 20/10/2025
+Fault: screen intermittently black and touch unresponsive since 28/01/2026
+RMA requested: No
+Warranty: 24 months
+
+Please advise repair or replacement under warranty and provide RMA number. ACC-340770.",High,Low,Device / handset fault or warranty dispute,Terse and minimal,online form
+173,"Hello,
+
+On 02/02/2026 my account (ACC-660099) was moved from 'Home Plus 200' to 'Home Essential 40' without prior notice. The effective change reduced my guaranteed upload and removed static IP. I did not agree to this change. Please reinstate my original package immediately and provide a written explanation of contractual authority for the alteration. REF-20260202-DG.
+
+Thanks,
+Laura H.",High,Low,Service downgrade without consent,Polite but firm,live chat
+174,"Account: ACC-221144
+Billing period: 01/01/2026 - 31/01/2026
+Charge in dispute: £79.99 listed as 'priority support fee'.
+
+Yes, I can see it. No, I did not request it. Kindly remove the charge and refund £79.99. I would be thrilled to pay for something I never authorised, but since you charged it in error, please reverse it today. REF-BILL-20260131.",High,Low,Billing overcharge / unexpected fees,Passive-aggressive / sarcastic,online form
+175,"@YourISP I was promised a retention offer when I told retention I would leave (call 02/02, agent 'Maya' ACC-887700). No offer recorded and my bill increased instead. Please confirm the offer you gave and apply it retroactively or provide a clear reason why the retention offer was not honoured.",High,Low,Customer loyalty not rewarded / retention offer dispute,Terse and minimal,social media
+176,"Hello — Account ACC-7291834. I submitted this online form because my mobile signal in my flat in Bolton (postcode BL3 2RT) has been non-existent since 07/02/2026. I reported it via the app on 09/02/2026 (REF-20260209-81) and was told a local mast fault would be fixed within 48 hours. It is now 17/02/2026 and I still have zero service. This is high urgency: I care for my elderly father who is housebound and needs me to be contactable for medical appointments; inability to receive calls yesterday led to a missed ambulance appointment. Please escalate immediately, provide a clear ETA and a temporary solution (replacement SIM, roaming or alternative provision) and confirm compensation for the outage. I expect an update by 18/02/2026. Thank you, Claire H.",High,Medium,Network outage / poor coverage,Polite but firm,online form
+177,"Hi — REF: BILL-04126-2026. I’ve been on hold for 25 minutes and this is the third time today I’ve had to start a chat about the same issue. On 03/02/2026 you charged me £132.45 for data overuse on tariff “Essential Plus” despite my plan including 60GB. I have screenshots from the MyAccount app showing usage at 42.1GB on 02/02/2026 and an email from customer services (agent Mike, 06/02/2026) saying the overage charge would be reversed. That reversal never happened and now I have an unauthorised £132.45 direct debit scheduled for 20/02/2026 (DD REF DD-20260220-9). I have already called twice (08/02 and 11/02) and chatted earlier today — nobody has resolved this. I need the incorrect charge removed, confirmation that the DD will be cancelled immediately, a formal apology and confirmation of what you will do to stop this recurring. If you can’t fix this now escalate to billing supervisor Saira and give me a callback today. I’m fed up of repeating myself.",High,Medium,Billing overcharge / unexpected fees,Verbose and detailed,live chat
+178,"Dear Billing Team,
+
+Well done — you have taken £89.99 from my account on 12/02/2026 for a service I cancelled on 29/01/2026. My direct debit details are on file under ACC-554009. I know you like charging first and asking questions later, but I'd appreciate the courtesy of returning my money. I cancelled the contract with agent Tom (call recorded at 10:12, REF-20260129-T), and I have the email confirmation. Please reverse this payment immediately and confirm in writing that you will not attempt to take further sums. If this cannot be resolved within 48 hours I will be arranging a chargeback with my bank and make a formal complaint. Thanks, Elaine Porter",High,Medium,Direct debit or payment processing error,Passive-aggressive / sarcastic,email
+179,"@ProviderSupport I have repeatedly reported unresolved faults (REFs: 20250105-A, 20250612-C, 20260122-H) and am informing you formally that continued failure to remedy essential service outages and incorrect billing may constitute an unfair commercial practice under the Consumer Protection from Unfair Trading Regulations 2008. I am a vulnerable customer (registered disabled) and have been without reliable broadband and landline since 01/02/2026. I have documented every contact: call logs, emails, and chat transcripts, all ignored or closed without meaningful action. If you do not provide a corrective plan within 7 days I will escalate to Ofcom and seek compensation for loss of earnings and distress. This is my final notice.",High,Medium,Multiple unresolved issues over time,Legalistic / rights-aware,social media
+180,@ProviderSupport Mis-sold a ‘Business Unlimited’ package in January. Not what I signed up for. Unacceptable.,High,Medium,Mis-selling / misleading sales practices,Terse and minimal,social media
+181,Agent said ‘unlimited’ but the plan limits peak tethering and throttles to 128kbps after 20GB — clever. Thanks for the surprise. REF-SALE-110126. Can someone explain why your salesperson (Nina) told me there were no caps? My productivity depends on this and I’m not amused. Sort it now.,High,Medium,Mis-selling / misleading sales practices,Passive-aggressive / sarcastic,live chat
+182,"To whom it may concern,
+
+Account: ACC-992200. REF: OUT-20260201.
+
+I have contacted you on 12 separate occasions since 01/02/2026 regarding repeated outages and incorrect billing. Your records will show calls on 04/02, 07/02, 10/02 and emails on 05/02 and 11/02. None of the fault reports have been resolved. Please escalate and provide a single point of contact and a timeline for resolution within 5 working days. If unresolved I will pursue statutory complaint channels.
+
+Regards,
+Mark Ellis",High,Medium,Multiple unresolved issues over time,Terse and minimal,email
+183,"@provider I want to cancel my line. Been trying all week — every number leads to a queue or a different department. Can someone just confirm how I cancel and get a final bill? Account ACC-334411. Thanks, Jess",High,Medium,Service cancellation difficulty,Casual conversational,social media
+184,"Device model: Galaxy A52S (IMEI 351234567890123). Purchase date 14/11/2025 on handset finance plan HFN-55678. Fault reported 05/01/2026 (RMA REF 20260105-421). The screen has developed a vertical green band and the touchscreen intermittently fails; the phone is unusable for work calls. I returned the handset to your repair depot on 12/01/2026 and was told a replacement would be issued within 10 working days. It is now 17/02/2026 and I have had no update, no loan phone and the recorded contacts (calls to support on 20/01, 27/01, 04/02) show promises that were not kept. I am out of contract for the SIM and cannot afford to pay for a handset I cannot use. Please confirm today: either a same-spec replacement under warranty, a full refund of outstanding handset finance, and confirmation of any temporary handset provision while this is resolved. I expect acknowledgement within 24 hours and an engineer contact or dispatch number.
+
+Customer: Arjun Patel
+ACC-774201",High,Medium,Device / handset fault or warranty dispute,Verbose and detailed,online form
+185,"@provider So glad to see my email, bank details and phone number casually listed in a file leak. Is this how you “protect” customers? REF-PRIV-20260215. Lovely. I expect immediate confirmation of what data was exposed, exactly which third parties accessed it, and what you are doing to protect customers from fraud as a result. Please stop sending us scripts and tell me, in plain English, whether my identity is at risk. I expect a proper incident response update within 24 hours. #databreach",High,Medium,Data breach / privacy concern,Passive-aggressive / sarcastic,social media
+186,"Chat: Hi, I’m contacting you in this chat because the usual channels aren’t working. Account: ACC-667788. I have raised fault REF-20260130 and complained twice via email (12/02 & 14/02) — both replies were generic and unhelpful. I am a small business owner and your ongoing failures to provide the broadband service I pay for are causing material losses. Under the Consumer Rights Act I require a full written remedy plan and compensation calculation. Please escalate to your complaints manager now and confirm an independent complaint review within 10 working days.",High,Medium,Multiple unresolved issues over time,Legalistic / rights-aware,live chat
+187,"@ProviderSupport I was spoken to rudely by your call centre advisor 'Liam' on 10/02/2026 at 15:45 regarding a billing error (REF BILL-20260210-A). He repeatedly cut me off and refused to provide his name badge number when asked. I am disappointed and expect an apology and training review. As a disabled customer I rely on patient, clear communication — this treatment was unacceptable. Please investigate and update me by DM. — Sarah M.",High,Medium,Rude or unhelpful customer service,Polite but firm,social media
+188,@ProviderLegal I was sold a “HomeMax 500” package on 15/01/2026 by your agent who stated “guaranteed speeds”. The service delivered is consistently below 10Mbps. This appears to be a misleading commercial practice within the meaning of the Consumer Protection Regulations. REF-SALE-150126. I request contract rescission and full refund of installation fees within 14 days or I will lodge an enforcement complaint with Trading Standards and Ofcom. Please respond publicly and DM to discuss settlement.,High,Medium,Mis-selling / misleading sales practices,Legalistic / rights-aware,social media
+189,"Dear Payments Team,
+
+Account: ACC-881233. Reference: DD-ERR-20260212.
+
+On 12/02/2026 my bank informed me an attempted direct debit of £240.00 was submitted twice on the same day, resulting in an unpaid charge and bank fees of £35.00. My normal monthly payment is £120.00. I have already contacted your billing line on 13/02 and was promised a refund for the extra attempt; this refund has not appeared. Please reverse the duplicate transaction, reimburse my bank fees, and confirm in writing that future direct debits will be processed correctly from my nominated account (sort code 40-12-34, acct ****1234). If this is not resolved within 48 hours I will pursue a formal chargeback and file a complaint with the Financial Ombudsman.
+
+Yours sincerely,
+Hannah Reeves",High,Medium,Direct debit or payment processing error,Formal professional,email
+190,"Account ACC-559900, roaming charge dispute. I travelled to France and Spain between 01/01/2026–08/01/2026 and used 1.6GB on a plan that includes free EU roaming (Plan: Traveller Pro). On returning I was billed £422.60 on 15/01/2026 for roaming data. I have detailed data logs (dates/times/locations) and the in-service notification messages that confirmed roaming was enabled and should be covered. I called on 18/01 (agent Farid), then again on 22/01 (agent Laila) — both promised an internal review and a refund. No refund has been issued and the balance is showing as overdue, threatening penalty charges. This is causing significant financial distress as I must pay the bill to avoid collections. I require an immediate reversal of the roaming charges, written confirmation that my credit record will not be affected, and escalation to your billing disputes team. Please treat this as high priority and confirm by 18/02/2026.",High,Medium,Roaming charges / international billing,Verbose and detailed,online form
+191,"Hello,
+
+I’m absolutely delighted to see a £375 roaming charge on my bill for calls while visiting Portugal 03/02–06/02/2026 — delightful, because I certainly didn’t expect to have to remortgage to phone my family. My plan clearly states ‘EU roaming included’ and your website had no notification about new surcharges. I do appreciate surprises, but the only thing I enjoy less than unexpected bank charges is dealing with suspicion of billing incompetence. Please refund the £375, cancel any late/collection actions, and confirm you will credit my account. I expect a full explanation in writing.
+
+Regards,
+Tom Baxter
+ACC-321209",High,Medium,Roaming charges / international billing,Passive-aggressive / sarcastic,email
+192,@provider Been a customer for 11 years and today I get an email offering new customers a discount my account didn't get. I tried retention yesterday and was told nothing was available. Disappointed and fed up. Loyalty counts for nothing it seems. Can someone sort a fair retention offer or I’ll be leaving. ACC: 442233.,High,Medium,Customer loyalty not rewarded / retention offer dispute,Casual conversational,social media
+193,"To Complaints,
+
+Account ACC-120045. Complaint reference C-20260202.
+
+I submitted a formal complaint on 02/02/2026 and received an automated acknowledgement. Since then I have received no substantive response, despite chasing on 09/02 and 14/02. Your complaints handling procedure (Consumer Contracts Regulations and Complaint Handling Rules) requires acknowledgement and substantive response within defined timeframes. This ongoing failure to follow your own process is unacceptable. I request immediate escalation to your Head of Complaints, a full chronology of all contacts, and final resolution within 7 days. Please confirm receipt and the name and contact details of the person responsible. Failure to comply will leave me no option but to escalate to the Telecommunications Ombudsman and Trading Standards.
+
+Yours faithfully,
+Dr. Fiona McClelland",High,Medium,Complaint handling process failure,Legalistic / rights-aware,email
+194,"Dear Sir/Madam,
+
+I write to formally object to the downgrade of my broadband package from ‘Fibre 200’ to ‘Fibre 50’ without my consent on or around 10/02/2026. My account number is ACC-983311. No prior notice was received; I discovered the change when speeds dropped severely on 11/02/2026. This unilateral change impacts my ability to work from home and care for my dependent; it appears to be a breach of contract. Under the Consumer Rights Act 2015 and contract law I require immediate reinstatement of the original plan, compensation for lost earnings, and written confirmation that this will not recur. Please revert my service to Fibre 200 and provide details of how you will remedy this within 5 working days.
+
+Yours sincerely,
+George L. Whitaker",High,Medium,Billing overcharge / unexpected fees,Casual conversational,social media
+195,"Right, story time. I moved my business line from Provider X to you on 02/12/2025 and was promised the migration would be seamless. Instead, I received a bill on 31/01/2026 for £1,050 covering two months of service — including charges from Provider X that you were supposed to handle. I called on 02/02 (agent Zoe), who said she’d credit £650 and escalate a dispute; nothing has happened and the credit hasn’t appeared. I’ve now had 3 days of calls from debt collectors despite disputing the charge. This is unbearable: my staff morale and cashflow are suffering because of your billing error. Please remove the incorrect £1,050 immediately, confirm the credit and provide a written apology. If this isn't fixed in 48 hours I will involve my solicitor.",High,Medium,Service cancellation difficulty,Polite but firm,live chat
+196,"Booking REF INST-20260125. Installation appointment for broadband was scheduled for 03/02/2026 between 08:00–12:00. No engineer turned up and no one called to explain. I have been working from home since then and have missed two client video calls and lost fees totalling £420. I have phoned customer services (calls on 03/02 and 04/02) and was promised a new engineer appointment within 48 hours; still nothing. This is urgent — I need broadband today or a temporary workaround (mobile router) dispatched immediately, plus a clear apology and compensation for lost earnings. Please confirm action now: my address is 14 Highfield Road, Cambridge CB1 3DF; phone 07711 223344. Thank you, Olivia Kent",High,Medium,Complaint handling process failure,Verbose and detailed,social media
+197,"Hi, I’ve had zero signal since 06/02/2026 at my rural address (ACC-557744). I rely on the mobile line to check glucose levels for my son overnight; not being contactable is dangerous. I called yesterday (15/02/2026) and was told an engineer would visit within two working days, but no ETA was given. This is urgent — I need temporary provision (emergency SIM/loan phone or priority engineer) immediately. Please escalate and call me now on 07788 445566. Thank you, Mark Calder",High,Medium,Service downgrade without consent,Legalistic / rights-aware,email
+198,[GENERATION FAILED — re-run needed],High,Medium,Billing overcharge / unexpected fees,Narrative / storytelling,live chat
+199,[GENERATION FAILED — re-run needed],High,Medium,Broadband installation delay or failure,Polite but firm,online form
+200,[GENERATION FAILED — re-run needed],High,Medium,Network outage / poor coverage,Polite but firm,live chat
+201,"@ProviderHelp This is beyond frustrating. ACC-7291834 — broadband dropouts since 03/02, billing errors since 12/03, and now voicemail stopped working on 10/04. I’ve messaged and called three times, spoke to Tom on 15/04 who promised escalation (REF-20240415) and heard nothing. I work from home and have lost two days’ income already. I’m absolutely livid that nothing is fixed and nobody can give a date. Fix it NOW or I’ll be switching and taking this to Ofcom. — Hannah",High,High,Multiple unresolved issues over time,Casual conversational,social media
+202,"Dear Customer Support,
+
+I am writing because your treatment of my 82‑year‑old mother, Mrs Joan Mercer (Account: JMR-551820), has been disgraceful and, frankly, dangerous. On 08/04 I called to report that her landline had been dead for two days and she could not call for help — she is on oxygen and would be unable to reach emergency services if there was a problem. I spoke with an advisor named Saira who told me she would mark the account as a priority and arrange an engineer for the 10/04. No engineer attended, no callback, and the line remained dead until 12/04 when I had to take her to A&E because she couldn’t contact anyone.
+
+I have since called back four times (calls on 09/04, 11/04, 12/04 and 13/04) and been fobbed off or put on hold for an hour. Each time staff have treated the situation as an inconvenience rather than an emergency. This is wilful negligence towards a vulnerable customer. Your failure to provide a working emergency communication channel for someone reliant on it is unacceptable and puts lives at risk.
+
+I require immediate escalation to the priority faults team, a written apology, and confirmation within 24 hours that protections will be applied to her account, plus details of the compensation you will provide for the harm and distress caused. If I do not hear back within 24 hours I will be contacting my local MP and Ofcom.
+
+Yours,
+Clare Mercer
+Tel: 07xx xxx 1234
+Account: JMR-551820",High,High,Vulnerable customer mistreatment,Narrative / storytelling,email
+203,"Hi — I'm on chat because my broadband installation (REF-20240501) has been cancelled twice and the new router still hasn't arrived. Engineer was booked for 04/05, cancelled on 03/05; rebooked for 09/05, same. I work full days and was promised 'priority' by advisor Mark on 10/05 but nothing. I've been waiting since 24/04 and this is unacceptable — I need a definitive installation date today and a credit for lost working days. Please escalate to a supervisor now.",High,High,Broadband installation delay or failure,Polite but firm,live chat
+204,ACC-884422 — Direct debit taken twice on 14/04. Money not in account. Need immediate refund. This is causing overdraft fees. Fix now.,High,High,Direct debit or payment processing error,Terse and minimal,live chat
+205,"Hello — I have been trying to cancel my contract since 01/04 (Account REF: CXL-310322) and every time I call the automated line sends me to retention. I spoke to Lisa on 04/04 who said cancellation would be processed; I was billed again on 05/04. I have evidence of emails on 02/04 and recorded call where I said 'cancel' three times. I am being charged for a service I do not want and cannot use. Please process the cancellation immediately, refund the last payment and confirm in writing. I cannot keep dealing with this runaround — it’s been three weeks and counting.",High,High,Service cancellation difficulty,Narrative / storytelling,live chat
+206,"Port request PRO-20240421. Oh brilliant — you 'attempted' the port and then magically lost my number. My old provider released it on 21/04, you promised transfer on 22/04, now my customers and work contacts are unreachable and I get told 'we’ll try again' by someone called Dawn. Fabulous. Could you be any more helpful? I need my number restored immediately or provide a full explanation and compensation for lost business. (Number ending 4321; account PRT-998776.)",High,High,Porting / number transfer issues,Passive-aggressive / sarcastic,online form
+207,"Dear Complaints Team,
+
+I am escalating because your internal complaints process has failed me completely. I raised an official complaint on 05/04 (Complaint ref COMP-20240405) after repeated outages and unauthorised charges. I received an automated acknowledgement, then nothing. I called on 12/04 and spoke with Oliver who promised a response 'within 7 working days' — two weeks later and still nothing. I have sent reminder emails on 19/04 and 26/04 and been given different reasons for delay each time.
+
+This absence of accountability is unacceptable. I expect this complaint to be investigated by someone not previously involved, a substantive response with findings and proposed redress within 48 hours, and a named contact who will take responsibility. If you cannot meet that timeframe, please confirm so I may take the matter to the Ombudsman.
+
+Regards,
+James Fairclough
+Account: JF-44012
+REF: COMP-20240405",High,High,Complaint handling process failure,Polite but firm,email
+208,"Account ACC-550233 — Roaming charges from holiday in Spain (12/03–19/03) are £1,240. I checked my plan and was told roaming was included; the advisor on 10/03 (Rachel) confirmed this. I paid £45/month for an 'all-inclusive' plan and now you’ve billed me for data at extortionate rates. I’ve provided my passport stamp and call logs. Please remove these charges and credit my account immediately; I will not accept being nickeled to death because your records are wrong.",High,High,Roaming charges / international billing,Casual conversational,online form
+209,"Wi‑Fi is crawling — 2 Mbps down at 10am today (speedtest attached) and has been like this for ten days. ACC-332210. I can’t do video calls, lost a client meeting and lost income. Fix it now, this is urgent.",High,High,Slow or unreliable internet speed,Terse and minimal,social media
+210,"I am absolutely appalled. For two weeks my line drops every evening: I’m legally entitled to a reliable service. Account: LR-77019. You’ve had fault reports on 05/04, 08/04 and 12/04 (calls with Sukh and Mia) and nothing permanent has been done. If you do not resolve this within 48 hours I will issue a formal letter citing breach of contract and seek remedies under the Consumer Rights Act. I expect compensation and full details of the remedial actions you will take.",High,High,Vulnerable customer mistreatment,Passive-aggressive / sarcastic,live chat
+211,@Provider — I’ve just been charged £385 for data roaming while on business in Germany (invoice INV-20240420). My tariff includes EU roaming. I expect an immediate reversal and explanation. This billing mistake is unacceptable for a corporate customer — please respond now and confirm when the refund will reach my account.,High,High,Slow or unreliable internet speed,Legalistic / rights-aware,live chat
+212,"Hello,
+
+I need to tell the story of what your 'installation' has been. I placed an order on 05/03 for fibre to the property (Order FBN-20240305). You sent a technician who declared the line ready on 12/03 but the router never provisioned. Since then I've had four phoned promises, three cancelled slots and one no‑show. On 22/03, a junior agent, Tom, told my partner they'd 'come back next week' — they didn't. My partner, a single parent, had to miss two days of work to wait in; my university‑age daughter has missed online classes. On 01/04 you 'fixed' it remotely and it worked for 24 hours before collapsing again.
+
+This string of errors and broken promises is not just inconvenient — it's financially damaging and stressful. I require a full re‑assessment, an urgent engineer visit with a guaranteed 24‑hour window, and compensation for the time lost. Please escalate to a manager and confirm actions by return.
+
+Regards,
+Ruth Fenwick
+Account: RF-20240305",High,High,Roaming charges / international billing,Formal professional,social media
+213,"Accessibility complaint — Account ASD-6612. I am registered as deaf and require text/video relay support and SMS notifications. On 14/04 I received a voicemail-only message about a service change I could not access; on 18/04 I was transferred repeatedly with no captioned options when calling. Your staff did not update my contact preferences despite the form I submitted on 02/03 and a call with Niamh on 05/03. This is discriminatory and unsafe: I rely on clear written notices for service interruptions. I require immediate correction of my account settings, written confirmation, and the appointment of a dedicated agent who understands accessibility needs. If not resolved within 48 hours I will raise a formal complaint and contact equality advisory services.",High,High,Broadband installation delay or failure,Narrative / storytelling,email
+214,"Hello. I've been bounced around since I first complained on 28/03 (Complaint REF: CH-280323). The initial issue was an outage causing two full days without broadband; I submitted evidence and asked for compensation. Since then I've had four different advisors — Paul, Gemma, Sandeep and Tyler — each promising an update that never arrives. Your complaints process is not working. I need this escalated to your complaints manager today, a timeline for resolution, and fair redress. Please do not send another generic e‑mail that says 'we're investigating'.",High,High,Accessibility needs not met,Formal professional,online form
+215,"Dear Retentions Team,
+
+I have been a customer for eight years (Account: LOY-88001). In January your advisor Amir offered me a loyalty discount and assured me there would be no change to my terms if I renewed early. I accepted and took a 24‑month package on 12/01/2024. However, the bill received on 01/04/2024 shows I have been charged the full rate and the 'discount' has never been applied. I called on 05/04 and spoke with a supervisor, Hannah, who said it would be corrected — it hasn't.
+
+This is a clear failure to honour agreed terms. I am out of pocket by £276 so far and have been given no credible explanation. I require written confirmation of the promised discount, an immediate refund of the overcharged amounts, and assurance that my contract will reflect what was promised. If this is not resolved within 7 days I will terminate without penalty and pursue the balance through the Ombudsman.
+
+Yours sincerely,
+Mohammed Idris
+Account: LOY-88001",High,High,Complaint handling process failure,Formal professional,live chat
+216,"Slow speeds AGAIN. Account SVC-9933. Average download 1.8Mbps for the last month despite paying for 100Mbps. I've done three speed tests at different times and sent them 10/04, 14/04 and 17/04 with no meaningful response. Under the terms of the contract and the Consumer Rights Act I am entitled to services at the speed promised or a refund — I demand immediate remediation, compensation for lost service, and confirmation of my right to cancel without penalty if you cannot meet the advertised speeds within 14 days.",High,High,Customer loyalty not rewarded / retention offer dispute,Formal professional,email
+217,"CXL-5542 — I pressed cancel on 02/04 and again on 04/04 via live chat. Your system keeps reactivating my service and charging my card on 05/04 and 06/04 despite confirmation messages saying 'Your cancellation is complete.' Stop billing me immediately, confirm cancellation in writing, and refund the last two charges. This is urgent — I cannot afford further unauthorised payments.",High,High,Slow or unreliable internet speed,Legalistic / rights-aware,online form
+218,"Privacy breach: I received an email on 15/04 addressed to someone else that contained the last four digits of my bank account and details of my recent payments (INV-20240410). Additionally, my online account showed another customer’s call history on 16/04 — clearly a data segregation failure. My email address was cc'd publicly to multiple addresses by your automated system. This is a serious personal data incident affecting my finances and privacy.
+
+I require an urgent security lock on my account, immediate investigation, written confirmation of what data was exposed and to whom, and details of the remedial steps you are taking. Please treat this as high priority and respond within 24 hours with a named contact. I am considering reporting this to the ICO if not resolved immediately.
+
+Account: PB-41290",High,High,Service cancellation difficulty,Terse and minimal,live chat
+219,"@Provider this is intolerable. On 12/04 your portal displayed thousands of customers' partial account numbers and billing summaries to anyone logged in — I could see other people's names and invoices. This is not a minor glitch, it’s a massive data protection failure. You are legally obliged under GDPR to notify affected customers without undue delay. I expect a public statement, direct notification to all affected accounts, and immediate measures to secure the system. If I do not see evidence of action within 24 hours I will be raising this with the ICO and pursuing legal remedies. #databreach #GDPR",High,High,Data breach / privacy concern,Formal professional,online form
+220,"Account: ACC-11877 — I've had a catalogue of problems: dropped calls for months, incorrect bills, and last week my broadband went down completely (no dial tone) and has been out since 09/04. I filed faults on 10/04 and 12/04 and was given two different reference numbers (F-100412 and F-120412). Every time I call I speak to a different person and get a different story. I am desperate — I need a single point of contact assigned today, a timeline for restoration, and compensation for the repeated failures. If you can't do this, tell me now so I can switch providers before more damage is done.",High,High,Data breach / privacy concern,Legalistic / rights-aware,social media
+221,"I am writing in detail because the charges you have levied as an 'early termination fee' are both unfair and contrary to what was agreed. My contract (Contract CT-2019-07, signed 09/07/2019) included a promotional credit which was removed when service became unreliable and I reported multiple faults (logs: 12/01/2024, 05/03/2024, 02/04/2024). I exercised my right to terminate due to persistent breaches of service; yet you have invoiced me £420 as an ETF. Your terms allow termination without penalty if service is not of satisfactory quality. I have documented proof of outages, emails where advisors admitted the fault, and recordings of calls where staff promised refunds and no ETF if I left.
+
+I expect the ETF to be cancelled immediately, a full refund of any disputed amounts, and written confirmation of the contract termination within seven days. If this is not resolved I will commence a formal dispute, involve the Ombudsman, and seek all costs incurred. Please escalate to legal/contractual team and respond by return.
+
+Name: Eleanor Bridger
+Account: CT-2019-07
+REF: ETF-DISPUTE-20240417",High,High,Multiple unresolved issues over time,Casual conversational,online form
+222,"Oh good, another 'we're sorry to hear that' script. Complaint ref CH-030424 — three call centre transfers later and still no answer. I spoke to Kai who promised 'manager callback within 48 hours' on 04/04. Nada. You have perfected the art of saying nothing. If you're going to ignore customers, at least have the decency to stop sending automated 'we value you' emails. Escalate this now or I'll stop paying for a service that values me less than your IVR.
+
+— Rupert",High,High,Contract dispute / early termination fee,Verbose and detailed,online form
+223,Hi — my account (ACC-DSL-772) is flagged as requiring accessibility support but each time I call I'm placed on hold with standard music for 40+ minutes. I am partially sighted and cannot navigate the automated system. I registered for large‑text bills and priority fault support on 01/03 (reference ACC-0041) but it hasn't been applied. Today the broadband went down and I couldn't get through to report it; I rely on internet for vital medication ordering. Please switch me to text/SMS contact and arrange a priority engineer within 24 hours. I need human contact who understands accessibility — this is urgent.,High,High,Complaint handling process failure,Passive-aggressive / sarcastic,live chat
+224,"Account SIM-5560 — I received an eSIM activation code on 11/04 but each activation attempt fails with 'profile not found'. My phone shows no service and I cannot make emergency calls from home. I spoke to Yasmin on 12/04 who said she'd push a new profile but nothing arrived. I am away from my usual provider, have no spare SIM and rely on this line for prescription refill calls. Please activate the eSIM remotely now, or send a replacement physical SIM with guaranteed next‑day delivery and confirm by chat. This is urgent — being without a working phone is dangerous.",High,High,Accessibility needs not met,Casual conversational,live chat
+225,[GENERATION FAILED — re-run needed],High,High,SIM card / eSIM activation problem,Casual conversational,live chat

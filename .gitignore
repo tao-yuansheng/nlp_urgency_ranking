@@ -1,3 +1,4 @@
 .env
 *.xlsx
 __pycache__/
+.claude
