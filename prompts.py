@@ -1,4 +1,4 @@
-"""System prompt templates, level definitions, scenarios, styles, and channels."""
+"""System prompt templates, level definitions, scenarios, styles, and profiles."""
 
 # ---------------------------------------------------------------------------
 # Urgency definitions
@@ -66,29 +66,53 @@ EMOTION_DEFINITIONS = {
 # Scenarios (20)
 # ---------------------------------------------------------------------------
 SCENARIOS = [
-    # Original 8
-    "Billing overcharge / unexpected fees",
-    "Network outage / poor coverage",
-    "Contract dispute / early termination fee",
-    "Slow or unreliable internet speed",
-    "Rude or unhelpful customer service",
-    "Porting / number transfer issues",
-    "Roaming charges / international billing",
-    "Service cancellation difficulty",
-    # New 12
-    "Data breach / privacy concern",
-    "Accessibility needs not met",
-    "Vulnerable customer mistreatment",
-    "Multiple unresolved issues over time",
-    "Device / handset fault or warranty dispute",
-    "SIM card / eSIM activation problem",
-    "Broadband installation delay or failure",
-    "Customer loyalty not rewarded / retention offer dispute",
-    "Direct debit or payment processing error",
-    "Mis-selling / misleading sales practices",
-    "Service downgrade without consent",
-    "Complaint handling process failure",
+    "Difficulty Cancelling Service",
+    "Fraud & Scams",
+    "Overcharging & Incorrect Billing",
+    "Poor Network Coverage",
+    "3G Shutdown Impact",
+    "Auto-Renewal Without Consent",
+    "Billing After Cancellation",
+    "High Early Termination Fees",
+    "Ineffective AI / Chatbot Support",
+    "Unfulfilled Fix Promises",
+    "Long Call-Waiting Times",
+    "Wrong Sale Due to Agent Mistake",
+    "Loyalty Penalty",
+    "Mid-Contract Price Increase",
+    "Complete Service Outage",
+    "Faulty Hardware / Handset Issues",
+    "Hidden Fees & Charges",
+    "Lack of Progress Updates",
+    "Poor Complaint Handling",
+    "Slow Broadband Speeds",
 ]
+
+# ---------------------------------------------------------------------------
+# Scenario → allowed urgency levels (Low=12, Medium=18, High=10 scenarios)
+# ---------------------------------------------------------------------------
+SCENARIO_URGENCY: dict[str, list[str]] = {
+    "Difficulty Cancelling Service":       ["Low", "Medium"],
+    "Fraud & Scams":                       ["Medium", "High"],
+    "Overcharging & Incorrect Billing":    ["Low", "Medium", "High"],
+    "Poor Network Coverage":               ["Low", "Medium"],
+    "3G Shutdown Impact":                  ["Medium", "High"],
+    "Auto-Renewal Without Consent":        ["Low", "Medium"],
+    "Billing After Cancellation":          ["Medium", "High"],
+    "High Early Termination Fees":         ["Medium", "High"],
+    "Ineffective AI / Chatbot Support":    ["Low", "Medium"],
+    "Unfulfilled Fix Promises":            ["Medium", "High"],
+    "Long Call-Waiting Times":             ["Low", "Medium"],
+    "Wrong Sale Due to Agent Mistake":     ["Medium", "High"],
+    "Loyalty Penalty":                     ["Low", "Medium"],
+    "Mid-Contract Price Increase":         ["Low", "Medium"],
+    "Complete Service Outage":             ["High"],
+    "Faulty Hardware / Handset Issues":    ["Low", "Medium", "High"],
+    "Hidden Fees & Charges":               ["Low", "Medium"],
+    "Lack of Progress Updates":            ["Low", "Medium"],
+    "Poor Complaint Handling":             ["Medium", "High"],
+    "Slow Broadband Speeds":               ["Low", "Medium"],
+}
 
 # ---------------------------------------------------------------------------
 # Writing styles (8) — intentionally orthogonal to emotion
@@ -105,13 +129,27 @@ STYLES = [
 ]
 
 # ---------------------------------------------------------------------------
-# Communication channels (4)
+# Customer profiles (8) — persona for the complaint author
 # ---------------------------------------------------------------------------
-CHANNELS = [
-    "email",
-    "live chat",
-    "online form",
-    "social media",
+CUSTOMER_PROFILES = [
+    "Young professional, tech-savvy, impatient",
+    "Elderly customer, not confident with technology",
+    "Small business owner relying on service for livelihood",
+    "Parent managing a family plan",
+    "Student on a tight budget",
+    "Long-term loyal customer (10+ years)",
+    "Recently switched from another provider",
+    "Vulnerable customer with disability or health condition",
+]
+
+# ---------------------------------------------------------------------------
+# Complaint history depth (4) — how many prior interactions
+# ---------------------------------------------------------------------------
+COMPLAINT_HISTORY = [
+    "First contact — raising the issue for the first time",
+    "Second attempt — raised once before with no resolution",
+    "Repeat complainer — has contacted 3-5 times over weeks",
+    "Escalation — has exhausted normal channels, requesting manager/ombudsman",
 ]
 
 # ---------------------------------------------------------------------------
@@ -126,15 +164,13 @@ SYSTEM_PROMPTS = [
         "preamble. Vary the length naturally; some complaints should be short "
         "and others longer. Use realistic but varied customer names, or omit "
         "the name entirely. Never use placeholder names like 'John Doe'. "
-        "Include realistic details: reference numbers (e.g., 'REF-20240917'), "
-        "dates of prior contacts, account numbers, and specific amounts where "
-        "relevant. Mention prior interactions ('I already called twice last "
-        "week'). Match the communication channel — emails should have "
-        "greetings and sign-offs, live chats should be informal and "
-        "immediate, online forms should be structured, and social media posts "
-        "should be concise and public-facing. Let emotional intensity come "
-        "through naturally via word choice, sentence rhythm, and tone — not "
-        "primarily through formatting tricks."
+        "Include realistic details: dates of prior contacts and specific "
+        "amounts where relevant. Mention prior interactions ('I already "
+        "called twice last week'). Let emotional intensity come through "
+        "naturally via word choice, sentence rhythm, and tone — not "
+        "primarily through formatting tricks. Vary sentence length "
+        "dramatically — some complaints should be 2-3 sentences, others "
+        "2-3 paragraphs."
     ),
     # Template B
     (
@@ -144,28 +180,29 @@ SYSTEM_PROMPTS = [
         "no tags, no explanations. The complaints should feel authentic: "
         "varying in length, tone, and detail. If a name is used, make it "
         "sound genuine and diverse — avoid generic placeholders. Ground each "
-        "complaint in specific details: dates, reference numbers, prior call "
-        "history, specific amounts or plan names. Format the message "
-        "appropriately for the specified communication channel. When emotion "
-        "is high, write like a genuinely upset customer — the intensity "
-        "should come from what they say and how they say it, not from "
-        "excessive punctuation alone. Some angry customers write in clipped, "
-        "controlled fury; others ramble; others threaten to go to Ofcom."
+        "complaint in specific details: dates, prior call history, specific "
+        "amounts or plan names. When emotion is high, write like a genuinely "
+        "upset customer — the intensity should come from what they say and "
+        "how they say it, not from excessive punctuation alone. Some angry "
+        "customers write in clipped, controlled fury; others ramble; others "
+        "threaten to go to Ofcom. Vary length dramatically — some "
+        "complaints should be just a couple of sentences, others several "
+        "paragraphs."
     ),
     # Template C
     (
         "Act as a generator of customer complaint messages for a UK telecoms "
         "company. Each output must read like a genuine message a customer "
-        "would send through the specified support channel. Provide only the "
-        "complaint body — do not include any metadata, labels, or framing "
-        "text. Let the complaints differ naturally in length and specificity. "
-        "Use believable names when appropriate; never use obvious filler "
-        "names. Make each complaint feel grounded: include account details, "
-        "dates, reference numbers, names of staff spoken to, and relevant "
-        "history. Adapt the format to the channel (email vs chat vs form vs "
-        "social media). Express emotion through authentic language — the "
+        "would send. Provide only the complaint body — do not include any "
+        "metadata, labels, or framing text. Let the complaints differ "
+        "naturally in length and specificity. Use believable names when "
+        "appropriate; never use obvious filler names. Make each complaint "
+        "feel grounded: include dates, names of staff spoken to, and "
+        "relevant history. Express emotion through authentic language — the "
         "reader should sense the customer's emotional state from their word "
         "choices, the rhythm of their sentences, and what they choose to "
-        "emphasise, rather than from typographic conventions alone."
+        "emphasise, rather than from typographic conventions alone. "
+        "Vary length dramatically — some complaints should be very brief, "
+        "others much longer and more detailed."
     ),
 ]

@@ -23,28 +23,44 @@ This project generates synthetic telecoms customer complaints using OpenAI's GPT
    ```bash
    python generate_complaints.py
    ```
-   This will generate 225 complaints and save them to `telecoms_complaints_sample.csv`.
+   By default this generates 5,000 complaints. Use `--total` and `--seed` to customise:
+   ```bash
+   python generate_complaints.py --total 100 --seed 42
+   ```
+
+## Pipeline Overview
+
+The generator uses a **3x3 urgency x emotion grid** with a skewed urgency distribution (35% Low / 40% Medium / 25% High). Each complaint is assigned a unique combination of:
+
+- **Scenario** (20 UK telecoms complaint topics) — constrained by a scenario-urgency affinity map
+- **Writing style** (8 styles, e.g. formal, sarcastic, legalistic)
+- **Customer profile** (8 personas, e.g. elderly customer, small business owner)
+- **Complaint history** (4 depths, from first contact to escalation)
+
+This gives 5,120 unique combinations, ensuring diversity at scale. Three rotating system prompts further reduce stylistic uniformity.
 
 ## File Descriptions
 
 | File | Description |
 |------|-------------|
-| `generate_complaints.py` | Main script. Calls the OpenAI API to generate complaints across all urgency/emotion cells and saves the output as a CSV. |
-| `prompts.py` | Contains urgency and emotion level definitions, complaint scenarios, writing styles, communication channels, and the rotating system prompt templates sent to the model. |
-| `taxonomy.py` | Defines the 3×3 urgency × emotion grid and the logic for assigning scenarios, styles, and channels to each cell while enforcing distribution constraints. |
+| `generate_complaints.py` | Main script. Calls the OpenAI API in batches of 15, with retry logic, and saves the output as a CSV. |
+| `prompts.py` | Urgency/emotion definitions, 20 scenarios, scenario-urgency affinity map, writing styles, customer profiles, complaint history depths, and 3 rotating system prompts. |
+| `taxonomy.py` | 3x3 grid with skewed distribution, pool-based assignment with per-urgency scenario constraints, 4-tuple dedup, and validation. Run standalone to verify distributions. |
+| `scenario_urgency_affinity.csv` | Human-readable reference of which scenarios are allowed at each urgency level. |
 | `requirements.txt` | Python dependencies: `openai`, `pandas`, `python-dotenv`. |
 | `.env.example` | Template for the `.env` file. Copy this to `.env` and add your API key. |
-| `.env` | **Not tracked by git.** Holds your `OPENAI_API_KEY`. |
-| `telecoms_complaints_sample.csv` | Generated output — a CSV of 225 complaints with columns listed below. |
 
 ## Output Format
 
-The generated CSV contains the following columns:
+The generated CSV (`telecoms_complaints.csv`) contains:
 
-- **id** — Complaint number
-- **complaint_text** — The generated complaint message
-- **intended_urgency** — Low, Medium, or High
-- **intended_emotion** — Low, Medium, or High
-- **scenario** — The complaint topic (e.g., billing overcharge, data breach, broadband installation)
-- **style** — The writing style (e.g., formal professional, terse and minimal, legalistic)
-- **channel** — The communication channel (email, live chat, online form, or social media)
+| Column | Description |
+|--------|-------------|
+| `id` | Complaint number |
+| `complaint_text` | The generated complaint message |
+| `intended_urgency` | Low, Medium, or High |
+| `intended_emotion` | Low, Medium, or High |
+| `scenario` | Complaint topic (e.g. Fraud & Scams, Slow Broadband Speeds) |
+| `style` | Writing style (e.g. formal professional, terse and minimal) |
+| `profile` | Customer persona (e.g. elderly customer, student on a tight budget) |
+| `history` | Complaint history depth (e.g. first contact, escalation) |
