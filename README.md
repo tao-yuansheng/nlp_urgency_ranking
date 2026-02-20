@@ -1,6 +1,6 @@
 # NLP Urgency Ranking — Synthetic Complaint Generator
 
-This project generates synthetic telecoms customer complaints using OpenAI's GPT-5-mini. Each complaint is labelled with an intended urgency level and emotion level, forming a balanced dataset for NLP urgency-ranking research.
+This project generates synthetic telecoms customer complaints using OpenAI's GPT-4o-mini. Each complaint is labelled with an intended urgency level and emotion level, forming a balanced dataset for NLP urgency-ranking research.
 
 ## Setup
 
@@ -49,6 +49,44 @@ This gives 5,120 unique combinations, ensuring diversity at scale. Three rotatin
 | `scenario_urgency_affinity.csv` | Human-readable reference of which scenarios are allowed at each urgency level. |
 | `requirements.txt` | Python dependencies: `openai`, `pandas`, `python-dotenv`. |
 | `.env.example` | Template for the `.env` file. Copy this to `.env` and add your API key. |
+
+## Dataset Scale & Diversity Justification
+
+The design supports generating **5,000–10,000 complaints without meaningful repetition**, for three independent reasons:
+
+### 1. Combinatorial space exceeds the target range
+
+The four metadata dimensions produce a large unique-tuple space:
+
+| Dimension | Count |
+|-----------|-------|
+| Scenarios | 20 |
+| Writing styles | 8 |
+| Customer profiles | 8 |
+| Complaint history depths | 4 |
+| **Total unique 4-tuples** | **5,120** |
+
+At 5,000 entries the dataset uses ~98% of the available unique combinations. At 10,000 entries the generator reuses 4-tuples, but linguistic diversity (see point 3) prevents these from producing duplicate complaint texts.
+
+### 2. Affinity constraints create realistic within-cell variety
+
+Scenarios and styles are not freely combined — each is restricted to compatible urgency/emotion levels via affinity maps:
+
+- **10–18 scenarios** are allowed per urgency level (not all 20)
+- **6–8 styles** are allowed per emotion level (not all 8)
+- Within each of the 9 grid cells, the generator enforces **no duplicate (scenario, style, profile, history) tuples**, so every complaint within a cell has a distinct metadata signature
+
+This means the 9 grid cells each draw from their own constrained sub-space, avoiding the clustering that a flat random draw would produce.
+
+### 3. Three independent sources of linguistic diversity
+
+Even when two complaints share the same 4-tuple metadata, their text will differ because:
+
+- **Temperature = 1.0** — maximum LLM sampling randomness on every API call
+- **3 rotating system prompts** — different framing instructions per cell cycle (complaint-writing assistant / real customer simulation / generator mode)
+- **CRITICAL tone instructions** — emotion-level instructions enforce distinct vocabulary and sentence structure at Low / Medium / High, rather than relying on punctuation or capitalization
+
+Together these ensure that 10,000 complaints remain linguistically varied even where metadata overlaps.
 
 ## Output Format
 

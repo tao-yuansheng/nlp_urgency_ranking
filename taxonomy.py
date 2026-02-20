@@ -3,7 +3,7 @@
 import random
 from prompts import (
     SCENARIOS, STYLES, CUSTOMER_PROFILES, COMPLAINT_HISTORY,
-    SCENARIO_URGENCY,
+    SCENARIO_URGENCY, STYLE_EMOTION,
 )
 
 # ---------------------------------------------------------------------------
@@ -55,15 +55,22 @@ def _scenarios_for_urgency(urgency: str) -> list[str]:
     return [sc for sc in SCENARIOS if urgency in SCENARIO_URGENCY[sc]]
 
 
+def _styles_for_emotion(emotion: str) -> list[str]:
+    """Return the list of styles allowed at the given emotion level."""
+    return [st for st in STYLES if emotion in STYLE_EMOTION[st]]
+
+
 def build_assignments(total: int = 5000, seed: int = 42) -> list[dict]:
-    """Return `total` complaint assignments with scenario-urgency affinity.
+    """Return `total` complaint assignments with scenario-urgency and style-emotion affinity.
 
     Distribution: Low 35%, Medium 40%, High 25%.
 
     Guarantees:
     - Each scenario only appears at its allowed urgency levels.
+    - Each style only appears at its allowed emotion levels.
     - Within each urgency level, scenarios are distributed as evenly as possible.
-    - Global style, profile, and history distributions are balanced.
+    - Within each emotion level, styles are distributed as evenly as possible.
+    - Global profile and history distributions are balanced.
     - No duplicate (scenario, style, profile, history) tuple within the same cell.
     """
     rng = random.Random(seed)
@@ -82,8 +89,19 @@ def build_assignments(total: int = 5000, seed: int = 42) -> list[dict]:
         min_per = urg_total // len(allowed)
         scenario_pools[urg] = _build_pool(allowed, urg_total, min_per, rng)
 
-    # --- Global pools for style, profile, history ---------------------------
-    style_pool = _build_pool(STYLES, total, total // len(STYLES), rng)
+    # --- Per-emotion style pools ----------------------------------------------
+    emotion_totals: dict[str, int] = {}
+    for _urg, emo, count in grid:
+        emotion_totals[emo] = emotion_totals.get(emo, 0) + count
+
+    style_pools: dict[str, list[str]] = {}
+    for emo in EMOTION_LEVELS:
+        allowed = _styles_for_emotion(emo)
+        emo_total = emotion_totals[emo]
+        min_per = emo_total // len(allowed)
+        style_pools[emo] = _build_pool(allowed, emo_total, min_per, rng)
+
+    # --- Global pools for profile, history ------------------------------------
     profile_pool = _build_pool(
         CUSTOMER_PROFILES, total, total // len(CUSTOMER_PROFILES), rng)
     history_pool = _build_pool(
@@ -93,6 +111,7 @@ def build_assignments(total: int = 5000, seed: int = 42) -> list[dict]:
     assignments: list[dict] = []
     global_offset = 0
     scenario_offsets: dict[str, int] = {urg: 0 for urg in URGENCY_LEVELS}
+    style_offsets: dict[str, int] = {emo: 0 for emo in EMOTION_LEVELS}
 
     for cell_idx, (urgency, emotion, count) in enumerate(grid):
         # Scenario: draw from per-urgency pool
@@ -101,8 +120,12 @@ def build_assignments(total: int = 5000, seed: int = 42) -> list[dict]:
             scenario_pools[urgency][sc_off:sc_off + count])
         scenario_offsets[urgency] = sc_off + count
 
-        # Style, profile, history: draw from global pools
-        cell_styles = list(style_pool[global_offset:global_offset + count])
+        # Style: draw from per-emotion pool
+        st_off = style_offsets[emotion]
+        cell_styles = list(style_pools[emotion][st_off:st_off + count])
+        style_offsets[emotion] = st_off + count
+
+        # Profile, history: draw from global pools
         cell_profiles = list(profile_pool[global_offset:global_offset + count])
         cell_histories = list(
             history_pool[global_offset:global_offset + count])
@@ -152,6 +175,15 @@ def build_assignments(total: int = 5000, seed: int = 42) -> list[dict]:
                 f"'{a['urgency']}' but only allowed at {allowed}"
             )
 
+    # Check style-emotion affinity
+    for a in assignments:
+        allowed = STYLE_EMOTION[a["style"]]
+        if a["emotion"] not in allowed:
+            raise ValueError(
+                f"Style '{a['style']}' assigned to emotion "
+                f"'{a['emotion']}' but only allowed at {allowed}"
+            )
+
     # Check per-urgency scenario minimums
     for urg in URGENCY_LEVELS:
         allowed = _scenarios_for_urgency(urg)
@@ -166,9 +198,22 @@ def build_assignments(total: int = 5000, seed: int = 42) -> list[dict]:
                     f"(< {min_expected})"
                 )
 
+    # Check per-emotion style minimums
+    for emo in EMOTION_LEVELS:
+        allowed = _styles_for_emotion(emo)
+        emo_assignments = [a for a in assignments if a["emotion"] == emo]
+        counts = Counter(a["style"] for a in emo_assignments)
+        min_expected = len(emo_assignments) // len(allowed)
+        for st in allowed:
+            cnt = counts.get(st, 0)
+            if cnt < min_expected:
+                raise ValueError(
+                    f"Style '{st}' at {emo} emotion: {cnt} times "
+                    f"(< {min_expected})"
+                )
+
     # Check global axis minimums
     for axis_name, key, items in [
-        ("Style", "style", STYLES),
         ("Profile", "profile", CUSTOMER_PROFILES),
         ("History", "history", COMPLAINT_HISTORY),
     ]:
@@ -212,9 +257,16 @@ if __name__ == "__main__":
             print(f"  {sc}: {cnt}")
         print()
 
+    # Per-emotion style breakdown
+    for emo in EMOTION_LEVELS:
+        emo_assigns = [a for a in assignments if a["emotion"] == emo]
+        print(f"Styles at {emo} emotion ({len(emo_assigns)} total):")
+        for st, cnt in sorted(Counter(a["style"] for a in emo_assigns).items()):
+            print(f"  {st}: {cnt}")
+        print()
+
     # Global axes
     for axis_name, key in [
-        ("Style", "style"),
         ("Profile", "profile"),
         ("History", "history"),
     ]:

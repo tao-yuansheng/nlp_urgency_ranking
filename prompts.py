@@ -89,6 +89,20 @@ SCENARIOS = [
 ]
 
 # ---------------------------------------------------------------------------
+# Style → allowed emotion levels (Low=7, Medium=8, High=6 styles)
+# ---------------------------------------------------------------------------
+STYLE_EMOTION: dict[str, list[str]] = {
+    "Formal professional":            ["Low", "Medium"],
+    "Casual conversational":          ["Low", "Medium", "High"],
+    "Passive-aggressive / sarcastic": ["Medium", "High"],
+    "Verbose and detailed":           ["Low", "Medium", "High"],
+    "Terse and minimal":              ["Low", "Medium", "High"],
+    "Narrative / storytelling":       ["Low", "Medium", "High"],
+    "Legalistic / rights-aware":      ["Low", "Medium", "High"],
+    "Polite but firm":                ["Low", "Medium"],
+}
+
+# ---------------------------------------------------------------------------
 # Scenario → allowed urgency levels (Low=12, Medium=18, High=10 scenarios)
 # ---------------------------------------------------------------------------
 SCENARIO_URGENCY: dict[str, list[str]] = {

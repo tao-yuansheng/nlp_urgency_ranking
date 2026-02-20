@@ -1,4 +1,6 @@
 .env
 *.xlsx
+*.docx
 __pycache__/
 .claude/worktrees
+archive
