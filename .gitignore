@@ -2,5 +2,5 @@
 *.xlsx
 *.docx
 __pycache__/
-.claude/worktrees
+.claude/
 archive
