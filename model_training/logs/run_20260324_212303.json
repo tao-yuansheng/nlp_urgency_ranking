@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-03-24 21:23:03",
+  "run_id": "20260324_212303",
+  "notes": "",
+  "model": "microsoft/deberta-v3-base",
+  "max_length": 192,
+  "batch_size": 16,
+  "lr": 2e-05,
+  "best_epoch": 6,
+  "epochs_max": 10,
+  "early_stopping_patience": 3,
+  "optimizer": "AdamW",
+  "best_val_loss": 1.5427,
+  "best_val_urgency_f1": 0.6292,
+  "best_val_emotion_f1": 0.8409,
+  "test_urgency_macro_f1": 0.6133,
+  "test_urgency_f1_low": 0.6417,
+  "test_urgency_f1_medium": 0.5061,
+  "test_urgency_f1_high": 0.6923,
+  "test_emotion_macro_f1": 0.8679,
+  "test_emotion_f1_low": 0.9508,
+  "test_emotion_f1_medium": 0.8138,
+  "test_emotion_f1_high": 0.8391,
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.9501,
+      "val_loss": 1.4806,
+      "val_urgency_f1": 0.4555,
+      "val_emotion_f1": 0.7707
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.3369,
+      "val_loss": 1.1865,
+      "val_urgency_f1": 0.5296,
+      "val_emotion_f1": 0.8397
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.0603,
+      "val_loss": 1.1738,
+      "val_urgency_f1": 0.5961,
+      "val_emotion_f1": 0.8417
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.8566,
+      "val_loss": 1.1978,
+      "val_urgency_f1": 0.6126,
+      "val_emotion_f1": 0.8542
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.7097,
+      "val_loss": 1.3239,
+      "val_urgency_f1": 0.6144,
+      "val_emotion_f1": 0.8368
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5185,
+      "val_loss": 1.5427,
+      "val_urgency_f1": 0.6292,
+      "val_emotion_f1": 0.8409
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.3663,
+      "val_loss": 1.7137,
+      "val_urgency_f1": 0.6081,
+      "val_emotion_f1": 0.8441
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.2445,
+      "val_loss": 1.9913,
+      "val_urgency_f1": 0.5913,
+      "val_emotion_f1": 0.8359
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.1591,
+      "val_loss": 2.2318,
+      "val_urgency_f1": 0.5832,
+      "val_emotion_f1": 0.8401
+    }
+  ]
+}

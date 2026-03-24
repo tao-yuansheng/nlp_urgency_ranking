@@ -28,11 +28,11 @@ from tqdm import tqdm
 CSV_PATH      = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "telecoms_complaints.csv")
 MODEL_NAME    = "microsoft/deberta-v3-base"
 OUTPUT_DIR    = "model_output"
-MAX_LENGTH    = 128
+MAX_LENGTH    = 192
 BATCH_SIZE    = 16
 LR            = 2e-5
-EPOCHS        = 5
-PATIENCE      = 2
+EPOCHS        = 10
+PATIENCE      = 3
 LABEL_MAP     = {"Low": 0, "Medium": 1, "High": 2}
 LABEL_NAMES   = ["Low", "Medium", "High"]
 DEVICE        = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -150,9 +150,11 @@ def run_epoch(loader, train=True):
                 scaler.scale(loss).backward()
                 scaler.unscale_(optimizer)
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                scale_before = scaler.get_scale()
                 scaler.step(optimizer)
                 scaler.update()
-                scheduler.step()
+                if scaler.get_scale() == scale_before:  # optimizer stepped (no inf/nan)
+                    scheduler.step()
 
             total_loss += loss.item()
             all_urg_preds.extend(urg_logits.argmax(dim=-1).cpu().tolist())
