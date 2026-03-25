@@ -1,0 +1,24 @@
+Total records: 133 / 154
+Skipped: 21
+Unique error titles: 127
+
+  3x  Underestimation of Cumulative Urgency Indicators
+  2x  Miscalibrated Severity Assessment
+  2x  Underestimation of Complaint Severity Factors
+  2x  Misinterpretation of Urgency Timeline
+  2x  Misinterpreting Urgency Thresholds
+  1x  Miscalibrated Severity Threshold
+  1x  Underestimation of Cumulative Urgency and Severity Indicators
+  1x  Underestimation of Cumulative Severity Factors
+  1x  Underestimation of Complaint Severity Indicators
+  1x  Underestimation of Cumulative Severity Indicators
+  1x  Failure to Recognize Escalation and Formal Threats
+  1x  Misinterpretation of Complaint Severity and Escalation Signals
+  1x  Misinterpretation of Complaint Intensity/Tone
+  1x  Underestimated Multi-Step Request Complexity
+  1x  Underestimation of Negative Emotional Intensity and Complaint Severity
+  1x  Underestimation of Sentiment Severity and Customer Impact
+  1x  Misinterpreting Organizational Urgency Thresholds
+  1x  Provided General Information Instead of Strict Redirection
+  1x  Misinterpretation of Escalation and Urgency Cues
+  1x  Severity Threshold Misjudgment (Ombudsman vs. High Escalation)
