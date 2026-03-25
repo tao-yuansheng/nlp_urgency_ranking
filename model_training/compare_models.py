@@ -230,7 +230,7 @@ for key, label in labels.items():
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 csv_path = os.path.join(RESULTS_DIR, f"test_predictions_{timestamp}.csv")
-out_df.to_csv(csv_path, index=False)
+out_df.to_csv(csv_path, index=False, encoding="utf-8-sig")
 print(f"\nTest predictions saved to '{csv_path}'")
 
 summary = {

@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-03-25 19:45:36",
+  "test_set_size": 750,
+  "models": {
+    "tfidf_lr": {
+      "urgency_macro_f1": 0.8192,
+      "urgency_f1_low": 0.803,
+      "urgency_f1_medium": 0.7805,
+      "urgency_f1_high": 0.8739,
+      "emotion_macro_f1": 0.7638,
+      "emotion_f1_low": 0.8192,
+      "emotion_f1_medium": 0.7113,
+      "emotion_f1_high": 0.761
+    },
+    "sbert_lr": {
+      "urgency_macro_f1": 0.6912,
+      "urgency_f1_low": 0.6962,
+      "urgency_f1_medium": 0.6275,
+      "urgency_f1_high": 0.75,
+      "emotion_macro_f1": 0.6307,
+      "emotion_f1_low": 0.6958,
+      "emotion_f1_medium": 0.5666,
+      "emotion_f1_high": 0.6298
+    },
+    "deberta_finetuned": {
+      "urgency_macro_f1": 0.8071,
+      "urgency_f1_low": 0.8258,
+      "urgency_f1_medium": 0.7542,
+      "urgency_f1_high": 0.8413,
+      "emotion_macro_f1": 0.8611,
+      "emotion_f1_low": 0.8953,
+      "emotion_f1_medium": 0.834,
+      "emotion_f1_high": 0.8541
+    }
+  }
+}
