@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-03-25 15:28:25",
+  "run_id": "20260325_152825",
+  "model": "TF-IDF + Logistic Regression",
+  "tfidf_max_features": 20000,
+  "tfidf_ngram_range": [
+    1,
+    2
+  ],
+  "lr_C": 1.0,
+  "lr_solver": "lbfgs",
+  "val_urgency_macro_f1": 0.81,
+  "val_emotion_macro_f1": 0.7268,
+  "test_urgency_macro_f1": 0.8192,
+  "test_urgency_f1_low": 0.803,
+  "test_urgency_f1_medium": 0.7805,
+  "test_urgency_f1_high": 0.8739,
+  "test_emotion_macro_f1": 0.7638,
+  "test_emotion_f1_low": 0.8192,
+  "test_emotion_f1_medium": 0.7113,
+  "test_emotion_f1_high": 0.761
+}

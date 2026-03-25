@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-03-25 16:20:46",
+  "run_id": "20260325_162046",
+  "model": "Sentence-BERT (all-MiniLM-L6-v2) + Logistic Regression",
+  "sbert_model": "all-MiniLM-L6-v2",
+  "embedding_dim": 384,
+  "lr_C": 1.0,
+  "lr_solver": "lbfgs",
+  "val_urgency_macro_f1": 0.6672,
+  "val_emotion_macro_f1": 0.6137,
+  "test_urgency_macro_f1": 0.6912,
+  "test_urgency_f1_low": 0.6962,
+  "test_urgency_f1_medium": 0.6275,
+  "test_urgency_f1_high": 0.75,
+  "test_emotion_macro_f1": 0.6307,
+  "test_emotion_f1_low": 0.6958,
+  "test_emotion_f1_medium": 0.5666,
+  "test_emotion_f1_high": 0.6298
+}

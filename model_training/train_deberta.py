@@ -291,9 +291,9 @@ log_entry = {
     "early_stopping_patience": PATIENCE,
     "optimizer": "AdamW",
     # Validation at best epoch
-    "best_val_loss":       round(best_val_loss,    4),
-    "best_val_urgency_f1": round(best_val_urg_f1,  4),
-    "best_val_emotion_f1": round(best_val_emo_f1,  4),
+    "best_val_loss":       round(best_val_loss,   4),
+    "best_val_urgency_f1": round(best_val_urg_f1, 4),
+    "best_val_emotion_f1": round(best_val_emo_f1, 4),
     # Test results — urgency
     "test_urgency_macro_f1":   urg_macro,
     "test_urgency_f1_low":     round(float(urg_f1_per_class[0]), 4),

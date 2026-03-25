@@ -52,7 +52,7 @@ Model page: [yuansheng-tao/emotion_urgency_classifier](https://huggingface.co/yu
 Requires the dataset at `data/telecoms_complaints.csv`. See [data_generation/README.md](../data_generation/README.md) to generate it.
 
 ```bash
-python model_training/train.py
+python model_training/train_deberta.py
 ```
 
 The best model weights are saved to `model_training/model_output/` at the end of each run.
@@ -66,6 +66,25 @@ python model_training/adversarial_test.py
 ```
 
 Results are saved as a timestamped `.txt` file in `model_training/`.
+
+### Compare all models
+
+Runs all three models against the same held-out test set in one command and saves a merged prediction CSV plus a metrics summary:
+
+```bash
+python model_training/compare_models.py
+```
+
+Output is saved to `model_training/results/`:
+- `test_predictions_<timestamp>.csv` — every test complaint with true labels and each model's predictions side by side
+- `metrics_summary_<timestamp>.json` — per-class and macro F1 for all three models
+
+### Run a baseline model
+
+```bash
+python model_training/baseline_tfidf_lr.py    # TF-IDF + Logistic Regression
+python model_training/baseline_sbert_lr.py    # Sentence-BERT (frozen) + Logistic Regression
+```
 
 ---
 
@@ -87,6 +106,16 @@ Results are saved as a timestamped `.txt` file in `model_training/`.
 |---|---|---|---|---|
 | Urgency | 0.823 | 0.736 | 0.844 | **0.801** |
 | Emotion | 0.891 | 0.825 | 0.841 | **0.852** |
+
+### Baseline comparison (v3 dataset, test set)
+
+| Model | Urgency Macro F1 | Emotion Macro F1 |
+|---|---|---|
+| TF-IDF + Logistic Regression | 0.819 | 0.764 |
+| Sentence-BERT (frozen) + LR | 0.691 | 0.631 |
+| **Fine-tuned DeBERTa-v3-base** | **0.801** | **0.852** |
+
+Fine-tuning dominates on emotion (contextual understanding required). TF-IDF is competitive on urgency due to strong lexical signals from the scenario affinity map. Frozen Sentence-BERT underperforms both, confirming that general-purpose embeddings without task adaptation are insufficient.
 
 ### Adversarial test (v3 model)
 

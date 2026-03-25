@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-03-25 15:51:45",
+  "run_id": "20260325_155145",
+  "notes": "",
+  "model": "microsoft/deberta-v3-base",
+  "max_length": 192,
+  "batch_size": 16,
+  "lr_backbone": 1e-05,
+  "lr_heads": 5e-05,
+  "best_epoch": 10,
+  "epochs_max": 10,
+  "early_stopping_patience": 3,
+  "optimizer": "AdamW",
+  "best_val_loss": 1.1576,
+  "best_val_urgency_f1": 0.8014,
+  "best_val_emotion_f1": 0.832,
+  "test_urgency_macro_f1": 0.8112,
+  "test_urgency_f1_low": 0.8244,
+  "test_urgency_f1_medium": 0.7565,
+  "test_urgency_f1_high": 0.8526,
+  "test_emotion_macro_f1": 0.8299,
+  "test_emotion_f1_low": 0.8762,
+  "test_emotion_f1_medium": 0.7801,
+  "test_emotion_f1_high": 0.8333,
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.1401,
+      "val_loss": 1.8421,
+      "val_urgency_f1": 0.1959,
+      "val_emotion_f1": 0.5546
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.485,
+      "val_loss": 1.3124,
+      "val_urgency_f1": 0.635,
+      "val_emotion_f1": 0.765
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.1352,
+      "val_loss": 1.1116,
+      "val_urgency_f1": 0.7389,
+      "val_emotion_f1": 0.8005
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.8843,
+      "val_loss": 1.0471,
+      "val_urgency_f1": 0.7583,
+      "val_emotion_f1": 0.8208
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.7078,
+      "val_loss": 1.0509,
+      "val_urgency_f1": 0.77,
+      "val_emotion_f1": 0.8054
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5741,
+      "val_loss": 1.2854,
+      "val_urgency_f1": 0.7918,
+      "val_emotion_f1": 0.7564
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.4402,
+      "val_loss": 1.0688,
+      "val_urgency_f1": 0.7928,
+      "val_emotion_f1": 0.832
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.3451,
+      "val_loss": 1.1593,
+      "val_urgency_f1": 0.793,
+      "val_emotion_f1": 0.8232
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.2899,
+      "val_loss": 1.1872,
+      "val_urgency_f1": 0.7876,
+      "val_emotion_f1": 0.8302
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.2413,
+      "val_loss": 1.1576,
+      "val_urgency_f1": 0.8014,
+      "val_emotion_f1": 0.832
+    }
+  ]
+}
