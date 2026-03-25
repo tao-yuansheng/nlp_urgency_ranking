@@ -1,12 +1,20 @@
-Total records: 133 / 154
-Skipped: 21
-Unique error titles: 127
+Stage 1 ErrorMap Summary
+=======================
 
+Total records: 146 / 154
+Still missing: 8
+Coverage: 94.8%
+
+Unique error titles: 139
+
+Top 20 error titles:
+--------------------------------------------------
   3x  Underestimation of Cumulative Urgency Indicators
   2x  Miscalibrated Severity Assessment
   2x  Underestimation of Complaint Severity Factors
   2x  Misinterpretation of Urgency Timeline
   2x  Misinterpreting Urgency Thresholds
+  2x  Underestimation of Sentiment Severity
   1x  Miscalibrated Severity Threshold
   1x  Underestimation of Cumulative Urgency and Severity Indicators
   1x  Underestimation of Cumulative Severity Factors
@@ -21,4 +29,3 @@ Unique error titles: 127
   1x  Misinterpreting Organizational Urgency Thresholds
   1x  Provided General Information Instead of Strict Redirection
   1x  Misinterpretation of Escalation and Urgency Cues
-  1x  Severity Threshold Misjudgment (Ombudsman vs. High Escalation)
