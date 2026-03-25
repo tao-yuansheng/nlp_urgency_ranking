@@ -1,0 +1,89 @@
+======================================================================
+10-ITEM ADVERSARIAL TEST
+Timestamp : 2026-03-25 11:14:26
+Model dir : C:\Users\Yuansheng Tao\OneDrive\UCL_BA\NLP\Group Project\Project\model_training\model_output
+======================================================================
+
+[01] Sarcastic Praise  [FAIL]
+     Text: "Absolutely wonderful. Your engineer just pushed an update that wiped my entire c..."
+     Urgency  — expected: Medium | predicted: High   WRONG
+              probs  Low=0.01  Med=0.22  High=0.77
+     Emotion  — expected: High   | predicted: Low    WRONG
+              probs  Low=0.65  Med=0.32  High=0.03
+     Why tricky: Glowing words like 'wonderful' and 'masterpiece' mask intense frustration about data loss.
+
+[02] Polite Catastrophe  [PASS]
+     Text: "Good morning. I hope this message finds you well. I wanted to let you know that ..."
+     Urgency  — expected: High   | predicted: High   OK
+              probs  Low=0.00  Med=0.01  High=0.99
+     Emotion  — expected: Low    | predicted: Low    OK
+              probs  Low=0.92  Med=0.08  High=0.00
+     Why tricky: A full business outage affecting 40 people described with total calm and politeness.
+
+[03] Aggressive Triviality  [PASS]
+     Text: "THIS IS ABSOLUTELY DISGUSTING!!! THE FONT ON MY MONTHLY BILL PDF IS SLIGHTLY DIF..."
+     Urgency  — expected: Low    | predicted: Low    OK
+              probs  Low=0.78  Med=0.13  High=0.09
+     Emotion  — expected: High   | predicted: High   OK
+              probs  Low=0.00  Med=0.22  High=0.77
+     Why tricky: Maximum fury over a cosmetic billing PDF change with zero real impact.
+
+[04] Passive-Aggressive Legal Threat  [FAIL]
+     Text: "As your SLA guarantees 99.9% uptime and we have now experienced 14 hours of down..."
+     Urgency  — expected: High   | predicted: Low    WRONG
+              probs  Low=0.58  Med=0.38  High=0.04
+     Emotion  — expected: High   | predicted: Low    WRONG
+              probs  Low=1.00  Med=0.00  High=0.00
+     Why tricky: Cold, precise legal language — no exclamation marks, but the threat level is severe.
+
+[05] Rambling Confusion  [PASS]
+     Text: "Hi there, I was trying to top up my account and I got a bit confused with the ne..."
+     Urgency  — expected: Low    | predicted: Low    OK
+              probs  Low=0.99  Med=0.01  High=0.00
+     Emotion  — expected: Low    | predicted: Low    OK
+              probs  Low=0.58  Med=0.41  High=0.00
+     Why tricky: Long message suggesting a serious issue, but it's a mild self-resolved navigation confusion.
+
+[06] Urgent but Cheerful  [PASS]
+     Text: "Hey team! Big fans of the new app redesign! Quick heads up though — it looks lik..."
+     Urgency  — expected: High   | predicted: High   OK
+              probs  Low=0.00  Med=0.12  High=0.88
+     Emotion  — expected: Low    | predicted: Low    OK
+              probs  Low=1.00  Med=0.00  High=0.00
+     Why tricky: Complete call failure reported with enthusiasm and exclamation points by a happy customer.
+
+[07] Sincere Heartbreak  [PASS]
+     Text: "I've been with you for nine years and always defended you to friends who switche..."
+     Urgency  — expected: Low    | predicted: Low    OK
+              probs  Low=0.73  Med=0.26  High=0.01
+     Emotion  — expected: High   | predicted: High   OK
+              probs  Low=0.00  Med=0.01  High=0.99
+     Why tricky: Deep loyalty and sadness over a minor plan feature removal — emotion without urgency.
+
+[08] Pure Machine Logic  [PASS]
+     Text: "BGP session dropped on PE-router LON-CORE-04. AS path withdrawal propagating. Es..."
+     Urgency  — expected: High   | predicted: High   OK
+              probs  Low=0.00  Med=0.09  High=0.91
+     Emotion  — expected: Low    | predicted: Low    OK
+              probs  Low=0.67  Med=0.33  High=0.00
+     Why tricky: Pure network engineering jargon — zero emotional language, but a massive regional outage.
+
+[09] Ambiguous Broken  [FAIL]
+     Text: "The signal keeps dropping again. It's been doing this on and off for a couple of..."
+     Urgency  — expected: Medium | predicted: Low    WRONG
+              probs  Low=0.97  Med=0.03  High=0.00
+     Emotion  — expected: Medium | predicted: Low    WRONG
+              probs  Low=0.98  Med=0.02  High=0.01
+     Why tricky: True Medium/Medium baseline — mild recurring issue with a hint of frustration but no detail.
+
+[10] Overreaction to a Fix  [FAIL]
+     Text: "Oh wow, you finally corrected the wrong data allowance displayed on my account p..."
+     Urgency  — expected: Low    | predicted: Medium WRONG
+              probs  Low=0.33  Med=0.54  High=0.13
+     Emotion  — expected: High   | predicted: Medium WRONG
+              probs  Low=0.30  Med=0.67  High=0.03
+     Why tricky: Issue already resolved — sarcasm signals high residual anger despite zero current urgency.
+
+======================================================================
+RESULT: 6/10 passed
+======================================================================
