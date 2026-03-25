@@ -51,7 +51,7 @@ cp .env.example .env          # add your OPENAI_API_KEY
 python data_generation/generate_complaints.py
 
 # 2. Train
-python model_training/train.py
+python model_training/train_deberta.py
 ```
 
 ---
@@ -61,13 +61,19 @@ python model_training/train.py
 ```
 Project/
 ├── data/
-│   └── telecoms_complaints.csv      # 5,000 synthetic labelled complaints
-├── data_generation/                 # Synthetic dataset pipeline
-│   └── README.md                    # Full data generation documentation
-├── model_training/                  # Fine-tuning & evaluation
-│   └── README.md                    # Training, download, and results documentation
+│   └── telecoms_complaints.csv          # 5,000 synthetic labelled complaints
+├── data_generation/                     # Synthetic dataset pipeline
+│   └── README.md                        # Full data generation documentation
+├── model_training/                      # Fine-tuning & evaluation
+│   ├── train_deberta.py                 # Fine-tune DeBERTa-v3-base
+│   ├── baseline_tfidf_lr.py             # TF-IDF + Logistic Regression baseline
+│   ├── baseline_sbert_lr.py             # Sentence-BERT (frozen) + LR baseline
+│   ├── compare_models.py                # Run all three models and save predictions
+│   ├── adversarial_test.py              # 10-item edge-case evaluation
+│   ├── download_model.py                # Download fine-tuned model from HuggingFace
+│   └── README.md                        # Training, download, and results documentation
 ├── requirements.txt
-└── .env.example                     # API key template
+└── .env.example                         # API key template
 ```
 
 - [data_generation/README.md](data_generation/README.md) — how the dataset is built (GPT-5-mini, taxonomy, affinity map)
