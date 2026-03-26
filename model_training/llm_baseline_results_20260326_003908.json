@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-26 00:39:08",
+  "run_id": "20260326_003908",
+  "model": "claude-haiku-4-5-20251001",
+  "method": "few-shot (9 examples, 1 per urgency x emotion cell)",
+  "few_shot_seed": 42,
+  "complaints_per_api_call": 10,
+  "temperature": 0.0,
+  "test_samples": 750,
+  "elapsed_seconds": 255.2,
+  "fallback_count": 39,
+  "test_urgency_macro_f1": 0.5353,
+  "test_urgency_f1_low": 0.4157,
+  "test_urgency_f1_medium": 0.5291,
+  "test_urgency_f1_high": 0.6611,
+  "test_emotion_macro_f1": 0.4972,
+  "test_emotion_f1_low": 0.5522,
+  "test_emotion_f1_medium": 0.381,
+  "test_emotion_f1_high": 0.5583
+}
