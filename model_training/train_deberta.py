@@ -168,24 +168,28 @@ def run_epoch(loader, train=True):
     return avg_loss, urg_f1, emo_f1
 
 # ── Training loop ─────────────────────────────────────────────────────────────
-best_val_urg_f1  = -1.0       # early stopping now tracks urgency F1 (higher = better)
-best_val_loss    = float("inf")
-patience_counter = 0
-best_model_state = None
-best_epoch       = 1
-best_val_emo_f1  = 0.0
-epoch_history    = []
+best_val_combined_f1 = -1.0   # early stopping tracks mean(urgency F1, emotion F1)
+best_val_loss        = float("inf")
+patience_counter     = 0
+best_model_state     = None
+best_epoch           = 1
+best_val_urg_f1      = 0.0
+best_val_emo_f1      = 0.0
+epoch_history        = []
 
 for epoch in range(1, EPOCHS + 1):
     train_loss, train_urg_f1, train_emo_f1 = run_epoch(train_loader, train=True)
     val_loss,   val_urg_f1,   val_emo_f1   = run_epoch(val_loader,   train=False)
 
+    val_combined_f1 = (val_urg_f1 + val_emo_f1) / 2
+
     epoch_history.append({
         "epoch": epoch,
         "train_loss": round(train_loss, 4),
         "val_loss":   round(val_loss,   4),
-        "val_urgency_f1": round(val_urg_f1, 4),
-        "val_emotion_f1": round(val_emo_f1, 4),
+        "val_urgency_f1":  round(val_urg_f1,      4),
+        "val_emotion_f1":  round(val_emo_f1,       4),
+        "val_combined_f1": round(val_combined_f1,  4),
     })
 
     print(
@@ -193,17 +197,19 @@ for epoch in range(1, EPOCHS + 1):
         f"Train Loss: {train_loss:.4f} | "
         f"Val Loss: {val_loss:.4f} | "
         f"Val Urgency F1: {val_urg_f1:.4f} | "
-        f"Val Emotion F1: {val_emo_f1:.4f}"
+        f"Val Emotion F1: {val_emo_f1:.4f} | "
+        f"Val Combined F1: {val_combined_f1:.4f}"
     )
 
-    if val_urg_f1 > best_val_urg_f1:
-        best_val_urg_f1  = val_urg_f1
-        best_val_loss    = val_loss
-        best_epoch       = epoch
-        best_val_emo_f1  = val_emo_f1
-        patience_counter = 0
-        best_model_state = {k: v.cpu().clone() for k, v in model.state_dict().items()}
-        print(f"  -> New best model saved (val urgency F1 {best_val_urg_f1:.4f})")
+    if val_combined_f1 > best_val_combined_f1:
+        best_val_combined_f1 = val_combined_f1
+        best_val_loss        = val_loss
+        best_epoch           = epoch
+        best_val_urg_f1      = val_urg_f1
+        best_val_emo_f1      = val_emo_f1
+        patience_counter     = 0
+        best_model_state     = {k: v.cpu().clone() for k, v in model.state_dict().items()}
+        print(f"  -> New best model saved (val combined F1 {best_val_combined_f1:.4f})")
     else:
         patience_counter += 1
         print(f"  -> No improvement. Patience {patience_counter}/{PATIENCE}")
@@ -291,9 +297,10 @@ log_entry = {
     "early_stopping_patience": PATIENCE,
     "optimizer": "AdamW",
     # Validation at best epoch
-    "best_val_loss":       round(best_val_loss,   4),
-    "best_val_urgency_f1": round(best_val_urg_f1, 4),
-    "best_val_emotion_f1": round(best_val_emo_f1, 4),
+    "best_val_loss":        round(best_val_loss,        4),
+    "best_val_combined_f1": round(best_val_combined_f1, 4),
+    "best_val_urgency_f1":  round(best_val_urg_f1,      4),
+    "best_val_emotion_f1":  round(best_val_emo_f1,      4),
     # Test results — urgency
     "test_urgency_macro_f1":   urg_macro,
     "test_urgency_f1_low":     round(float(urg_f1_per_class[0]), 4),
@@ -317,7 +324,7 @@ with open(run_log_path, "w") as f:
 summary_path = os.path.join(logs_dir, "summary.csv")
 summary_fields = [
     "timestamp", "run_id", "notes", "model", "max_length", "batch_size", "lr",
-    "best_epoch", "best_val_loss", "best_val_urgency_f1", "best_val_emotion_f1",
+    "best_epoch", "best_val_loss", "best_val_combined_f1", "best_val_urgency_f1", "best_val_emotion_f1",
     "test_urgency_macro_f1", "test_urgency_f1_low", "test_urgency_f1_medium", "test_urgency_f1_high",
     "test_emotion_macro_f1", "test_emotion_f1_low",  "test_emotion_f1_medium",  "test_emotion_f1_high",
 ]
