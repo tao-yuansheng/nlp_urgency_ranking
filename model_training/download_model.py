@@ -26,4 +26,4 @@ snapshot_download(
 print("\nDownload complete.")
 print("Next steps:")
 print("  Run adversarial test : python model_training/adversarial_test.py")
-print("  Run training         : python model_training/train.py")
+print("  Run training         : python model_training/train_deberta.py")

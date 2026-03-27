@@ -35,13 +35,13 @@ RUN_LABELS = {
 
 # ── Academic style globals ─────────────────────────────────────────────────────
 FONT_FAMILY = "serif"
-FONT_SIZE_BASE = 9
-FONT_SIZE_TITLE = 11
-FONT_SIZE_LABEL = 10
-FONT_SIZE_TICK = 8.5
-FONT_SIZE_ANNOT = 7.5
-FONT_SIZE_LEGEND = 8.5
-FONT_SIZE_SECTION = 8.5
+FONT_SIZE_BASE = 11
+FONT_SIZE_TITLE = 13
+FONT_SIZE_LABEL = 12
+FONT_SIZE_TICK = 10.5
+FONT_SIZE_ANNOT = 9.5
+FONT_SIZE_LEGEND = 10.5
+FONT_SIZE_SECTION = 10.5
 
 COLOR_URGENCY = "#2166AC"   # deep steel blue
 COLOR_EMOTION = "#B2182B"   # dark crimson
@@ -316,7 +316,7 @@ def plot(runs: list[dict]):
         xytext=(6, -4),
         textcoords="offset points",
         va="top", ha="left",
-        fontsize=7.5, fontstyle="italic", color="#555555",
+        fontsize=9.5, fontstyle="italic", color="#555555",
         fontfamily=FONT_FAMILY,
     )
 
