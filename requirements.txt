@@ -3,9 +3,25 @@ openai
 pandas
 python-dotenv
 
+# EDA & visualisation
+numpy
+matplotlib
+seaborn
+scipy
+
 # Model training
 torch
 transformers
 scikit-learn
 tqdm
 sentencepiece
+huggingface_hub
+
+# Baselines
+sentence-transformers
+anthropic
+
+# Error analysis
+google-genai
+fpdf2
+python-docx

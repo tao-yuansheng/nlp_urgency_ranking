@@ -1,0 +1,109 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Ashury-Tahan et~al.(2026)Ashury-Tahan, Mai, Bandel, Shmueli-Scheuer,
+  and Choshen}]{ashuryTahan2026}
+Ashury-Tahan, S., Mai, Y., Bandel, E., Shmueli-Scheuer, M. and Choshen, L.
+  (2026).
+\newblock \href {https://arxiv.org/abs/2601.15812} {{ErrorMap} and
+  {ErrorAtlas}: Charting the failure landscape of large language models}.
+\newblock \emph{Preprint}, arXiv:2601.15812.
+
+\bibitem[{Athira and Gupta(2025)}]{athira2025}
+Athira, A.M. and Gupta, D. (2025).
+\newblock \href {https://doi.org/10.1016/j.procs.2025.04.472} {Effective
+  complaint detection in financial services through complaint, severity,
+  emotion and sentiment analysis}.
+\newblock \emph{Procedia Computer Science}, 258, pp.2220--2231.
+
+\bibitem[{Chen et~al.(2024)Chen, Zhang, and Yang}]{chen2024multitask}
+Chen, S., Zhang, Y. and Yang, Q. (2024).
+\newblock \href {https://doi.org/10.1145/3663363} {Multi-task learning in
+  natural language processing: An overview}.
+\newblock \emph{{ACM} Computing Surveys}, 56(12), pp.1--32.
+
+\bibitem[{He et~al.(2021)He, Liu, Gao, and Chen}]{he2021deberta}
+He, P., Liu, X., Gao, J. and Chen, W. (2021).
+\newblock \href {https://doi.org/10.48550/arxiv.2006.03654} {{DeBERTa}:
+  Decoding-enhanced {BERT} with disentangled attention}.
+\newblock \emph{Preprint}, arXiv:2006.03654.
+
+\bibitem[{He et~al.(2023)He, Gao, and Chen}]{he2023debertav3}
+He, P., Gao, J. and Chen, W. (2023).
+\newblock \href {https://arxiv.org/abs/2111.09543} {{DeBERTaV3}: Improving
+  {DeBERTa} using {ELECTRA}-style pre-training with gradient-disentangled
+  embedding sharing}.
+\newblock In \emph{International Conference on Learning Representations
+  ({ICLR})}.
+
+\bibitem[{Iskander et~al.(2024)Iskander, Tolmach, Shapira, Cohen, and
+  Karnin}]{iskander2024quality}
+Iskander, S., Tolmach, S., Shapira, O., Cohen, N. and Karnin, Z. (2024).
+\newblock \href {https://doi.org/10.18653/v1/2024.emnlp-main.285} {Quality
+  matters: Evaluating synthetic data for tool-using {LLMs}}.
+\newblock In \emph{Proceedings of the 2024 Conference on Empirical Methods in
+  Natural Language Processing}, pp.4958--4976, Miami, Florida. Association for
+  Computational Linguistics.
+
+\bibitem[{Long et~al.(2024)Long, Wang, Xiao, Zhao, Ding, Chen, and
+  Wang}]{long2024llms}
+Long, L., Wang, R., Xiao, R., Zhao, J., Ding, X., Chen, G. and Wang, H.
+  (2024).
+\newblock \href {https://doi.org/10.18653/v1/2024.findings-acl.658} {On
+  {LLMs}-driven synthetic data generation, curation, and evaluation: A survey}.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  {ACL} 2024}, pp.11065--11082.
+
+\bibitem[{Lu et~al.(2024)Lu, Tian, Wei, Qu, Cheng, Xie, and
+  Chen}]{lu2024mitigating}
+Lu, Z., Tian, J., Wei, W., Qu, X., Cheng, Y., Xie, W. and Chen, D. (2024).
+\newblock \href {https://doi.org/10.18653/v1/2024.findings-acl.467} {Mitigating
+  boundary ambiguity and inherent bias for text classification in the era of
+  large language models}.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  {ACL} 2024}, pp.7841--7864, Bangkok, Thailand. Association for Computational
+  Linguistics.
+
+\bibitem[{Reimers and Gurevych(2019)}]{reimers2019sbert}
+Reimers, N. and Gurevych, I. (2019).
+\newblock \href {https://doi.org/10.18653/v1/d19-1410} {Sentence-{BERT}:
+  Sentence embeddings using siamese {BERT}-networks}.
+\newblock In \emph{Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing and the 9th International Joint Conference on
+  Natural Language Processing ({EMNLP-IJCNLP})}.
+
+\bibitem[{Roumeliotis et~al.(2025)Roumeliotis, Tselikas, and
+  Nasiopoulos}]{roumeliotis2025}
+Roumeliotis, K.I., Tselikas, N.D. and Nasiopoulos, D.K. (2025).
+\newblock \href {https://doi.org/10.3390/electronics14061070} {Think before you
+  classify: The rise of reasoning large language models for consumer complaint
+  detection and classification}.
+\newblock \emph{Electronics}, 14(6), p.1070.
+
+\bibitem[{Tan et~al.(2024)Tan, Li, Wang, Beigi, Jiang, Bhattacharjee, Karami,
+  Li, Cheng, and Liu}]{tan2024annotation}
+Tan, Z., Li, D., Wang, S., Beigi, A., Jiang, B., Bhattacharjee, A., Karami,
+  M., Li, J., Cheng, L. and Liu, H. (2024).
+\newblock \href {https://doi.org/10.48550/arXiv.2402.13446} {Large language
+  models for data annotation: A survey}.
+\newblock \emph{Preprint}, arXiv:2402.13446.
+
+\bibitem[{Vairetti et~al.(2024)Vairetti, Ar{\'a}nguiz, Maldonado, Karmy, and
+  Leal}]{vairetti2024}
+Vairetti, C., Ar{\'a}nguiz, I., Maldonado, S., Karmy, J.P. and Leal, A.
+  (2024).
+\newblock \href {https://doi.org/10.1016/j.ejor.2023.08.027} {Analytics-driven
+  complaint prioritisation via deep learning and multicriteria
+  decision-making}.
+\newblock \emph{European Journal of Operational Research}, 312(3), pp.1108--1118.
+
+\bibitem[{Zhang et~al.(2024)Zhang, Deng, Liu, Pan, and
+  Bing}]{zhang2024sentiment}
+Zhang, W., Deng, Y., Liu, B., Pan, S.J. and Bing, L. (2024).
+\newblock \href {https://doi.org/10.18653/v1/2024.findings-naacl.246}
+  {Sentiment analysis in the era of large language models: A reality check}.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  {NAACL} 2024}, pp.2937--2958, Mexico City. Association for Computational
+  Linguistics.
+
+\end{thebibliography}
